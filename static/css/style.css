@@ -21,7 +21,10 @@ h5 {
 .nav-text {
     font-family: "Akaya Telivigala", sans-serif;
 }
-
+/* --- Navbar --- */
+nav {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
 /* --- Footer --- */
   body {
@@ -33,3 +36,4 @@ h5 {
   main {
     flex: 1 0 auto;
   }
+
