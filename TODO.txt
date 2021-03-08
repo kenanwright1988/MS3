@@ -1,3 +1,5 @@
+TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
+
 favicon src : https://www.pinterest.com/pin/39688040450475892/
 background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-counters/
 
