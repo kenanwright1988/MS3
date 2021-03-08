@@ -4,3 +4,10 @@ background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-c
 
 fix nav
 design recipie layout
+
+
+
+
+
+issues:
+centering a form input element - https://stackoverflow.com/questions/54728464/how-to-center-text-inputs-using-materialize-css
