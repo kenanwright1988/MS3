@@ -28,10 +28,13 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-ellipsis-v"></i></a>
                 <ul class="hide-on-med-and-down grey darken-4 nav-text">
                     <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
-                    <li><a href="{{ url_for('register')}}">Register</a></li>
+                    {% if session.user %}
                     <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
+                    <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+                    {% endif %}
+                    <li><a href="{{ url_for('register')}}">Register</a></li>
                     <li><a href="{{ url_for('login')}}">Log In</a></li>
-                    <li><a href="#">Log Out</a></li>
+                    
                 </ul>
                 <div class="nav-wrapper right">
                     <form>
@@ -48,10 +51,13 @@
 
         <ul class="sidenav nav-text" id="mobile-demo">
             <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
-            <li><a href="{{ url_for('register')}}">Register</a></li>
-            <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
-            <li><a href="{{ url_for('login')}}">Log In</a></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
+                    {% if session.user %}
+                    <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
+                    <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+                    {% endif %}
+                    <li><a href="{{ url_for('register')}}">Register</a></li>
+                    <li><a href="{{ url_for('login')}}">Log In</a></li>
         </ul>
     </header>
     <section>

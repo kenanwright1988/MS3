@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col s12 center-align">
+            <h1>Welcome {{ session["name"] }}</h1>
+        </div>
+    </div>
 
-<h1>Welcome {{ session["name"] }}</h1>
-
+</div>
 {% endblock %}
