@@ -27,7 +27,7 @@
             <div class="nav-wrapper transparent-bg center-align">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-ellipsis-v"></i></a>
                 <ul class="hide-on-med-and-down grey darken-4 nav-text">
-                    <li><a href="#">Recipies</a></li>
+                    <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
                     <li><a href="{{ url_for('register')}}">Register</a></li>
                     <li><a href="#">Log In</a></li>
                     <li><a href="#">Log Out</a></li>
@@ -46,7 +46,7 @@
 
 
         <ul class="sidenav nav-text" id="mobile-demo">
-            <li><a href="#">Recipies</a></li>
+            <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
             <li><a href="{{ url_for('register')}}">Register</a></li>
             <li><a href="#">Log In</a></li>
             <li><a href="#">Log Out</a></li>

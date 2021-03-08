@@ -19,8 +19,9 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-def home_page():
-    return render_template("base.html")
+@app.route("/recipies.html")
+def recipies():
+    return render_template("recipies.html")
 
 
 @app.route("/register.html", methods=["GET", "POST"])
@@ -36,16 +37,23 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "name": request.form.get("name"),
+            "email": request.form.get("email")
         }
         mongo.db.users.insert_one(register)
 
         # put new user into cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("user_profile", username=session["user"]))
 
     return render_template("register.html")
+
+
+@app.route("/user_profile.html")
+def user_profile():
+    return render_template("user_profile.html")
 
 
 if __name__ == "__main__":
