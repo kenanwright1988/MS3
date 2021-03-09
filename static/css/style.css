@@ -62,3 +62,13 @@ body {
     flex: 1 0 auto;
   }
 
+
+  .recipie-image {
+      height: 150px;
+      width: 200px;
+
+  }
+
+ul .recipie-list li {
+    list-style-type: disc;
+}

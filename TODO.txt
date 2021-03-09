@@ -2,7 +2,7 @@ TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
 
 favicon src : https://www.pinterest.com/pin/39688040450475892/
 background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-counters/
-
+omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png
 
 fix nav
 design recipie layout
@@ -14,3 +14,4 @@ comment register from walkthrough and highlight parts that I have changed
 
 issues:
 centering a form input element - https://stackoverflow.com/questions/54728464/how-to-center-text-inputs-using-materialize-css
+displaying current page as custom text under page heading - fixed by writing a loop to check if the page name and inster an h3 depending on page name. add screenshot. 

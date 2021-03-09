@@ -34,7 +34,8 @@ def register():
         if existing_user:
             flash("username already exists")
             return redirect(url_for("register"))
-
+        # Used register method from Code Institute walkthrough project
+        # but added name and email fields when registering
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
@@ -57,6 +58,8 @@ def user_profile():
     return render_template("user_profile.html")
 
 
+# login method used from walkthrough project
+#  in the Code Institute Backend module
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -84,9 +87,11 @@ def login():
     return render_template("login.html")
 
 
+# login method used from walkthrough project
+#  in the Code Institute Backend module
 @app.route("/logout")
 def logout():
-    flash("Successfully logged out!")
+    flash("Successfully logged out, Goodbye!")
     session.pop("user")
     return redirect(url_for("login"))
 
