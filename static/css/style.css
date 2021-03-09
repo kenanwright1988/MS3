@@ -29,7 +29,10 @@ nav {
     font-family: "Akaya Telivigala", sans-serif;
 }
 
-
+.no-margin-h3 {
+    margin: 0;
+    padding: 0;
+}
 
 /* --- Footer --- */
 .page-footer {
