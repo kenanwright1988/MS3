@@ -3,9 +3,13 @@ TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
 favicon src : https://www.pinterest.com/pin/39688040450475892/
 background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-counters/
 omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png
+omlette text from : https://www.bbcgoodfood.com/recipes/basic-omelette
 
 fix nav
 design recipie layout
+fix ul for recipie lists
+
+add recipie to tab card and each tab is a step. use for loop to add tabs depending on amount of steps.
 
 comment user auth hashing, login and logout from walkthrough project
 comment register from walkthrough and highlight parts that I have changed
