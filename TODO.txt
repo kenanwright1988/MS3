@@ -7,7 +7,8 @@ background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-c
 fix nav
 design recipie layout
 
-comment user auth hashing from walkthrough project
+comment user auth hashing, login and logout from walkthrough project
+comment register from walkthrough and highlight parts that I have changed
 
 
 

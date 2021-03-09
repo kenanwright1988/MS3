@@ -52,7 +52,7 @@ def register():
     return render_template("register.html")
 
 
-@app.route("/user_profile")
+@app.route("/user_profile.html")
 def user_profile():
     return render_template("user_profile.html")
 
