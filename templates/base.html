@@ -20,22 +20,23 @@
     <header>
         <div class="row">
             <div class="col s12 center-align">
-                <h1 class="page-heading"><i class="fas fa-utensils"></i> Kenan's Cook Book <i class="fas fa-bacon"></i></h1>
+                <h1 class="page-heading"><i class="fas fa-utensils"></i> Kenan's Cook Book <i class="fas fa-bacon"></i>
+                </h1>
             </div>
-        
+
 
             <div class="col s12 center-align">
                 <!-- My if statement to check what page you are on and display a custom subheading under the h1 -->
                 {% if url_for(request.endpoint) == "/recipies.html" %}
-                    <h3>Recipies</h3>
+                <h3>Recipies</h3>
                 {% elif url_for(request.endpoint) == "/register.html" %}
-                    <h3>Register a new user</h3>
+                <h3>Register a new user</h3>
                 {% elif url_for(request.endpoint) == "/login.html" %}
-                    <h3>Please Log In</h3>
+                <h3>Please Log In</h3>
                 {% elif url_for(request.endpoint) == "/user_profile.html" %}
-                    <h3>{{ session['name'] }}'s Profile</h3>
+                <h3>{{ session['name'] }}'s Profile</h3>
                 {% else %}
-                    <h3>No page name set</h3>         
+                <h3>No page name set</h3>
                 {% endif %}
             </div>
         </div>
@@ -44,20 +45,20 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-ellipsis-v"></i></a>
                 <ul class="hide-on-med-and-down grey darken-4 nav-text">
                     <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
-                {% if session.user %}
-                    <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
-                    <li><a href="{{ url_for('logout')}}">Log Out</a></li>
-                {% else %}
-                    <li><a href="{{ url_for('register')}}">Register</a></li>
-                    <li><a href="{{ url_for('login')}}">Log In</a></li>
-                {% endif %}    
+                    {% if session.user %}
+                        <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
+                        <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('register')}}">Register</a></li>
+                        <li><a href="{{ url_for('login')}}">Log In</a></li>
+                    {% endif %}
                 </ul>
                 <div class="nav-wrapper right">
                     <form>
                         <div class="input-field">
                             <input id="search" type="search" required>
                             <label class="label-icon" for="search"><i class="fas fa-search"></i></label>
-                            
+
                         </div>
                     </form>
                 </div>
@@ -67,27 +68,27 @@
 
         <ul class="sidenav nav-text" id="mobile-demo">
             <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
-            <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
-                    {% if session.user %}
-                    <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
-                    <li><a href="{{ url_for('logout')}}">Log Out</a></li>
-                    {% endif %}
-                    <li><a href="{{ url_for('register')}}">Register</a></li>
-                    <li><a href="{{ url_for('login')}}">Log In</a></li>
+            {% if session.user %}
+                <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
+                <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+            {% else %}
+                <li><a href="{{ url_for('register')}}">Register</a></li>
+                <li><a href="{{ url_for('login')}}">Log In</a></li>
+            {% endif %}
         </ul>
     </header>
     <section>
         <!-- flash messages display-->
         {% with messages = get_flashed_messages() %}
-            {% if messages%}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="light-blue lighten-4 center-align">
-                        {{ message }}
-                        </h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages%}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="light-blue lighten-4 center-align">
+                {{ message }}
+            </h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
     <!-- Main content -->
@@ -103,7 +104,8 @@
         <div class="container ">
             <div class="row center-align">
                 <div class="col s12">
-                    <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i><i class="fab fa-pinterest-square"></i>
+                    <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i><i
+                        class="fab fa-pinterest-square"></i>
                 </div>
             </div>
         </div>
