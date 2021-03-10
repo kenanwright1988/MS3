@@ -24,6 +24,28 @@ def recipies():
     return render_template("recipies.html")
 
 
+@app.route("/add_recipie.html", methods=["GET", "POST"])
+def add_recipie():
+    if request.method == "POST":
+        new_recipie = {
+            "food_name": request.form.get("food_name"),
+            "difficulty": request.form.get("difficulty"),
+            "cook_time": request.form.get("cook_time"),
+            "img_url": request.form.get("img_url"),
+            "ing_name": request.form.get("ing_name"),
+            "ing_quantity": request.form.get("ing_quantity"),
+            "step_1": request.form.get("step_1"),
+            "step_2": request.form.get("step_2"),
+            "step_3": request.form.get("step_3"),
+            "step_4": request.form.get("step_4"),
+            "step_5": request.form.get("step_5"),
+            "step_6": request.form.get("step_6"),
+        }
+        mongo.db.recipies.insert_one(new_recipie)
+
+    return render_template("add_recipie.html")
+
+
 @app.route("/register.html", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

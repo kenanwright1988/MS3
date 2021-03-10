@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel teal align-center center-align">
+                <span class="white-text">
+                    <h3>Add a recipie</h3>
+                </span>
+
+                <div class="row center-align">
+                    <form class="col s8 " method="POST" action="{{ url_for('add_recipie') }}">
+                        <div class="row">
+                            <div class="input-field col s6 offset-s6">
+                                <input id="food_name" name="food_name" type="text" class="validate" required>
+                                <label for="food_name">Recipie Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 offset-s6">
+                                <select id="food_difficulty" name="food_difficulty" class="validate" required>
+                                <option value="" disabled selected>Choose difficulty</option>
+                                <option value="1">Basic</option>
+                                <option value="2">Intermediate</option>
+                                <option value="3">Advanced</option>
+                                </select>
+                                <label for="food_difficulty">Difficulty</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6 offset-s6">
+                                <input id="cook_time" type="text" name="cook_time" class="validate" required>
+                                <label for="cook_time">Cooking time in minuites</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 offset-s6">
+                                <input id="img_url" type="text" name="img_url" class="validate" required>
+                                <label for="img_url">Image URL</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <button type="submit" class="col s6 offset-s6 btn-large green">
+                                    Submit Recipie <i class="fas fa-sign-in-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

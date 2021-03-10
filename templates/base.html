@@ -35,6 +35,8 @@
                 <h3>Please Log In</h3>
                 {% elif url_for(request.endpoint) == "/user_profile.html" %}
                 <h3>{{ session['name'] }}'s Profile</h3>
+                {% elif url_for(request.endpoint) == "/add_recipie.html" %}
+                <h3>Add your own recipie</h3>
                 {% else %}
                 <h3>No page name set</h3>
                 {% endif %}
@@ -46,6 +48,7 @@
                 <ul class="hide-on-med-and-down grey darken-4 nav-text">
                     <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
                     {% if session.user %}
+                        <li><a href="{{ url_for('add_recipie')}}">Add a Recipie</a></li>
                         <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
                         <li><a href="{{ url_for('logout')}}">Log Out</a></li>
                     {% else %}
@@ -69,6 +72,7 @@
         <ul class="sidenav nav-text" id="mobile-demo">
             <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
             {% if session.user %}
+                <li><a href="{{ url_for('add_recipie')}}">Add a Recipie</a></li>
                 <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
                 <li><a href="{{ url_for('logout')}}">Log Out</a></li>
             {% else %}
