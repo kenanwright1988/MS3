@@ -73,6 +73,6 @@ body {
 
   }
 
-ul .recipie-list li {
-    list-style-type: disc;
+.custom_list {
+    list-style-type: disc !important; 
 }

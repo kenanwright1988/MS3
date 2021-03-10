@@ -22,13 +22,14 @@ mongo = PyMongo(app)
 @app.route("/recipies.html")
 def recipies():
     recipies = list(mongo.db.recipies.find())
-    return render_template("recipies.html", recipies=recipies)
+    return render_template(
+                           "recipies.html", recipies=recipies,)
 
 
 @app.route("/add_recipie.html", methods=["GET", "POST"])
 def add_recipie():
     if request.method == "POST":
-        ingredients = request.form.get("ing_name")
+        ingredients = request.form.getlist("ing_name")
         ingredients_list = []
         for ingredient in ingredients:
             ingredients_list.append(ingredient)
