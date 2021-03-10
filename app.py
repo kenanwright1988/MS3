@@ -88,7 +88,8 @@ def register():
 
 @app.route("/user_profile.html")
 def user_profile():
-    return render_template("user_profile.html")
+    recipies = list(mongo.db.recipies.find())
+    return render_template("user_profile.html", recipies=recipies)
 
 
 # login method used from walkthrough project

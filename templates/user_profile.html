@@ -4,8 +4,64 @@
     <div class="row">
         <div class="col s12 center-align">
             <h1>Welcome {{ session["name"] }}</h1>
+            <h5>Here are all the recipies you have created: </h5>
         </div>
     </div>
+
+    {% for recipie in recipies %}
+        {% if session["name"] == recipie["created_by"] %}
+            <div class="row">
+                <div class="col s12">
+                    <div class="card teal">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s4">
+                                    <img class="recipie-image" src="{{ recipie.img_url }}"
+                                        alt="Image of {{ recipie.food_name }}">
+                                </div>
+                                <div class="col s8">
+                                    <h3>{{ recipie.food_name }}</h3><br>
+                                    <h4>Cooking Time: {{ recipie.cook_time }}min</h4>
+                                    <h4>Difficulty: {{ recipie.difficulty }}</h4>
+                                    <h4>Submitted by: {{ recipie.created_by }}</h4>
+
+                                </div>
+                                <!-- Gets indevidual ingredients from ing_name key -->
+
+                            </div>
+                            <div class="row">
+                                <div class="col s3 ingredients">
+                                    <h4>Ingredients</h4>
+                                    <ul class="custom_list left-align">
+                                        {% if recipie.ing_name %}
+                                        {% for ingredient in recipie.ing_name %}
+                                        <li>{{ ingredient|title }}</li>
+                                        {% endfor %}
+                                        {% else %}
+                                        <p>No ingredients added</p>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s 12">
+                                    <p>
+                                        {{ recipie.steps }}
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col s12">
+                                    <a href="{{ url_for('delete_recipie', recipie_id=recipie._id) }}" class="btn-large red accent-4">Delete Recipie</a>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}    
 
 </div>
 {% endblock %}
