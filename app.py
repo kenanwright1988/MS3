@@ -42,8 +42,8 @@ def add_recipie():
             "step_6": request.form.get("step_6"),
         }
         mongo.db.recipies.insert_one(new_recipie)
-
-    return render_template("add_recipie.html")
+    flash("Thank you for submitting your recipie!")
+    return redirect(url_for("recipies"))
 
 
 @app.route("/register.html", methods=["GET", "POST"])
