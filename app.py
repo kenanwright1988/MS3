@@ -50,6 +50,13 @@ def add_recipie():
     return render_template("add_recipie.html")
 
 
+@app.route("/delete_recipie/<recipie_id>")
+def delete_recipie(recipie_id):
+    mongo.db.recipies.remove({"_id": ObjectId(recipie_id)})
+    flash("Recipie Deleted")
+    return redirect(url_for("recipies"))
+
+
 @app.route("/register.html", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
