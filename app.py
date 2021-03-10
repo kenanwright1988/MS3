@@ -21,13 +21,15 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/recipies.html")
 def recipies():
-    return render_template("recipies.html")
+    recipies = list(mongo.db.recipies.find())
+    return render_template("recipies.html", recipies=recipies)
 
 
 @app.route("/add_recipie.html", methods=["GET", "POST"])
 def add_recipie():
     if request.method == "POST":
         new_recipie = {
+            "created_by": session["name"],
             "food_name": request.form.get("food_name"),
             "difficulty": request.form.get("difficulty"),
             "cook_time": request.form.get("cook_time"),
@@ -42,8 +44,9 @@ def add_recipie():
             "step_6": request.form.get("step_6"),
         }
         mongo.db.recipies.insert_one(new_recipie)
-    flash("Thank you for submitting your recipie!")
-    return redirect(url_for("recipies"))
+        flash("Thank you for submitting your recipie!")
+
+    return render_template("add_recipie.html")
 
 
 @app.route("/register.html", methods=["GET", "POST"])
