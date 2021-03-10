@@ -28,13 +28,18 @@ def recipies():
 @app.route("/add_recipie.html", methods=["GET", "POST"])
 def add_recipie():
     if request.method == "POST":
+        ingredients = request.form.get("ing_name")
+        ingredients_list = []
+        for ingredient in ingredients:
+            ingredients_list.append(ingredient)
+
         new_recipie = {
-            "created_by": session["name"],
+            "created_by": session.get("name"),
             "food_name": request.form.get("food_name"),
             "difficulty": request.form.get("difficulty"),
             "cook_time": request.form.get("cook_time"),
             "img_url": request.form.get("img_url"),
-            "ing_name": request.form.get("ing_name"),
+            "ing_name": ingredients_list,
             "ing_quantity": request.form.get("ing_quantity"),
             "step_1": request.form.get("step_1"),
             "step_2": request.form.get("step_2"),

@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container center-align">
+<div class="container center-align">
     {% for recipie in recipies %}
-    
+
         <div class="row">
             <div class="col s12">
                 <div class="card teal">
                     <div class="card-content">
                         <div class="row">
                             <div class="col s4">
-                                <img class="recipie-image"
-                                    src="{{ recipie.img_url }}"
+                                <img class="recipie-image" src="{{ recipie.img_url }}"
                                     alt="Image of {{ recipie.food_name }}">
                             </div>
                             <div class="col s8">
@@ -20,50 +19,24 @@
                                 <h4>Submitted by: {{ recipie.created_by }}</h4>
 
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col s3">
                                     <ul class="recipie-list">
                                         <h4>Ingredients</h4>
-                                        <li>3 eggs</li>
-                                        <li>Cheese</li>
-                                        <li>butter</li>
+                                        {% for ingredient in recipies.ing_name %}
+                                        <li>{{ ingredient }}</li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-tabs">
-                            <ul class="tabs tabs-fixed-width">
-                                <li class="tab"><a href="#test4">Step 1</a></li>
-                                <li class="tab"><a class="active" href="#test5">Step 2</a></li>
-                                <li class="tab"><a href="#test6">Step 3</a></li>
-                                <li class="tab"><a href="#test7">Step 4</a></li>
-                            </ul>
-                        </div>
-                        <div class="card-content grey lighten-4">
-                            <div id="test4">Season the beaten eggs well with salt and pepper. Heat the oil and butter in a
-                                non-stick
-                                frying pan over a medium-low heat until the butter has melted and is foaming.</div>
-                            <div id="test5"> STEP 2
-                                Pour the eggs into the pan, tilt the pan ever so slightly from one side to another
-                                to
-                                allow the eggs to swirl and cover the surface of the pan completely. Let the mixture
-                                cook for about 20 seconds then scrape a line through the middle with a spatula.</div>
-                            <div id="test6">STEP 3
-                                Tilt the pan again to allow it to fill back up with the runny egg. Repeat once or
-                                twice
-                                more until the egg has just set.</div>
-                            <div id="test7">At this point you can fill the omelette with whatever you like – some grated
-                                cheese,
-                                sliced ham, fresh herbs, sautéed mushrooms or smoked salmon all work well. Scatter
-                                the
-                                filling over the top of the omelette and fold gently in half with the spatula. Slide
-                                onto a plate to serve.</div>
-                        </div>
+
+
                     </div>
                 </div>
             </div>
-        
+
         {% endfor %}
-    </div>        
+    </div>
 {% endblock %}
