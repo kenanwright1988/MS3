@@ -73,6 +73,15 @@ body {
 
   }
 
-.custom_list {
+.ingredients {
+    padding-left: 20px;
+}
+
+.row .col.s3 {
+    padding-left: 40px;
+}
+
+.custom_list li {
     list-style-type: disc !important; 
+    font-size: 20px;
 }
