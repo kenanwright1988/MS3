@@ -42,12 +42,7 @@ def add_recipie():
             "img_url": request.form.get("img_url"),
             "ing_name": ingredients_list,
             "ing_quantity": request.form.get("ing_quantity"),
-            "step_1": request.form.get("step_1"),
-            "step_2": request.form.get("step_2"),
-            "step_3": request.form.get("step_3"),
-            "step_4": request.form.get("step_4"),
-            "step_5": request.form.get("step_5"),
-            "step_6": request.form.get("step_6"),
+            "steps": request.form.get("steps")
         }
         mongo.db.recipies.insert_one(new_recipie)
         flash("Thank you for submitting your recipie!")
