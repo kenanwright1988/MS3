@@ -1,4 +1,5 @@
 import os
+from datetime import date
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -29,6 +30,8 @@ def recipies():
 @app.route("/add_recipe.html", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        today = date.today()
+        d1 = today.strftime("%d/%m/%Y")
         ingredients = request.form.getlist("ing_name")
         ingredients_list = []
         for ingredient in ingredients:
@@ -36,6 +39,7 @@ def add_recipe():
 
         new_recipe = {
             "created_by": session.get("name"),
+            "date_created": d1,
             "food_name": request.form.get("food_name"),
             "difficulty": request.form.get("difficulty"),
             "cook_time": request.form.get("cook_time"),

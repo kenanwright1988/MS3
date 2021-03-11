@@ -9,7 +9,13 @@ fix nav
 design recipie layout
 fix ul for recipie lists
 
-add recipie to tab card and each tab is a step. use for loop to add tabs depending on amount of steps.
+add date posted to recipies
+add admin account functionality which shows edit/delete for recipies and users. 
+add edit recipie functionality
+clean up add recipie formatting and layout
+find a way to add multiple steps, maybe have multiple inputs to list then have steps{{ recipe.step }} or something
+
+
 
 comment user auth hashing, login and logout from walkthrough project
 comment register from walkthrough and highlight parts that I have changed
