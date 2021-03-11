@@ -5,8 +5,10 @@ background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-c
 omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png
 omlette text from : https://www.bbcgoodfood.com/recipes/basic-omelette
 
-fix nav
-design recipie layout
+KEEP WORKING ON ADD RECIPIE FORM, need to use js to label the newly created input fields. the remove button removes the parent div and so deletes all the new input and labels.
+
+fix nav layout, make it look good
+design recipie layout more
 fix ul for recipie lists
 add search and indexing
 add admin account functionality which shows edit/delete for recipies and users. 
@@ -15,6 +17,7 @@ clean up add recipie formatting and layout
 find a way to add multiple steps, maybe have multiple inputs to list then have steps{{ recipe.step }} or something
 add min max to inputs on register
 fix confirmation modal when delete is clicked
+comment each code section 
 
 
 
@@ -28,3 +31,4 @@ comment register from walkthrough and highlight parts that I have changed
 issues:
 centering a form input element - https://stackoverflow.com/questions/54728464/how-to-center-text-inputs-using-materialize-css
 displaying current page as custom text under page heading - fixed by writing a loop to check if the page name and inster an h3 depending on page name. add screenshot. 
+label text overlapping on the firs label and not on each new label - figure this out!

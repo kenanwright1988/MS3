@@ -30,6 +30,10 @@ def recipies():
 @app.route("/add_recipe.html", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        steps = request.form.getlist("steps")
+        step_list = []
+        for step in steps:
+            step_list.append(step)
         today = date.today()
         d1 = today.strftime("%d/%m/%Y")
         ingredients = request.form.getlist("ing_name")
@@ -46,7 +50,7 @@ def add_recipe():
             "img_url": request.form.get("img_url"),
             "ing_name": ingredients_list,
             "ing_quantity": request.form.get("ing_quantity"),
-            "steps": request.form.get("steps")
+            "steps": step_list
         }
         mongo.db.recipies.insert_one(new_recipe)
         flash("Thank you for submitting your recipe!")
@@ -58,7 +62,7 @@ def add_recipe():
 def delete_recipe(recipe_id):
     mongo.db.recipies.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Deleted")
-    return redirect(url_for("recipies"))
+    return redirect(url_for("user_profile"))
 
 
 @app.route("/register.html", methods=["GET", "POST"])
