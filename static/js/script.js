@@ -2,6 +2,7 @@
       $('.sidenav').sidenav();
       $('.tabs').tabs();
       $('select').formSelect();
+      $('.modal').modal();
             
   });
 
