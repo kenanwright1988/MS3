@@ -26,15 +26,15 @@ def recipies():
                            "recipies.html", recipies=recipies,)
 
 
-@app.route("/add_recipie.html", methods=["GET", "POST"])
-def add_recipie():
+@app.route("/add_recipe.html", methods=["GET", "POST"])
+def add_recipe():
     if request.method == "POST":
         ingredients = request.form.getlist("ing_name")
         ingredients_list = []
         for ingredient in ingredients:
             ingredients_list.append(ingredient)
 
-        new_recipie = {
+        new_recipe = {
             "created_by": session.get("name"),
             "food_name": request.form.get("food_name"),
             "difficulty": request.form.get("difficulty"),
@@ -44,16 +44,16 @@ def add_recipie():
             "ing_quantity": request.form.get("ing_quantity"),
             "steps": request.form.get("steps")
         }
-        mongo.db.recipies.insert_one(new_recipie)
-        flash("Thank you for submitting your recipie!")
+        mongo.db.recipies.insert_one(new_recipe)
+        flash("Thank you for submitting your recipe!")
 
-    return render_template("add_recipie.html")
+    return render_template("add_recipe.html")
 
 
-@app.route("/delete_recipie/<recipie_id>")
-def delete_recipie(recipie_id):
-    mongo.db.recipies.remove({"_id": ObjectId(recipie_id)})
-    flash("Recipie Deleted")
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipies.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Deleted")
     return redirect(url_for("recipies"))
 
 

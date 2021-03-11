@@ -4,70 +4,64 @@
 <div class="container">
     <div class="row">
         <div class="col s12">
-            <div class="card-panel teal align-center center-align">
-                <span class="white-text">
-                    <h3>Add a recipie</h3>
+            <div class="card-panel box-shadow box-color center-align">
+                <span class="black-text">
+                    <h3>Add a recipe</h3>
                 </span>
 
                 <div class="row center-align">
-                    <form class="col s8 " method="POST" action="{{ url_for('add_recipie') }}">
+                    <form class="col s8 " method="POST" action="{{ url_for('add_recipe') }}">
                         <div class="row">
                             <div class="input-field col s6 offset-s6">
                                 <input id="food_name" name="food_name" type="text" class="validate" required>
-                                <label for="food_name">Recipie Name</label>
+                                <label class="black-text" for="food_name">Recipe Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6 offset-s6">
-                                <select id="difficulty" name="difficulty" class="validate" required>
+                                <select id="difficulty" name="difficulty" class="validate">
                                     <option value="" disabled selected>Choose difficulty</option>
                                     <option value="Basic">Basic</option>
                                     <option value="Intermediate">Intermediate</option>
                                     <option value="Advanced">Advanced</option>
                                 </select>
-                                <label for="difficulty">Difficulty</label>
+                                <label class="black-text" for="difficulty">Difficulty</label>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-field col s6 offset-s6">
                                 <input id="cook_time" type="text" name="cook_time" class="validate" required>
-                                <label for="cook_time">Cooking time in minuites</label>
+                                <label class="black-text" for="cook_time">Cooking time in minuites</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6 offset-s6">
                                 <input id="img_url" type="text" name="img_url" class="validate" required>
-                                <label for="img_url">Image URL</label>
+                                <label class="black-text" for="img_url">Image URL</label>
                             </div>
-                            <div class="row">
+                            <div class="row ingredients_list">
                                 <div class="input-field col s6 offset-s6">
                                     <input id="ing_name" type="text" name="ing_name" class="validate" required>
-                                    <label for="ing_name">Ingredient Name</label>
+                                    <label class="black-text" for="ing_name">Ingredient Name</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="input-field col s6 offset-s6">
-                                    <input id="ing_name" type="text" name="ing_name" class="validate" required>
-                                    <label for="ing_name">Ingredient Name</label>
+                                <div class="col col s6 offset-s6">
+                                    <button class="btn green add_field_button"><i class="fas fa-plus"></i></button>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s6 offset-s6">
-                                    <input id="ing_name" type="text" name="ing_name" class="validate" required>
-                                    <label for="ing_name">Ingredient Name</label>
-                                </div>
-                            </div>
+                            
                             <div class="row">
                                 <div class="input-field col s6 offset-s6">
                                     <input id="steps" type="text" name="steps" class="validate" required>
-                                    <label for="steps">Steps</label>
+                                    <label class="black-text" for="steps">Steps</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s12 center-align">
-                                    <button type="submit" class="col s6 offset-s6 btn-large green">
-                                        Submit Recipie <i class="fas fa-sign-in-alt"></i>
+                                    <button type="submit" class="col s6 offset-s6 btn-large grey darken-4">
+                                        Submit Recipe <i class="fas fa-sign-in-alt"></i>
                                     </button>
                                 </div>
                             </div>

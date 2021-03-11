@@ -67,7 +67,7 @@ main {
 }
 
 
-.recipie-image {
+.recipe-image {
     height: 200px;
     width: 250px;
 
@@ -81,4 +81,16 @@ main {
 .custom_list li {
     list-style-type: disc !important;
     font-size: 20px;
+}
+
+.box-shadow {
+    box-shadow: 0px 10px 10px 0px black;
+}
+
+.box-color {
+    background-color: rgba(238, 238, 238, 0.3);
+}
+
+.underline {
+    text-decoration: underline;
 }
