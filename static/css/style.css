@@ -1,5 +1,7 @@
 /* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Cormorant+Unicase&display=swap');
 
 html {
     background: url("https://res.cloudinary.com/dyxe4g62g/image/upload/v1615153236/images/albums/MS3/background.jpg") no-repeat center center fixed;
@@ -22,6 +24,9 @@ h5 {
     margin: 0;
 }
 
+p {
+    font-family: "Bitter", sans-serif;
+}
 
 /* --- Navbar --- */
 nav {
@@ -30,9 +35,14 @@ nav {
 }
 
 .nav-text {
-    font-family: "Akaya Telivigala", sans-serif;
+    font-family: "Cormorant Unicase", sans-serif;
+    text-shadow: 0pc 2px 2px 0px black;
 }
 
+nav ul a {
+    font-size: 30px;
+    
+}
 
 /* --- Footer --- */
 .page-footer {
@@ -68,8 +78,10 @@ main {
 
 
 .recipe-image {
-    height: 200px;
-    width: 250px;
+    height:210px;
+    width: 315px;
+    background-repeat: no-repeat;
+    object-fit:cover ;
 
 }
 
@@ -80,7 +92,9 @@ main {
 
 .custom_list li {
     list-style-type: disc !important;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: "Bitter", sans-serif;
+
 }
 
 .box-shadow {
@@ -95,9 +109,17 @@ main {
     text-decoration: underline;
 }
 
+.input-field>label  {
+    font-family: "Bitter", sans-serif;
+    font-size: 25px;
+}
+
+
 /*-- code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown --*/
 ul.dropdown-content.select-dropdown li span {
     background-color: #bdbdbd;
     color: black; 
     box-shadow: 0px 10px 10px 0px black;
+    font-family: "Bitter", sans-serif;
 }
+

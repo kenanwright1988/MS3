@@ -6,7 +6,7 @@ omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-ho
 omlette text from : https://www.bbcgoodfood.com/recipes/basic-omelette
 
 KEEP WORKING ON ADD RECIPIE FORM, need to use js to label the newly created input fields. the remove button removes the parent div and so deletes all the new input and labels.
-add edit recipie functionality - need to have the data from the recipe im editing already filled in
+add edit recipie functionality - need to have the data from the recipe im editing already filled in, find a way to show multiple steps/ingredients that were filled in previously, fixed with for loop and using loop index to number ingredient and steps.
 
 
 fix nav layout, make it look good
@@ -16,7 +16,7 @@ add search and indexing
 add admin account functionality which shows edit/delete for recipies and users. 
 
 clean up add recipie formatting and layout
-find a way to add multiple steps, maybe have multiple inputs to list then have steps{{ recipe.step }} or something
+
 add min max to inputs on register
 fix confirmation modal when delete is clicked
 comment each code section 
@@ -35,7 +35,7 @@ centering a form input element - https://stackoverflow.com/questions/54728464/ho
 displaying current page as custom text under page heading - fixed by writing a loop to check if the page name and inster an h3 depending on page name. add screenshot. 
 label text overlapping on the firs label and not on each new label - figure this out!
 werkzuig couldnt build the template for edit_recipe.html - working with michael from CI tutor support we found the problem was a jinja if statement on the base .html - try get this working again. 
-
+Couldnt fetch the name attribute on login - login method only inserted user attribute into cookies so when the user was creating a recipie it was insterting null into created by field. fixed by adding the name field into cookie upon login
 
 
 CODE I NEED TO KEEP BUT NOT USE YET!

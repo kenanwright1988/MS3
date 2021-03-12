@@ -84,6 +84,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipies.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated!")
+        return redirect(url_for("user_profile"))
 
     recipe = mongo.db.recipies.find_one({"_id": ObjectId(recipe_id)})
     return render_template("edit_recipe.html", recipe=recipe)
