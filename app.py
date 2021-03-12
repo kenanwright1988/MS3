@@ -42,7 +42,7 @@ def add_recipe():
             ingredients_list.append(ingredient)
 
         new_recipe = {
-            "created_by": session.get("name"),
+            "created_by": session.get("user"),
             "date_created": d1,
             "food_name": request.form.get("food_name"),
             "difficulty": request.form.get("difficulty"),
@@ -72,7 +72,7 @@ def edit_recipe(recipe_id):
         for ingredient in ingredients:
             ingredients_list.append(ingredient)
         submit = {
-            "created_by": session.get("name"),
+            "created_by": session.get("user"),
             "date_created": d1,
             "food_name": request.form.get("food_name"),
             "difficulty": request.form.get("difficulty"),
@@ -145,6 +145,7 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
+                    session["name"] = existing_user["name"]
                     flash("Welcome, {}".format(request.form.get("username")))
                     return redirect(url_for("user_profile", username=session["user"]))
             else:
