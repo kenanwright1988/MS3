@@ -6,13 +6,15 @@ omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-ho
 omlette text from : https://www.bbcgoodfood.com/recipes/basic-omelette
 
 KEEP WORKING ON ADD RECIPIE FORM, need to use js to label the newly created input fields. the remove button removes the parent div and so deletes all the new input and labels.
+add edit recipie functionality - need to have the data from the recipe im editing already filled in
+
 
 fix nav layout, make it look good
 design recipie layout more
 fix ul for recipie lists
 add search and indexing
 add admin account functionality which shows edit/delete for recipies and users. 
-add edit recipie functionality
+
 clean up add recipie formatting and layout
 find a way to add multiple steps, maybe have multiple inputs to list then have steps{{ recipe.step }} or something
 add min max to inputs on register
@@ -32,3 +34,22 @@ issues:
 centering a form input element - https://stackoverflow.com/questions/54728464/how-to-center-text-inputs-using-materialize-css
 displaying current page as custom text under page heading - fixed by writing a loop to check if the page name and inster an h3 depending on page name. add screenshot. 
 label text overlapping on the firs label and not on each new label - figure this out!
+werkzuig couldnt build the template for edit_recipe.html - working with michael from CI tutor support we found the problem was a jinja if statement on the base .html - try get this working again. 
+
+
+
+CODE I NEED TO KEEP BUT NOT USE YET!
+ <!-- My if statement to check what page you are on and display a custom subheading under the h1 -->
+                {% if url_for(request.endpoint) == "/recipies.html" %}
+                <h3>Recipies</h3>
+                {% elif url_for(request.endpoint) == "/register.html" %}
+                <h3>Register a new user</h3>
+                {% elif url_for(request.endpoint) == "/login.html" %}
+                <h3>Please Log In</h3>
+                {% elif url_for(request.endpoint) == "/user_profile.html" %}
+                <h3>{{ session['name'] }}'s Profile</h3>
+                {% elif url_for(request.endpoint) == "/add_recipe.html" %}
+                <h3>Add your own recipe</h3>
+                {% else %}
+                <h3>No page name set</h3>
+                {% endif %}

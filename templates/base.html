@@ -26,20 +26,7 @@
 
 
             <div class="col s12 center-align">
-                <!-- My if statement to check what page you are on and display a custom subheading under the h1 -->
-                {% if url_for(request.endpoint) == "/recipies.html" %}
-                <h3>Recipies</h3>
-                {% elif url_for(request.endpoint) == "/register.html" %}
-                <h3>Register a new user</h3>
-                {% elif url_for(request.endpoint) == "/login.html" %}
-                <h3>Please Log In</h3>
-                {% elif url_for(request.endpoint) == "/user_profile.html" %}
-                <h3>{{ session['name'] }}'s Profile</h3>
-                {% elif url_for(request.endpoint) == "/add_recipe.html" %}
-                <h3>Add your own recipe</h3>
-                {% else %}
-                <h3>No page name set</h3>
-                {% endif %}
+               
             </div>
         </div>
         <nav>

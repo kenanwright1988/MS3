@@ -1,4 +1,84 @@
 {% extends "base.html" %}
 {% block content %}
+        <div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel box-shadow box-color center-align">
+                <span class="black-text">
+                    <h3>Edit Recipe</h3>
+                </span>
+
+                <div class="row center-align">
+                    <form class="col s8 offset-s2" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+                        <div class="row">
+                            <div class="input-field col s12 ">
+                                <input id="food_name" name="food_name" type="text" class="validate" value="{{ recipe.food_name }}" required>
+                                <label class="black-text" for="food_name">Recipe Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select id="difficulty" name="difficulty" class="validate">
+                                    <option value="" disabled selected>Choose difficulty</option>
+                                    <option value="Basic"> Basic</option>
+                                    <option value="Intermediate"><em>Intermediate</em></option>
+                                    <option value="Advanced">Advanced</option>
+                                </select>
+                                <label class="black-text" for="difficulty">Difficulty</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="cook_time" type="text" name="cook_time" class="validate" value="{{ recipe.cook_time }}"" required>
+                                <label class="black-text" for="cook_time">Cooking time in minuites</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="img_url" type="text" name="img_url" class="validate" required>
+                                <label class="black-text" for="img_url">Image URL</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="ing_name" type="text" name="ing_name" class="validate" value="{{ recipe.ing_name }}" required>
+                                <label class="black-text" for="ing_name">Ingredient Name</label>
+                            </div>
+                            <a type="button" class="btn green add_field_button right"><i class="fas fa-plus"></i></a>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 ingredients_list">
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="steps" type="text" name="steps" class="validate" value="{{ recipe.steps }}" required>
+                                <label class="black-text" for="steps">Step 1</label>
+                            </div>
+                            <a type="button" class="btn green add_step_button right"><i class="fas fa-plus"></i></a>
+                        </div>
+                        <div class="row ">
+                            <div class="input-field col s12 step_list">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <button type="submit" class="col s6 offset-s6 btn-large grey darken-4 box-shadow">
+                                    Submit Recipe <i class="fas fa-sign-in-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
