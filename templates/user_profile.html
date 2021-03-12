@@ -25,6 +25,8 @@
                                     <h4>Difficulty: {{ recipe.difficulty }}</h4>
                                     <h4>Submitted by: {{ recipe.created_by }}</h4>
                                     <h4>Submitted on: {{ recipe.date_created }}</h4>
+                                    <h4>recipe._id {{ recipe._id }}</h4>
+                                    
 
                                 </div>
                                 <!-- Gets indevidual ingredients from ing_name key -->
@@ -55,6 +57,7 @@
                             <div class="row">
                                 <div class="col s12">
                                      <button data-target="modal1" class="btn red modal-trigger box-shadow">Delete</button>
+                                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-flat yellow accent-4 box-shadow waves-effect">Edit</a>
                             </div>
                         </div>
                             

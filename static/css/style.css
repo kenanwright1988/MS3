@@ -94,3 +94,10 @@ main {
 .underline {
     text-decoration: underline;
 }
+
+/*-- code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown --*/
+ul.dropdown-content.select-dropdown li span {
+    background-color: #bdbdbd;
+    color: black; 
+    box-shadow: 0px 10px 10px 0px black;
+}
