@@ -124,3 +124,21 @@ ul.dropdown-content.select-dropdown li span {
     font-family: "Bitter", sans-serif;
 }
 
+.search-box {
+    min-height: 80px;
+    padding: 10px;
+}
+
+/*-- Code to change placeholder text from w3 Schools documentation --*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+}

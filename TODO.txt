@@ -15,6 +15,7 @@ fix ul for recipie lists
 add search and indexing - done just need to refine it a bit more. 
 add admin account functionality which shows edit/delete for recipies and users. 
 
+clean up CSS file 
 clean up add recipie formatting and layout
 
 add min max to inputs on register
@@ -36,6 +37,8 @@ displaying current page as custom text under page heading - fixed by writing a l
 label text overlapping on the firs label and not on each new label - figure this out!
 werkzuig couldnt build the template for edit_recipe.html - working with michael from CI tutor support we found the problem was a jinja if statement on the base .html - try get this working again. 
 Couldnt fetch the name attribute on login - login method only inserted user attribute into cookies so when the user was creating a recipie it was insterting null into created by field. fixed by adding the name field into cookie upon login
+Couldnt make the search function work - Tutor support Kevin assisted me in fixing this by adding the propper form action to my search bar as well as using request.args.get("query") instead of request.form.get("query") 
+
 
 
 CODE I NEED TO KEEP BUT NOT USE YET!

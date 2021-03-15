@@ -2,6 +2,18 @@
 {% block content %}
     
 <div class="container center-align">   
+    <div class="row">
+        <div class="col s12">
+            <div class="box-shadow box-color center-align search-box">
+             <form action="{{ url_for('search')}}">
+                        <div class="input-field">
+                            <input type="text" name="query" id="query" placeholder="Search" class="validate" minlength="3" required>
+                            <label class="label" for="query"> <i class="fas fa-search"></i></label>
+                        </div>
+                    </form>
+            </div>        
+        </div>
+    </div>
         {% for recipe in recipies %}
             {% if recipies|length != 0 %}  
                 

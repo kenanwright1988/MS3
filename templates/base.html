@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="static/img/favicon.png" />
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dyxe4g62g/image/upload/v1615153238/images/albums/MS3/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css">
-    <title>Kenan's Cookbook</title>
+    <title>Kenan's Cook Book</title>
 </head>
 
 <body>
@@ -43,14 +43,6 @@
                         <li><a href="{{ url_for('login')}}">Log In</a></li>
                     {% endif %}
                 </ul>
-                <div class="nav-wrapper right">
-                    <form action="{{ url_for('search')}}">
-                        <div class="input-field">
-                            <input type="text" name="query" id="query" value="" class="validate" minlength="3" required>
-                            <label class="label-icon" for="query"><i class="fas fa-search"></i></label>
-                        </div>
-                    </form>
-                </div>
             </div>
         </nav>
 
