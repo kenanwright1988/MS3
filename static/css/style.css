@@ -36,12 +36,11 @@ nav {
 
 .nav-text {
     font-family: "Cormorant Unicase", sans-serif;
-    text-shadow: 0pc 2px 2px 0px black;
+    text-shadow: 2px 2px black;
 }
 
 nav ul a {
     font-size: 30px;
-    
 }
 
 /* --- Footer --- */
@@ -114,6 +113,7 @@ main {
     font-size: 25px;
     color: black;
 }
+
 
 
 /*-- code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown --*/

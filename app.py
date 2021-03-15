@@ -171,7 +171,10 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/search", methods=["GET", "POST"])
+# Search function, takes the string used to search
+#  and returns all matches from the db. Code from
+# walkthrough task project and modified to suit this project
+@app.route("/search", methods=["GET"])
 def search():
     query = request.args.get("query")
     recipies = list(mongo.db.recipies.find({"$text": {"$search": query}}))

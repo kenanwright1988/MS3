@@ -22,7 +22,7 @@
                                             <h4>Submitted on: {{ recipe.date_created }}</h4>
 
                                         </div>
-                                        <!-- Gets indevidual ingredients from ing_name key -->
+                                        <!-- Gets individual ingredients from ing_name key -->
 
                                     </div>
                                     <div class="row">
@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col s 12 center-align">
-                                            
+                                        <!-- Gets individual steps from steps key -->    
                                                 {% for step in recipe.steps %}
                                                     <h5 class="underline">Step {{ loop.index }}:</h5>
                                                     <p>{{ step }}</p>

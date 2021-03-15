@@ -12,7 +12,7 @@ add edit recipie functionality - need to have the data from the recipe im editin
 fix nav layout, make it look good
 design recipie layout more
 fix ul for recipie lists
-add search and indexing
+add search and indexing - done just need to refine it a bit more. 
 add admin account functionality which shows edit/delete for recipies and users. 
 
 clean up add recipie formatting and layout
