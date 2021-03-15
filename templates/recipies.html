@@ -1,56 +1,64 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container center-align">
-    {% for recipe in recipies %}
-
-    <div class="row">
-        <div class="col s12">
-            <div class="card box-shadow box-color">
-                <div class="card-content ">
+    
+<div class="container center-align">   
+        {% for recipe in recipies %}
+            {% if recipies|length != 0 %}  
+                
                     <div class="row">
-                        <div class="col s4">
-                            <img class="recipe-image  box-shadow" src="{{ recipe.img_url }}"
-                                alt="Image of {{ recipe.food_name }}">
-                        </div>
-                        <div class="col s8 center-align">
-                            <h3 class="underline">{{ recipe.food_name }}</h3><br>
-                            <h4>Cooking Time: {{ recipe.cook_time }}min</h4>
-                            <h4>Difficulty: {{ recipe.difficulty }}</h4>
-                            <h4>Submitted by: {{ recipe.created_by }}</h4>
-                            <h4>Submitted on: {{ recipe.date_created }}</h4>
+                        <div class="col s12">
+                            <div class="card box-shadow box-color">
+                                <div class="card-content ">
+                                    <div class="row">
+                                        <div class="col s4">
+                                            <img class="recipe-image box-shadow" src="{{ recipe.img_url }}"
+                                                alt="Image of {{ recipe.food_name }}">
+                                        </div>
+                                        <div class="col s8 center-align">
+                                            <h3 class="underline">{{ recipe.food_name|title }}</h3><br>
+                                            <h4>Cooking Time: {{ recipe.cook_time }}min</h4>
+                                            <h4>Difficulty: {{ recipe.difficulty }}</h4>
+                                            <h4>Submitted by: {{ recipe.created_by }}</h4>
+                                            <h4>Submitted on: {{ recipe.date_created }}</h4>
 
-                        </div>
-                        <!-- Gets indevidual ingredients from ing_name key -->
+                                        </div>
+                                        <!-- Gets indevidual ingredients from ing_name key -->
 
-                    </div>
-                    <div class="row">
-                        <div class="col s3 ingredients">
-                            <h4 class="underline">Ingredients:</h4>
-                            <ul class="custom_list left-align">
-                                {% if recipe.ing_name %}
-                                {% for ingredient in recipe.ing_name %}
-                                <li>{{ ingredient|title }}</li>
-                                {% endfor %}
-                                {% else %}
-                                <p>No ingredients added</p>
-                                {% endif %}
-                            </ul>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3 ingredients">
+                                            <h4 class="underline">Ingredients:</h4>
+                                            <ul class="custom_list left-align">
+                                                {% if recipe.ing_name %}
+                                                {% for ingredient in recipe.ing_name %}
+                                                <li>{{ ingredient|title }}</li>
+                                                {% endfor %}
+                                                {% else %}
+                                                <li>No ingredients added</li>
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s 12 center-align">
+                                            
+                                                {% for step in recipe.steps %}
+                                                    <h5 class="underline">Step {{ loop.index }}:</h5>
+                                                    <p>{{ step }}</p>
+                                                {% endfor %}
+                                            
+                                        </div>
+                                    </div>                 
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s 12 center-align">
-                            
-                                {% for step in recipe.steps %}
-                                    <h5 class="underline">Step {{ loop.index }}:</h5>
-                                    <p>{{ step }}</p>
-                                {% endfor %}
-                            
-                        </div>
-                    </div>                 
-                </div>
-            </div>
-        </div>
 
-        {% endfor %}
-    </div>
-    {% endblock %}
+                
+            {% else %}
+                <h3>No Recipies Found!</h3>        
+            {% endif %}         
+                
+        {% endfor %}  
+ 
+</div>             
+{% endblock %}

@@ -171,6 +171,14 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.args.get("query")
+    recipies = list(mongo.db.recipies.find({"$text": {"$search": query}}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

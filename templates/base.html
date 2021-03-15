@@ -44,11 +44,10 @@
                     {% endif %}
                 </ul>
                 <div class="nav-wrapper right">
-                    <form>
+                    <form action="{{ url_for('search')}}">
                         <div class="input-field">
-                            <input id="search" type="search" required>
-                            <label class="label-icon" for="search"><i class="fas fa-search"></i></label>
-
+                            <input type="text" name="query" id="query" value="" class="validate" minlength="3" required>
+                            <label class="label-icon" for="query"><i class="fas fa-search"></i></label>
                         </div>
                     </form>
                 </div>
