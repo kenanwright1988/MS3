@@ -128,8 +128,12 @@ def register():
 
 @app.route("/user_profile.html")
 def user_profile():
-    recipies = list(mongo.db.recipies.find())
-    return render_template("user_profile.html", recipies=recipies)
+    user = session.get("user")
+    if user is not None:
+        recipies = list(mongo.db.recipies.find())
+        return render_template("user_profile.html", recipies=recipies)
+    else:
+        return render_template("403.html")
 
 
 # login method used from walkthrough project
@@ -180,6 +184,22 @@ def search():
     recipies = list(mongo.db.recipies.find({"$text": {"$search": query}}))
     return render_template("recipies.html",
                            recipies=recipies)
+
+
+# Error handlers from flask documentation
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(403)
+def access_denied(e):
+    return render_template('403.html'), 403
+
+
+@app.errorhandler(500)
+def access_denied(e):
+    return render_template('500.html'), 500
 
 
 if __name__ == "__main__":
