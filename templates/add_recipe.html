@@ -25,7 +25,6 @@
                                     <option value="Intermediate"><em>Intermediate</em></option>
                                     <option value="Advanced">Advanced</option>
                                 </select>
-                                <label class="black-text" for="difficulty">Difficulty</label>
                             </div>
                         </div>
 
@@ -33,13 +32,12 @@
                             <div class="input-field col s12">
                                 <input id="cook_time" type="text" name="cook_time" class="validate" required>
                                 <label class="black-text" for="cook_time">Cooking time in minuites</label>
+                                <input id="img_url" type="hidden" name="img_url" class="validate" required> 
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="img_url" type="text" name="img_url" class="validate" required>
-                                <label class="black-text" for="img_url">Image URL</label>
-                                <a href="#"  id="upload_widget">upload</a>
+                                                              
                             </div>
                         </div>
                         <div class="row">
@@ -50,12 +48,7 @@
                             <a type="button" class="btn green add_field_button right"><i class="fas fa-plus"></i></a>
                         </div>
                         <div class="row ingredients_list">
-                            
-                            
                         </div>
-
-
-
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="steps" type="text" name="steps" class="validate" required>
@@ -68,6 +61,7 @@
                         </div>
                         <div class="row center-align">
                             <div class="col s12">
+                                <button type="button" class="btn-large green box-shadow" href="#"  id="upload_widget">Upload Image</button>
                                 <button type="submit" class="btn-large grey darken-4 box-shadow">
                                     Submit Recipe <i class="fas fa-sign-in-alt"></i>
                                 </button>
