@@ -39,6 +39,7 @@
                             <div class="input-field col s12">
                                 <input id="img_url" type="text" name="img_url" class="validate" required>
                                 <label class="black-text" for="img_url">Image URL</label>
+                                <a href="#"  id="upload_widget">upload</a>
                             </div>
                         </div>
                         <div class="row">
@@ -80,5 +81,6 @@
         </div>
     </div>
 </div>
+<script src="{{ url_for('static', filename='js/cloudinatry_widget.js')}}" type="text/javascript"></script>
 
 {% endblock %}
