@@ -38,6 +38,7 @@ label text overlapping on the firs label and not on each new label - figure this
 werkzuig couldnt build the template for edit_recipe.html - working with michael from CI tutor support we found the problem was a jinja if statement on the base .html - try get this working again. 
 Couldnt fetch the name attribute on login - login method only inserted user attribute into cookies so when the user was creating a recipie it was insterting null into created by field. fixed by adding the name field into cookie upon login
 Couldnt make the search function work - Tutor support Kevin assisted me in fixing this by adding the propper form action to my search bar as well as using request.args.get("query") instead of request.form.get("query") 
+integrating cloudinary api - after upload from widget the image url will be passed to the hidden input on the form and then gets written by the back end and saved to the db.
 
 
 

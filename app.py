@@ -49,7 +49,6 @@ def add_recipe():
             "cook_time": request.form.get("cook_time"),
             "img_url": request.form.get("img_url"),
             "ing_name": ingredients_list,
-            "ing_quantity": request.form.get("ing_quantity"),
             "steps": step_list
         }
         mongo.db.recipies.insert_one(new_recipe)
@@ -79,7 +78,6 @@ def edit_recipe(recipe_id):
             "cook_time": request.form.get("cook_time"),
             "img_url": request.form.get("img_url"),
             "ing_name": ingredients_list,
-            "ing_quantity": request.form.get("ing_quantity"),
             "steps": step_list
         }
         mongo.db.recipies.update({"_id": ObjectId(recipe_id)}, submit)
