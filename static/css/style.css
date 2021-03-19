@@ -78,8 +78,8 @@ main {
 
 
 .recipe-image {
-    height: 210px;
-    width: 315px;
+    height: auto;
+    width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
 
