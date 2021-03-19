@@ -26,6 +26,7 @@ h5 {
 
 p {
     font-family: "Bitter", sans-serif;
+    font-size: 20px;
 }
 
 /* --- Navbar --- */
@@ -77,10 +78,10 @@ main {
 
 
 .recipe-image {
-    height:210px;
+    height: 210px;
     width: 315px;
     background-repeat: no-repeat;
-    object-fit:cover ;
+    object-fit: cover;
 
 }
 
@@ -101,14 +102,14 @@ main {
 }
 
 .box-color {
-    background-color: rgba(238, 238, 238, 0.3);
+    background-color: rgba(238, 238, 238, 0.5);
 }
 
 .underline {
     text-decoration: underline;
 }
 
-.input-field>label  {
+.input-field>label {
     font-family: "Bitter", sans-serif;
     font-size: 25px;
     color: black;
@@ -119,7 +120,7 @@ main {
 /*-- code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown --*/
 ul.dropdown-content.select-dropdown li span {
     background-color: #bdbdbd;
-    color: black; 
+    color: black;
     box-shadow: 0px 10px 10px 0px black;
     font-family: "Bitter", sans-serif;
 }
@@ -127,18 +128,46 @@ ul.dropdown-content.select-dropdown li span {
 .search-box {
     min-height: 80px;
     padding: 10px;
+    border-radius: 12px;
 }
 
 /*-- Code to change placeholder text from w3 Schools documentation --*/
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
-  opacity: 1; /* Firefox */
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1;
+    /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: black;
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: black;
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black;
+}
+
+.sidenav li>a {
+    text-shadow: none;
+    font-size: 30px;
+}
+
+.logo-box {
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: #ECE63D;
+}
+
+.ingredients {
+    border: 2px solid black;
+    background-color: aqua;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+.info-box {
+    border: 2px solid black;
+    border-radius: 12px;
 }

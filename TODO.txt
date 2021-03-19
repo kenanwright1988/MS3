@@ -4,9 +4,12 @@ favicon src : https://www.pinterest.com/pin/39688040450475892/
 background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-counters/
 omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png
 omlette text from : https://www.bbcgoodfood.com/recipes/basic-omelette
+recipies and images from bbcgoodfood
 
 KEEP WORKING ON ADD RECIPIE FORM, need to use js to label the newly created input fields. the remove button removes the parent div and so deletes all the new input and labels.
 add edit recipie functionality - need to have the data from the recipe im editing already filled in, find a way to show multiple steps/ingredients that were filled in previously, fixed with for loop and using loop index to number ingredient and steps.
+
+Turn off console log from image upload when submitting
 
 
 fix nav layout, make it look good

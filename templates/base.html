@@ -11,7 +11,6 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
-        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/simplePagination.css')}}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css">
     <title>Kenan's Cook Book</title>
 </head>
@@ -20,10 +19,9 @@
 
     <!-- Navbar -->
     <header>
-        <div class="row">
-            <div class="col s12 center-align">
-                <h1 class="page-heading"><i class="fas fa-utensils"></i> Kenan's Cook Book <i class="fas fa-bacon"></i>
-                </h1>
+        <div class="row center-align">
+            <div class="col s12">
+                <h1 class="page-heading">Kenan's Cook Book</h1>
             </div>
 
 
@@ -101,7 +99,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.simplePagination.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js')}}" type="text/javascript"></script>
     <script src="{{ url_for('static', filename='js/add_recipe.js')}}" type="text/javascript"></script>

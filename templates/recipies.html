@@ -31,11 +31,11 @@
                                                 alt="No image uploaded">
                                             {% endif %}
                                         </div>
-                                        <div class="col s8 center-align">
+                                        <div class="col s8 center-align info-box box-shadow">
                                             <h3 class="underline">{{ recipe.food_name|title }}</h3><br>
                                             <h4>Cooking Time: {{ recipe.cook_time }}min</h4>
                                             <h4>Difficulty: {{ recipe.difficulty }}</h4>
-                                            <h4>Submitted by: {{ recipe.created_by }}</h4>
+                                            <h4>Submitted by: {{ recipe.created_by|title }}</h4>
                                             <h4>Submitted on: {{ recipe.date_created }}</h4>
 
                                         </div>
@@ -55,17 +55,18 @@
                                                 {% endif %}
                                             </ul>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col s 12 center-align">
+                                        <div class="col s8 center-align logo-box box-shadow">
                                         <!-- Gets individual steps from steps key -->    
                                                 {% for step in recipe.steps %}
-                                                    <h5 class="underline">Step {{ loop.index }}:</h5>
+                                                    <h4 class="underline">Step {{ loop.index }}:</h4>
                                                     <p>{{ step }}</p>
                                                 {% endfor %}
                                             
                                         </div>
-                                    </div>                 
+                                    </div>
+
+                                        
+                                                    
                                 </div>
                             </div>
                         </div>

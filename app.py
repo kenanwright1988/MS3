@@ -134,7 +134,7 @@ def user_profile():
         return render_template("403.html")
 
 
-# login method used from walkthrough project
+# login method used and customised from walkthrough project
 #  in the Code Institute Backend module
 @app.route("/login", methods=["GET", "POST"])
 def login():
