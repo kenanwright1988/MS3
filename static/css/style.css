@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Cormorant+Unicase&display=swap');
 
 html {
-    background: url("https://res.cloudinary.com/dyxe4g62g/image/upload/v1615153236/images/albums/MS3/background.jpg") no-repeat center center fixed;
+    background: url("https://res.cloudinary.com/dyxe4g62g/image/upload/v1616252447/images/albums/MS3/new_background_2_pq1syk.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -31,8 +31,8 @@ p {
 
 /* --- Navbar --- */
 nav {
-    background-color: rgba(0, 0, 0, 0.1);
-    margin-bottom: 100px;
+    background-color: transparent;
+    margin-bottom: 50px;
 }
 
 .nav-text {
@@ -94,8 +94,13 @@ main {
     list-style-type: disc !important;
     font-size: 20px;
     font-family: "Bitter", sans-serif;
-     list-style-position: inside;
+    list-style-position: inside;
+}
 
+.ingredients .custom_list li {
+    border-right: none;
+    margin-right: auto;
+    padding-right: auto;
 }
 
 .box-shadow {
@@ -182,4 +187,32 @@ ul.dropdown-content.select-dropdown li span {
     padding: 5px;
     border: 2px solid white;
     border-radius: 12px;
+}
+
+/*-- Centering Materialize nav. code from https://stackoverflow.com/questions/38964113/how-can-i-create-a-navbar-with-center-aligned-links-using-materialize --*/
+
+nav.nav-center ul {
+    text-align: center;
+}
+
+nav.nav-center ul li {
+    display: inline;
+    float: none;
+}
+
+nav.nav-center ul li a {
+    display: inline-block;
+}
+
+/*-- Piping between Nav links code from https://stackoverflow.com/questions/25247072/how-to-separate-link-items-with-pipeline --*/
+ul li:not(:last-child) {
+    border-right: 1px solid grey;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+    ul li:not(:last-child) {
+        border-right: none;
+    }
 }

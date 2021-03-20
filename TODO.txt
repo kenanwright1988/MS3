@@ -2,6 +2,7 @@ TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
 
 favicon src : https://www.pinterest.com/pin/39688040450475892/
 background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-counters/
+background2: https://eu.goerie.com/story/lifestyle/home-garden/2020/11/14/fresh-kitchen-backsplash-ideas-stylish-and-functional-backsplash-can-breathe-new-life-into-your-kitc/6190279002/
 omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png
 omlette text from : https://www.bbcgoodfood.com/recipes/basic-omelette
 recipies and images from bbcgoodfood
