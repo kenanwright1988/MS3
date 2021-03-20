@@ -176,3 +176,10 @@ ul.dropdown-content.select-dropdown li span {
     border: 5px solid #7e5644;
     border-radius: 12px;
 }
+
+
+.row div .custom-box-padding {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
