@@ -40,8 +40,13 @@ nav {
     text-shadow: 2px 2px black;
 }
 
+.sidenav li>a {
+    color: white;
+}
+
 nav ul a {
     font-size: 30px;
+    font-weight: 800;
 }
 
 /* --- Footer --- */
@@ -130,8 +135,8 @@ main {
 
 /*-- code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown --*/
 ul.dropdown-content.select-dropdown li span {
-    background-color: #bdbdbd;
-    color: black;
+    background-color: black;
+    color: white;
     box-shadow: 0px 10px 10px 0px black;
     font-family: "Bitter", sans-serif;
 }
@@ -145,19 +150,19 @@ ul.dropdown-content.select-dropdown li span {
 /*-- Code to change placeholder text from w3 Schools documentation --*/
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: black;
+    color: white;
     opacity: 1;
     /* Firefox */
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: black;
+    color: white;
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: black;
+    color: white;
 }
 
 .sidenav li>a {
@@ -206,7 +211,7 @@ nav.nav-center ul li a {
 
 /*-- Piping between Nav links code from https://stackoverflow.com/questions/25247072/how-to-separate-link-items-with-pipeline --*/
 ul li:not(:last-child) {
-    border-right: 1px solid grey;
+    border-right: 2px solid white;
     margin-right: 20px;
     padding-right: 20px;
 }
@@ -218,4 +223,9 @@ ul li:not(:last-child) {
     h1 {
         font-size: 40px;
     }
+}
+
+/*-- Turn off Nav shadow code from https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar/51751637 --*/
+.no-shadows {
+    box-shadow: none!important;
 }

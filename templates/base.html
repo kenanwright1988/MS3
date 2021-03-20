@@ -29,7 +29,7 @@
 
             </div>
         </div>
-        <nav class="nav-center">
+        <nav class="nav-center no-shadows">
             <div class="nav-wrapper center-align">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-ellipsis-v"></i></a>
                 <ul class="hide-on-med-and-down nav-text">
@@ -47,7 +47,7 @@
         </nav>
 
 
-        <ul class="sidenav nav-text" id="mobile-demo">
+        <ul class="sidenav chalk-board box-color nav-text" id="mobile-demo">
             <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('add_recipe')}}">Add a Recipe</a></li>

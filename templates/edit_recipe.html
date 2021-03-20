@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="input-field col s12 ">
                                 <input id="food_name" name="food_name" type="text" class="validate" value="{{ recipe.food_name }}" required>
-                                <label class="black-text" for="food_name">Recipe Name</label>
+                                <label class="white-text" for="food_name">Recipe Name</label>
                             </div>
                         </div>
                         
@@ -39,20 +39,20 @@
                                         <option value="Advanced">Advanced</option>
                                     {% endif %}    
                                 </select>
-                                <label class="black-text custom-label-size" for="difficulty">Difficulty</label>
+                                <label class="white-text custom-label-size" for="difficulty">Difficulty</label>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="cook_time" type="text" name="cook_time" class="validate" value="{{ recipe.cook_time }}" required>
-                                <label class="black-text" for="cook_time">Cooking time in minuites</label>
+                                <label class="white-text" for="cook_time">Cooking time in minuites</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="img_url" type="hidden" name="img_url" class="validate" value="{{ recipe.img_url }}" required>
-                                <label class="black-text" for="img_url">Image URL</label>
+                                <label class="white-text" for="img_url">Image URL</label>
                                 <a href="#"  id="upload_widget">upload</a>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="ing_name" type="text" name="ing_name" class="validate" value="{{ extra_ingredient }}" required>
-                                <label class="black-text" for="ing_name">Ingredient {{ loop.index }}</label>
+                                <label class="white-text" for="ing_name">Ingredient {{ loop.index }}</label>
                             </div>
                             <i id="remove_field" class="btn fas fa-minus red right"></i>
                             <a type="button" class="btn green add_field_button right"><i class="fas fa-plus"></i></a>
@@ -73,7 +73,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="steps" type="text" name="steps" class="validate" value="{{ extra_step }}" required>
-                                <label class="black-text" for="steps">Step {{ loop.index }}</label>
+                                <label class="white-text" for="steps">Step {{ loop.index }}</label>
                             </div>
                             <i id="remove_step" class="btn fas fa-minus red right"></i>
                             <a type="button" class="btn green add_step_button right"><i class="fas fa-plus"></i></a>
