@@ -92,8 +92,9 @@ main {
 
 .custom_list li {
     list-style-type: disc !important;
-    font-size: 30px;
+    font-size: 20px;
     font-family: "Bitter", sans-serif;
+     list-style-position: inside;
 
 }
 
@@ -103,6 +104,11 @@ main {
 
 .box-color {
     background-color: rgba(238, 238, 238, 0.5);
+    background-image: url('https://res.cloudinary.com/dyxe4g62g/image/upload/v1616248713/images/albums/MS3/chalkboard-1_zuwdry.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .underline {
@@ -155,19 +161,18 @@ ul.dropdown-content.select-dropdown li span {
 }
 
 .logo-box {
-    border: 2px solid black;
-    border-radius: 12px;
-    background-color: #ECE63D;
+    color: white;
+    background-color: transparent;
 }
 
 .ingredients {
-    border: 2px solid black;
-    background-color: aqua;
-    border-radius: 12px;
-    margin-right: 20px;
+    background-color: transparent;
+    padding: 5px;
+    color: white;
 }
 
-.info-box {
-    border: 2px solid black;
+
+.chalk-board {
+    border: 5px solid #7e5644;
     border-radius: 12px;
 }
