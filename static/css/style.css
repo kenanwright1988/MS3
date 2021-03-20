@@ -215,4 +215,7 @@ ul li:not(:last-child) {
     ul li:not(:last-child) {
         border-right: none;
     }
+    h1 {
+        font-size: 40px;
+    }
 }

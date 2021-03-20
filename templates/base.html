@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css">
-    <title>Kenan's Cook Book</title>
+    <title>Kenan's Kitchen</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <header>
         <div class="row center-align">
             <div class="col s4 offset-s4 box-shadow box-color chalk-board page-heading">
-                <h1 class="white-text">Kenan's Cook Book</h1>
+                <h1 class="white-text">Kenan's Kitchen</h1>
             </div>
 
 
@@ -36,7 +36,7 @@
                     <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('add_recipe')}}">Add a Recipe</a></li>
-                    <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
+                    <li><a href="{{ url_for('user_profile')}}">My Recipies</a></li>
                     <li><a href="{{ url_for('logout')}}">Log Out</a></li>
                     {% else %}
                     <li><a href="{{ url_for('register')}}">Register</a></li>
@@ -51,7 +51,7 @@
             <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('add_recipe')}}">Add a Recipe</a></li>
-            <li><a href="{{ url_for('user_profile')}}">My Profile</a></li>
+            <li><a href="{{ url_for('user_profile')}}">My Recipies</a></li>
             <li><a href="{{ url_for('logout')}}">Log Out</a></li>
             {% else %}
             <li><a href="{{ url_for('register')}}">Register</a></li>
