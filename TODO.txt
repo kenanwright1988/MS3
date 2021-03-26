@@ -12,17 +12,15 @@ add edit recipie functionality - need to have the data from the recipe im editin
 
 Turn off console log from image upload when submitting
 
+add materialize under deployment on readme
 
-fix nav layout, make it look good
-design recipie layout more
-fix ul for recipie lists
 add search and indexing - done just need to refine it a bit more. 
 add admin account functionality which shows edit/delete for recipies and users. 
 
 clean up CSS file 
 clean up add recipie formatting and layout
 
-add min max to inputs on register
+add min max to inputs on register and only numbers on time input
 fix confirmation modal when delete is clicked
 comment each code section 
 

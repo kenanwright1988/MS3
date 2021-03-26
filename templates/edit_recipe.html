@@ -52,8 +52,8 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="img_url" type="hidden" name="img_url" class="validate" value="{{ recipe.img_url }}" required>
-                                <label class="white-text" for="img_url">Image URL</label>
-                                <a href="#"  id="upload_widget">upload</a>
+                                <label class="white-text" for="img_url"></label>
+                                <a href="#" class="btn-large grey darken-4" id="upload_widget">Upload New Image</a>
                             </div>
                         </div>
                         {% for extra_ingredient in recipe.ing_name|list %}

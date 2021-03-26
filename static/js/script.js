@@ -3,6 +3,7 @@
       $('.tabs').tabs();
       $('select').formSelect();
       $('.modal').modal();
+      M.updateTextFields();
             
   });
 

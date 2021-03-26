@@ -123,6 +123,7 @@ main {
 
 .underline {
     text-decoration: underline;
+    margin-bottom: 15px;
 }
 
 .input-field>label {
@@ -228,4 +229,29 @@ ul li:not(:last-child) {
 /*-- Turn off Nav shadow code from https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar/51751637 --*/
 .no-shadows {
     box-shadow: none!important;
+}
+
+.flashes {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*-- Rule taken from Devtools in chrome to move the label up more when inputing data --*/
+.input-field>input[type]:-webkit-autofill:not(.browser-default):not([type="search"])+label, .input-field>input[type=date]:not(.browser-default)+label, .input-field>input[type=time]:not(.browser-default)+label {
+    -webkit-transform: translateY(-30px) scale(0.8);
+    transform: translateY(-30px) scale(0.8);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+/*-- Code to change Chromes autocomplete field background color to black. code from https://dev.to/atndesign/a-trick-to-change-the-autocomplete-background-color-21ll --*/
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+form {
+    margin-top: 20px;
 }
