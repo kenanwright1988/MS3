@@ -60,11 +60,11 @@ nav ul a {
 .page-footer i {
     margin: 0px 20px 0px 20px;
     padding-top: 5px;
-    color: black;
+    color: white;
 }
 
 .page-footer i:hover {
-    color: #fafafa;
+    color: black;
 }
 
 .no-padding {
@@ -255,3 +255,4 @@ select:-webkit-autofill {
 form {
     margin-top: 20px;
 }
+
