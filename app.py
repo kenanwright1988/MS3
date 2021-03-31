@@ -46,7 +46,7 @@ def add_recipe():
             "date_created": d1,
             "food_name": request.form.get("food_name"),
             "difficulty": request.form.get("difficulty"),
-            "cook_time": request.form.get("cook_time"),
+            "cook_time": int(request.form.get("cook_time")),
             "img_url": request.form.get("img_url"),
             "ing_name": ingredients_list,
             "steps": step_list
@@ -75,7 +75,7 @@ def edit_recipe(recipe_id):
             "date_created": d1,
             "food_name": request.form.get("food_name"),
             "difficulty": request.form.get("difficulty"),
-            "cook_time": request.form.get("cook_time"),
+            "cook_time": int(request.form.get("cook_time")),
             "img_url": request.form.get("img_url"),
             "ing_name": ingredients_list,
             "steps": step_list
@@ -184,6 +184,22 @@ def search():
                            recipies=recipies)
 
 
+# Route to sort all by Date created
+@app.route("/date", methods=["GET"])
+def by_date():
+    recipies = list(mongo.db.recipies.find().sort("date_created"))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to sort all by Date created
+@app.route("/cook_time", methods=["GET"])
+def by_cook_time():
+    recipies = list(mongo.db.recipies.find().sort("cook_time", 1))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
 # Error handlers from flask documentation
 @app.errorhandler(404)
 def page_not_found(e):
@@ -204,3 +220,6 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+
+
+

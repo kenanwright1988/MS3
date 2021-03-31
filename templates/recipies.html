@@ -11,6 +11,8 @@
                             <label class="label white-text" for="query"><i class="fas fa-search"></i></label>
                             <button class="submit btn-large grey darken-4 box-shadow">Search</button>
                             <a href="{{ url_for('recipies') }}" class="btn-large red box-shadow">Cancel</a>
+                            <a href="{{ url_for('by_date') }}" class="btn-large red box-shadow">Sort by date</a>
+                            <a href="{{ url_for('by_cook_time') }}" class="btn-large red box-shadow">Sort by Cooking time</a>
                         </div>
                     </form>
             </div>        
@@ -63,7 +65,7 @@
                                         <!-- Gets individual steps from steps key -->    
                                                 {% for step in recipe.steps %}
                                                     <h4 class="underline">Step {{ loop.index }}:</h4>
-                                                    <p>{{ step }}</p>
+                                                    <p class="left-align">{{ step }}</p>
                                                 {% endfor %}
                                             
                                         </div>
