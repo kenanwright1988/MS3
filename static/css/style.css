@@ -257,3 +257,19 @@ select:-webkit-autofill {
 form {
     margin-top: 20px;
 }
+
+.filter-tags a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.filter-tags a:not(:last-child) {
+    border-right: 2px solid white;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.filter-tags a:hover {
+    color: black;
+}

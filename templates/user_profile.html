@@ -7,6 +7,26 @@
             <h5>Here are all the recipies you have created: </h5>
         </div>
     </div>
+    <div class="row">
+        <div class="col s12 box-shadow box-color chalk-board center-align">
+            <h5 class="underline white-text">Filter recipies</h5>
+            <div class="row">
+                <div class="col s12 white-text filter-tags">
+                    <a href="{{ url_for('by_cook_time') }}">Sort by cooking time</a>
+                    <a href="{{ url_for('by_international') }}">International Recipies</a>
+                    <a href="{{ url_for('by_italian') }}">Italian Recipies</a>
+                    <a href="{{ url_for('by_british') }}">British Recipies</a>
+                    <a href="{{ url_for('by_american') }}">American Recipies</a>
+                    <a href="{{ url_for('by_latin') }}">Latin Recipies</a>
+                    <a href="{{ url_for('by_middleeast') }}">Middle Eastern Recipies</a>
+                    <a href="{{ url_for('by_asian') }}">Asian Recipies</a>
+                    <a href="{{ url_for('by_indian') }}">Indian Recipies</a>
+                    <a href="{{ url_for('by_african') }}">African Recipies</a>
+                    <a href="{{ url_for('by_european') }}">European Recipies</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     {% for recipe in recipies %}
     {% if session["user"] == recipe["created_by"|lower ] %}

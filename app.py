@@ -35,7 +35,7 @@ def add_recipe():
         for step in steps:
             step_list.append(step)
         today = date.today()
-        d1 = today.strftime("%d/%m/%Y")
+        d1 = today.strftime("%Y-%m-%d")
         ingredients = request.form.getlist("ing_name")
         ingredients_list = []
         for ingredient in ingredients:
@@ -66,7 +66,7 @@ def edit_recipe(recipe_id):
         for step in steps:
             step_list.append(step)
         today = date.today()
-        d1 = today.strftime("%d/%m/%Y")
+        d1 = today.strftime("%Y-%m-%d")
         ingredients = request.form.getlist("ing_name")
         ingredients_list = []
         for ingredient in ingredients:
@@ -182,14 +182,6 @@ def logout():
 def search():
     query = request.args.get("query")
     recipies = list(mongo.db.recipies.find({"$text": {"$search": query}}))
-    return render_template("recipies.html",
-                           recipies=recipies)
-
-
-# Route to sort all by Date created
-@app.route("/date", methods=["GET"])
-def by_date():
-    recipies = list(mongo.db.recipies.find().sort("date_created"))
     return render_template("recipies.html",
                            recipies=recipies)
 
