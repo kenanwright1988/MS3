@@ -265,6 +265,23 @@ def by_indian():
     return render_template("recipies.html",
                            recipies=recipies)
 
+
+# Route to filter by african
+@app.route("/african", methods=["GET"])
+def by_african():
+    recipies = list(mongo.db.recipies.find({"nationality": "african"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to filter by European
+@app.route("/european", methods=["GET"])
+def by_european():
+    recipies = list(mongo.db.recipies.find({"nationality": "european"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
 # Error handlers from flask documentation
 @app.errorhandler(404)
 def page_not_found(e):
