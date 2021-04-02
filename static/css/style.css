@@ -273,3 +273,18 @@ form {
 .filter-tags a:hover {
     color: black;
 }
+
+.affiliate_links a {
+    font-size: 40px;
+    color: white;
+}
+
+.affiliate_links a:hover {
+    color: black;
+}
+
+.affiliate_links a:not(:last-child) {
+    border-right: 2px solid white;
+    margin-right: 20px;
+    padding-right: 20px;
+}

@@ -286,6 +286,46 @@ def by_european():
                            recipies=recipies)
 
 
+# Route to filter by pots
+@app.route("/pots", methods=["GET"])
+def by_pots():
+    products = list(mongo.db.products.find({"type": "pot"}))
+    return render_template("range.html",
+                           products=products)
+
+
+# Route to filter by pans
+@app.route("/pans", methods=["GET"])
+def by_pans():
+    products = list(mongo.db.products.find({"type": "pan"}))
+    return render_template("range.html",
+                           products=products)
+
+
+# Route to filter by knives
+@app.route("/knives", methods=["GET"])
+def by_knives():
+    products = list(mongo.db.products.find({"type": "knife"}))
+    return render_template("range.html",
+                           products=products)
+
+
+# Route to filter by utensils
+@app.route("/utensil", methods=["GET"])
+def by_utensils():
+    products = list(mongo.db.products.find({"type": "utensil"}))
+    return render_template("range.html",
+                           products=products)
+
+
+# Route to filter by product rating
+@app.route("/rating", methods=["GET"])
+def by_rating():
+    products = list(mongo.db.products.find().sort("rating", -1))
+    return render_template("range.html",
+                           products=products)
+
+
 # Error handlers from flask documentation
 @app.errorhandler(404)
 def page_not_found(e):

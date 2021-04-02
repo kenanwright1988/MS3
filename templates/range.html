@@ -2,28 +2,15 @@
 {% block content %}
 <div class="container center-align">
     <div class="row">
-        <div class="col s12 box-shadow box-color chalk-board center-align search-box">
-            <div>
-                <form action="{{ url_for('search')}}">
-                    <div class="input-field">
-                        <input type="text" name="query" id="query" placeholder="Search" class="validate" minlength="3"
-                            required>
-                        <label class="label white-text" for="query"><i class="fas fa-search"></i></label>
-                        <button class="submit btn-large grey darken-4 box-shadow">Search</button>
-                        <a href="{{ url_for('range') }}" class="btn-large red box-shadow">Cancel</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
         <div class="col s12 box-shadow box-color chalk-board center-align">
-            <h5 class="underline white-text">Filter recipies</h5>
+            <h5 class="underline white-text">Filter Products</h5>
             <div class="row">
                 <div class="col s12 white-text filter-tags">
-                    <a href="#">Sort by cooking time</a>
-                    <a href="#">International Recipies</a>
+                    <a href="{{ url_for('by_rating') }}">Highest Rated</a>
+                    <a href="{{ url_for('by_pots') }}">Pots</a>
+                    <a href="{{ url_for('by_pans') }}">Pans</a>
+                    <a href="{{ url_for('by_knives') }}">Knives</a>
+                    <a href="{{ url_for('by_utensils') }}">Utensils</a>
                     
                 </div>
             </div>
@@ -79,6 +66,16 @@
                             <h4 class="underline">About:</h4>
                             <p>{{ product.about }}</p>
                         </div>
+                </div>
+                <div class="row center-align">
+                    <div class="col s12 white-text">
+                        <h4>Buy now from one of our retail partners</h4>
+                        <div class="div col s12 affiliate_links">
+                            <a href="http://www.amazon.co.uk"><i class="fab fa-amazon"></i></a>
+                            <a href="http://www.ebay.com"><i class="fab fa-ebay"></i></a>
+                            <a href="https://disney.fandom.com/wiki/Buy_n_Large"><i class="fab fa-buy-n-large"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
