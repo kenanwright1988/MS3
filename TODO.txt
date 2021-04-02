@@ -16,6 +16,7 @@ salmon roll from https://www.indoindians.com/how-to-make-salmon-sushi-2/
 indian scrambled eggs from https://www.bbc.co.uk/food/recipes/indianscrambledeggs_86454
 african eggs from https://www.bbc.co.uk/food/recipes/spiced_north-african_82972
 herring with dill from https://www.bbc.co.uk/food/recipes/herringwithdillandmu_88218
+frying pan from https://images-na.ssl-images-amazon.com/images/I/61ato0rDpjL._SX425_.jpg
 recipies and images from bbcgoodfood
 
 
@@ -25,7 +26,7 @@ Turn off console log from image upload when submitting
 add materialize under deployment on readme
 
 add search and indexing - done just need to refine it a bit more. 
-add admin account functionality which shows edit/delete for recipies and users. 
+
 
 clean up CSS file 
 clean up add recipie formatting and layout

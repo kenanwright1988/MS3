@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container center-align">
+    <div class="row">
+        <div class="col s12 box-shadow box-color chalk-board center-align search-box">
+            <div>
+                <form action="{{ url_for('search')}}">
+                    <div class="input-field">
+                        <input type="text" name="query" id="query" placeholder="Search" class="validate" minlength="3"
+                            required>
+                        <label class="label white-text" for="query"><i class="fas fa-search"></i></label>
+                        <button class="submit btn-large grey darken-4 box-shadow">Search</button>
+                        <a href="{{ url_for('range') }}" class="btn-large red box-shadow">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 box-shadow box-color chalk-board center-align">
+            <h5 class="underline white-text">Filter recipies</h5>
+            <div class="row">
+                <div class="col s12 white-text filter-tags">
+                    <a href="#">Sort by cooking time</a>
+                    <a href="#">International Recipies</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% for product in products %}
+    {% if products|length != 0 %}
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card box-shadow box-color chalk-board">
+                <div class="card-content ">
+                    <div class="row ">
+                        <div class="col s6 offset-s3 chalk-outline custom-box-padding">
+                            {% if product.img_url %}
+                            <img class="recipe-image box-shadow" src="{{ product.img_url }}"
+                                alt="Image of {{ product.name }}">
+                            {% else %}
+                            <img class="recipe-image box-shadow"
+                                src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1616167504/image-not-found_y6b1wx.jpg"
+                                alt="No image uploaded">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 white-text center-align info-box ">
+                            <h3 class="underline">{{ product.name|title }}</h3><br>
+                            <h4>Recommended Price: ${{ product.msrp|title }}</h4>
+                            <h4>User rating: {{ product.rating }}</h4>
+                            <h4>Diameter: {{ product.diameter }}</h4>
+                            <h4>Non-stick: {{ product.nonstick }}</h4>
+                            <h4>Care: {{ product.care }}</h4>
+
+                        </div>
+
+                    </div>
+                    <div class="row center-align">
+                        <div class="col s12 white-text center-align info-box ">
+                            <h4 class="underline">About:</h4>
+                            <p>{{ product.about }}</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% else %}
+        <h3>No Recipies Found!</h3>
+        {% endif %}
+
+        {% endfor %}
+
+
+    </div>
+{% endblock %}

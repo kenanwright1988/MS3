@@ -27,6 +27,18 @@ def recipies():
                            "recipies.html", recipies=recipies,)
 
 
+@app.route("/utensils")
+def utensils():
+    return render_template("store.html")
+
+
+@app.route("/range")
+def range():
+    products = list(mongo.db.products.find())
+    return render_template(
+                           "range.html", products=products)
+
+
 @app.route("/add_recipe.html", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":

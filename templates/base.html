@@ -34,6 +34,7 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-ellipsis-v"></i></a>
                 <ul class="hide-on-med-and-down nav-text">
                     <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
+                    <li><a href="{{ url_for('utensils')}}">Premium Utensils</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('add_recipe')}}">Add a Recipe</a></li>
                     <li><a href="{{ url_for('user_profile')}}">My Recipies</a></li>
@@ -49,6 +50,7 @@
 
         <ul class="sidenav chalk-board box-color nav-text" id="mobile-demo">
             <li><a href="{{ url_for('recipies')}}">Recipies</a></li>
+            <li><a href="{{ url_for('utensils')}}">Premium Utensils</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('add_recipe')}}">Add a Recipe</a></li>
             <li><a href="{{ url_for('user_profile')}}">My Recipies</a></li>
