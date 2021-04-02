@@ -6,6 +6,15 @@ background2: https://eu.goerie.com/story/lifestyle/home-garden/2020/11/14/fresh-
 omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png
 omlette text from : https://www.bbcgoodfood.com/recipes/basic-omelette
 jam from https://foodgawker.com/post/2017/08/21/675744/
+boiled egg from https://thestayathomechef.com/how-to-boil-eggs/
+carbonara from https://www.bbcgoodfood.com/recipes/ultimate-spaghetti-carbonara-recipe
+american pancakes from https://www.bbc.co.uk/food/recipes/fluffyamericanpancak_74828
+scotch egg from https://www.bbc.co.uk/food/recipes/scotcheggs_85851
+bunuelos from https://www.bbc.co.uk/food/recipes/buuelos_with_spiced_15500
+kofta from https://recipesjourney.com/en/turkish-kofte-recipe-lamb-meat/
+salmon roll from https://www.indoindians.com/how-to-make-salmon-sushi-2/
+indian scrambled eggs from https://www.bbc.co.uk/food/recipes/indianscrambledeggs_86454
+
 recipies and images from bbcgoodfood
 
 

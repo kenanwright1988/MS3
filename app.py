@@ -49,7 +49,8 @@ def add_recipe():
             "cook_time": int(request.form.get("cook_time")),
             "img_url": request.form.get("img_url"),
             "ing_name": ingredients_list,
-            "steps": step_list
+            "steps": step_list,
+            "nationality": request.form.get("nationality")
         }
         mongo.db.recipies.insert_one(new_recipe)
         flash("Thank you for submitting your recipe!")
@@ -78,7 +79,8 @@ def edit_recipe(recipe_id):
             "cook_time": int(request.form.get("cook_time")),
             "img_url": request.form.get("img_url"),
             "ing_name": ingredients_list,
-            "steps": step_list
+            "steps": step_list,
+            "nationality": request.form.get("nationality")
         }
         mongo.db.recipies.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated!")
@@ -192,13 +194,76 @@ def by_date():
                            recipies=recipies)
 
 
-# Route to sort all by Date created
+# Route to sort all by Cooking time
 @app.route("/cook_time", methods=["GET"])
 def by_cook_time():
     recipies = list(mongo.db.recipies.find().sort("cook_time", 1))
     return render_template("recipies.html",
                            recipies=recipies)
 
+
+# Route to filter by international
+@app.route("/international", methods=["GET"])
+def by_international():
+    recipies = list(mongo.db.recipies.find({"nationality": "international"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to filter by Italian
+@app.route("/italian", methods=["GET"])
+def by_italian():
+    recipies = list(mongo.db.recipies.find({"nationality": "italian"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to filter by British
+@app.route("/british", methods=["GET"])
+def by_british():
+    recipies = list(mongo.db.recipies.find({"nationality": "british"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to filter by American
+@app.route("/american", methods=["GET"])
+def by_american():
+    recipies = list(mongo.db.recipies.find({"nationality": "american"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to filter by latin
+@app.route("/latin", methods=["GET"])
+def by_latin():
+    recipies = list(mongo.db.recipies.find({"nationality": "latin"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to filter by middleeast
+@app.route("/middleeast", methods=["GET"])
+def by_middleeast():
+    recipies = list(mongo.db.recipies.find({"nationality": "middle eastern"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to filter by asian
+@app.route("/asian", methods=["GET"])
+def by_asian():
+    recipies = list(mongo.db.recipies.find({"nationality": "asian"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
+
+
+# Route to filter by indian
+@app.route("/indian", methods=["GET"])
+def by_indian():
+    recipies = list(mongo.db.recipies.find({"nationality": "indian"}))
+    return render_template("recipies.html",
+                           recipies=recipies)
 
 # Error handlers from flask documentation
 @app.errorhandler(404)
