@@ -27,11 +27,6 @@ def recipies():
                            "recipies.html", recipies=recipies,)
 
 
-@app.route("/utensils")
-def utensils():
-    return render_template("store.html")
-
-
 @app.route("/range")
 def range():
     products = list(mongo.db.products.find())
