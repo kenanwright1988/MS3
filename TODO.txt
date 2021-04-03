@@ -26,7 +26,7 @@ pot spoon from https://royaldesign.com/us/pot-spoon-526-30-cm
 
 recipies and images from bbcgoodfood
 
-
+ad span sr only on clickable icons for disability
 
 Turn off console log from image upload when submitting
 
