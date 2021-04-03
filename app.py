@@ -20,11 +20,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/recipies.html")
-def recipies():
-    recipies = list(mongo.db.recipies.find())
+@app.route("/recipes.html")
+def recipes():
+    recipes = list(mongo.db.recipies.find())
     return render_template(
-                           "recipies.html", recipies=recipies,)
+                           "recipes.html", recipes=recipes,)
 
 
 @app.route("/range")
@@ -137,8 +137,8 @@ def register():
 def user_profile():
     user = session.get("user")
     if user is not None:
-        recipies = list(mongo.db.recipies.find())
-        return render_template("user_profile.html", recipies=recipies)
+        recipes = list(mongo.db.recipies.find())
+        return render_template("user_profile.html", recipes=recipes)
     else:
         return render_template("403.html")
 
@@ -188,97 +188,97 @@ def logout():
 @app.route("/search", methods=["GET"])
 def search():
     query = request.args.get("query")
-    recipies = list(mongo.db.recipies.find({"$text": {"$search": query}}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"$text": {"$search": query}}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to sort all by Cooking time
 @app.route("/cook_time", methods=["GET"])
 def by_cook_time():
-    recipies = list(mongo.db.recipies.find().sort("cook_time", 1))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find().sort("cook_time", 1))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by international
 @app.route("/international", methods=["GET"])
 def by_international():
-    recipies = list(mongo.db.recipies.find({"nationality": "international"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "international"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by Italian
 @app.route("/italian", methods=["GET"])
 def by_italian():
-    recipies = list(mongo.db.recipies.find({"nationality": "italian"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "italian"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by British
 @app.route("/british", methods=["GET"])
 def by_british():
-    recipies = list(mongo.db.recipies.find({"nationality": "british"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "british"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by American
 @app.route("/american", methods=["GET"])
 def by_american():
-    recipies = list(mongo.db.recipies.find({"nationality": "american"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "american"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by latin
 @app.route("/latin", methods=["GET"])
 def by_latin():
-    recipies = list(mongo.db.recipies.find({"nationality": "latin"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "latin"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by middleeast
 @app.route("/middleeast", methods=["GET"])
 def by_middleeast():
-    recipies = list(mongo.db.recipies.find({"nationality": "middle eastern"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "middle eastern"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by asian
 @app.route("/asian", methods=["GET"])
 def by_asian():
-    recipies = list(mongo.db.recipies.find({"nationality": "asian"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "asian"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by indian
 @app.route("/indian", methods=["GET"])
 def by_indian():
-    recipies = list(mongo.db.recipies.find({"nationality": "indian"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "indian"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by african
 @app.route("/african", methods=["GET"])
 def by_african():
-    recipies = list(mongo.db.recipies.find({"nationality": "african"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "african"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by European
 @app.route("/european", methods=["GET"])
 def by_european():
-    recipies = list(mongo.db.recipies.find({"nationality": "european"}))
-    return render_template("recipies.html",
-                           recipies=recipies)
+    recipes = list(mongo.db.recipies.find({"nationality": "european"}))
+    return render_template("recipes.html",
+                           recipes=recipes)
 
 
 # Route to filter by pots

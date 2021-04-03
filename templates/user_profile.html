@@ -3,32 +3,32 @@
 <div class="container">
     <div class="row">
         <div class="col s12 center-align white-text">
-            <h1>{{ session["name"]|title }}'s Recipies</h1>
-            <h5>Here are all the recipies you have created: </h5>
+            <h1>{{ session["name"]|title }}'s Recipes</h1>
+            <h5>Here are all the recipes you have created: </h5>
         </div>
     </div>
     <div class="row">
         <div class="col s12 box-shadow box-color chalk-board center-align">
-            <h5 class="underline white-text">Filter recipies</h5>
+            <h5 class="underline white-text">Filter recipes</h5>
             <div class="row">
                 <div class="col s12 white-text filter-tags">
                     <a href="{{ url_for('by_cook_time') }}">Sort by cooking time</a>
-                    <a href="{{ url_for('by_international') }}">International Recipies</a>
-                    <a href="{{ url_for('by_italian') }}">Italian Recipies</a>
-                    <a href="{{ url_for('by_british') }}">British Recipies</a>
-                    <a href="{{ url_for('by_american') }}">American Recipies</a>
-                    <a href="{{ url_for('by_latin') }}">Latin Recipies</a>
-                    <a href="{{ url_for('by_middleeast') }}">Middle Eastern Recipies</a>
-                    <a href="{{ url_for('by_asian') }}">Asian Recipies</a>
-                    <a href="{{ url_for('by_indian') }}">Indian Recipies</a>
-                    <a href="{{ url_for('by_african') }}">African Recipies</a>
-                    <a href="{{ url_for('by_european') }}">European Recipies</a>
+                    <a href="{{ url_for('by_international') }}">International Recipes</a>
+                    <a href="{{ url_for('by_italian') }}">Italian Recipes</a>
+                    <a href="{{ url_for('by_british') }}">British Recipes</a>
+                    <a href="{{ url_for('by_american') }}">American Recipes</a>
+                    <a href="{{ url_for('by_latin') }}">Latin Recipes</a>
+                    <a href="{{ url_for('by_middleeast') }}">Middle Eastern Recipes</a>
+                    <a href="{{ url_for('by_asian') }}">Asian Recipes</a>
+                    <a href="{{ url_for('by_indian') }}">Indian Recipes</a>
+                    <a href="{{ url_for('by_african') }}">African Recipes</a>
+                    <a href="{{ url_for('by_european') }}">European Recipes</a>
                 </div>
             </div>
         </div>
     </div>
 
-    {% for recipe in recipies %}
+    {% for recipe in recipes %}
     {% if session["user"] == recipe["created_by"|lower ] %}
     <div class="row">
         <div class="col s12">

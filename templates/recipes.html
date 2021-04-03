@@ -11,7 +11,7 @@
                             required>
                         <label class="label white-text" for="query"><i class="fas fa-search"></i></label>
                         <button class="submit btn-large grey darken-4 box-shadow">Search</button>
-                        <a href="{{ url_for('recipies') }}" class="btn-large red box-shadow">Cancel</a>
+                        <a href="{{ url_for('recipes') }}" class="btn-large red box-shadow">Cancel</a>
                     </div>
                 </form>
             </div>
@@ -20,27 +20,27 @@
 
     <div class="row">
         <div class="col s12 box-shadow box-color chalk-board center-align">
-            <h5 class="underline white-text">Filter recipies</h5>
+            <h5 class="underline white-text">Filter recipes</h5>
             <div class="row">
                 <div class="col s12 white-text filter-tags">
                     <a href="{{ url_for('by_cook_time') }}">Sort by cooking time</a>
-                    <a href="{{ url_for('by_international') }}">International Recipies</a>
-                    <a href="{{ url_for('by_italian') }}">Italian Recipies</a>
-                    <a href="{{ url_for('by_british') }}">British Recipies</a>
-                    <a href="{{ url_for('by_american') }}">American Recipies</a>
-                    <a href="{{ url_for('by_latin') }}">Latin Recipies</a>
-                    <a href="{{ url_for('by_middleeast') }}">Middle Eastern Recipies</a>
-                    <a href="{{ url_for('by_asian') }}">Asian Recipies</a>
-                    <a href="{{ url_for('by_indian') }}">Indian Recipies</a>
-                    <a href="{{ url_for('by_african') }}">African Recipies</a>
-                    <a href="{{ url_for('by_european') }}">European Recipies</a>
+                    <a href="{{ url_for('by_international') }}">International Recipes</a>
+                    <a href="{{ url_for('by_italian') }}">Italian Recipes</a>
+                    <a href="{{ url_for('by_british') }}">British Recipes</a>
+                    <a href="{{ url_for('by_american') }}">American Recipes</a>
+                    <a href="{{ url_for('by_latin') }}">Latin Recipes</a>
+                    <a href="{{ url_for('by_middleeast') }}">Middle Eastern Recipes</a>
+                    <a href="{{ url_for('by_asian') }}">Asian Recipes</a>
+                    <a href="{{ url_for('by_indian') }}">Indian Recipes</a>
+                    <a href="{{ url_for('by_african') }}">African Recipes</a>
+                    <a href="{{ url_for('by_european') }}">European Recipes</a>
                 </div>
             </div>
         </div>
     </div>
 
-    {% for recipe in recipies %}
-    {% if recipies|length != 0 %}
+    {% for recipe in recipes %}
+    {% if recipes|length != 0 %}
 
     <div class="row">
         <div class="col s12">
@@ -102,7 +102,7 @@
 
 
         {% else %}
-        <h3>No Recipies Found!</h3>
+        <h3>No Recipes Found!</h3>
         {% endif %}
 
         {% endfor %}
