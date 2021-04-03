@@ -143,7 +143,7 @@ def user_profile():
         return render_template("403.html")
 
 
-# login method used and customised from walkthrough project
+# login method used and customized from walkthrough project
 #  in the Code Institute Backend module
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -158,7 +158,7 @@ def login():
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     session["name"] = existing_user["name"]
-                    flash("Welcome, {}".format(request.form.get("username")))
+                    flash("Welcome, {}!".format(request.form.get("username")))
                     return redirect(url_for("user_profile", username=session["user"]))
             else:
                 # invalid password match
@@ -173,7 +173,7 @@ def login():
     return render_template("login.html")
 
 
-# login method used from walkthrough project
+# logout method used from walkthrough project
 #  in the Code Institute Backend module
 @app.route("/logout")
 def logout():

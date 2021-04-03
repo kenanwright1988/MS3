@@ -105,7 +105,6 @@ main {
 .ingredients .custom_list li {
     border-right: none;
     margin-right: auto;
-    padding-right: auto;
     padding-left: 0;
     margin-left: 20px;
 }
@@ -335,7 +334,7 @@ input.valid[type=text]:not(.browser-default) {
 .input-field>label:not(.label-icon).active {
     color: white !important;
 }
-
+/*-- Changes the label underline on focus from green to white --*/
 .input-field input[type=email]:focus,
 .input-field input[type=text]:focus,
 .input-field input[type=number]:focus,

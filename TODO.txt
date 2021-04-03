@@ -36,17 +36,11 @@ add search and indexing - done just need to refine it a bit more.
 
 
 clean up CSS file 
-clean up add recipie formatting and layout
 
-add min max to inputs on register and only numbers on time input
 fix confirmation modal when delete is clicked
 comment each code section 
 
 
-
-
-
-comment user auth hashing, login and logout from walkthrough project
 comment register from walkthrough and highlight parts that I have changed
 
 
@@ -61,19 +55,5 @@ Couldnt make the search function work - Tutor support Kevin assisted me in fixin
 integrating cloudinary api - after upload from widget the image url will be passed to the hidden input on the form and then gets written by the back end and saved to the db.
 add edit recipie functionality - need to have the data from the recipe im editing already filled in, find a way to show multiple steps/ingredients that were filled in previously, fixed with for loop and using loop index to number ingredient and steps.
 recipe sorting list as 25 5 etc - fixed by storing cook time as integer rather than string
+underline color of materialize inputs - had to look at the materializw rules targeting these items and had to use !important as I could not create a specific enough rule. 
 
-CODE I NEED TO KEEP BUT NOT USE YET!
- <!-- My if statement to check what page you are on and display a custom subheading under the h1 -->
-                {% if url_for(request.endpoint) == "/recipies.html" %}
-                <h3>Recipies</h3>
-                {% elif url_for(request.endpoint) == "/register.html" %}
-                <h3>Register a new user</h3>
-                {% elif url_for(request.endpoint) == "/login.html" %}
-                <h3>Please Log In</h3>
-                {% elif url_for(request.endpoint) == "/user_profile.html" %}
-                <h3>{{ session['name'] }}'s Profile</h3>
-                {% elif url_for(request.endpoint) == "/add_recipe.html" %}
-                <h3>Add your own recipe</h3>
-                {% else %}
-                <h3>No page name set</h3>
-                {% endif %}
