@@ -1,45 +1,17 @@
-{% extends "base.html" %}
-{% block content %}
-
-<div class="container center-align">
-    <div class="row">
-        <div class="col s12 box-shadow box-color chalk-board center-align search-box">
-            <div>
-                <form action="{{ url_for('search')}}">
-                    <div class="input-field">
-                        <input type="text" name="query" id="query" placeholder="Search" class="validate" minlength="3"
-                            required>
-                        <label class="label white-text" for="query"><i class="fas fa-search"></i></label>
-                        <button class="submit btn-large grey darken-4 box-shadow">Search</button>
-                        <a href="{{ url_for('recipes') }}" class="btn-large red box-shadow">Cancel</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s12 box-shadow box-color chalk-board center-align">
-            <h5 class="underline white-text">Filter recipes</h5>
-            <div class="row">
-                <div class="col s12 white-text filter-tags">
-                    <a href="{{ url_for('by_cook_time') }}">Sort by cooking time</a>
-                    <a href="{{ url_for('by_international') }}">International Recipes</a>
-                    <a href="{{ url_for('by_italian') }}">Italian Recipes</a>
-                    <a href="{{ url_for('by_british') }}">British Recipes</a>
-                    <a href="{{ url_for('by_american') }}">American Recipes</a>
-                    <a href="{{ url_for('by_latin') }}">Latin Recipes</a>
-                    <a href="{{ url_for('by_middleeast') }}">Middle Eastern Recipes</a>
-                    <a href="{{ url_for('by_asian') }}">Asian Recipes</a>
-                    <a href="{{ url_for('by_indian') }}">Indian Recipes</a>
-                    <a href="{{ url_for('by_african') }}">African Recipes</a>
-                    <a href="{{ url_for('by_european') }}">European Recipes</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{ pagination.links }}
-    {% for recipe in recipes %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>flask-bootstrap example</title>
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      {{ pagination.links }}
+            {% for recipe in recipes %}
     {% if recipes|length != 0 %}
 
     <div class="row">
@@ -104,10 +76,9 @@
         {% else %}
         <h3>No Recipes Found!</h3>
         {% endif %}
-
-        {% endfor %}
-
-
+            {% endfor %}
+       
+      {{ pagination.links }}
     </div>
-</div>    
-    {% endblock %}
+  </body>
+</html>

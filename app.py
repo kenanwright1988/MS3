@@ -5,6 +5,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from flask_paginate import Pagination, get_page_args
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -18,20 +19,51 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+paginate_range = list(mongo.db.products.find())
+paginate_recipes = list(mongo.db.recipies.find())
+
+
+def get_products(offset=0, per_page=10):
+    return paginate_range[offset: offset + per_page]
+
+
+def get_recipes(offset=0, per_page=10):
+    return paginate_recipes[offset: offset + per_page]
+
 
 @app.route("/")
 @app.route("/recipes.html")
 def recipes():
-    recipes = list(mongo.db.recipies.find())
-    return render_template(
-                           "recipes.html", recipes=recipes,)
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    per_page = 5
+    total = len(paginate_recipes)
+    pagination_recipe = get_recipes(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materialize')
+    return render_template('recipes.html',
+                           recipes=pagination_recipe,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 @app.route("/range")
 def range():
-    products = list(mongo.db.products.find())
-    return render_template(
-                           "range.html", products=products)
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    per_page = 5
+    total = len(paginate_range)
+    pagination_range = get_products(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materialize')
+    return render_template('range.html',
+                           products=pagination_range,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 @app.route("/add_recipe.html", methods=["GET", "POST"])
