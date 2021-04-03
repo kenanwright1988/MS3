@@ -308,3 +308,38 @@ input {
     font-size: 25px;
     font-family: "Bitter", sans-serif;
 }
+
+/*-- Had to use the !important as the materialize rule is way more specific and couldn't get it to work without  --*/
+
+/*-- Overriding the default colors for the materialize form input fields invalid--*/
+input.invalid[type=email]:not(.browser-default),
+input.invalid[type=password]:not(.browser-default),
+input.invalid[type=number]:not(.browser-default),
+input.invalid[type=text]:not(.browser-default) {
+    border-bottom: 1px solid red !important;
+    -webkit-box-shadow: 0 1px 0 0 red !important;
+    box-shadow: 0 1px 0 0 red !important;
+}
+
+/*-- Overriding the default colors for the materialize form input fields valid, had to use important as the materialize rule is way more specific --*/
+input.valid[type=email]:not(.browser-default),
+input.valid[type=password]:not(.browser-default),
+input.valid[type=number]:not(.browser-default),
+input.valid[type=text]:not(.browser-default) {
+    border-bottom: 1px solid #4CAF50 !important;
+    -webkit-box-shadow: 0 1px 0 0 #4CAF50 !important;
+    box-shadow: 0 1px 0 0 #4CAF50 !important;
+}
+
+/*-- Changes the label text on active from green to white --*/
+.input-field>label:not(.label-icon).active {
+    color: white !important;
+}
+
+.input-field input[type=email]:focus,
+.input-field input[type=text]:focus,
+.input-field input[type=number]:focus,
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important;
+}
