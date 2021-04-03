@@ -334,6 +334,7 @@ input.valid[type=text]:not(.browser-default) {
 .input-field>label:not(.label-icon).active {
     color: white !important;
 }
+
 /*-- Changes the label underline on focus from green to white --*/
 .input-field input[type=email]:focus,
 .input-field input[type=text]:focus,
@@ -341,4 +342,30 @@ input.valid[type=text]:not(.browser-default) {
 .input-field input[type=password]:focus {
     border-bottom: 1px solid white !important;
     box-shadow: 0 1px 0 0 white !important;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: black !important;
+}
+
+.pagination-page-info {
+    color: white;
+    font-family: "Bitter", sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pagination {
+    color: white;
+}
+
+.pagination li.active {
+    background-color: grey;
+}
+
+.pagination li a {
+    color: white;
+}
+
+div .pagination ul {
+    background-color: rgba(0, 0, 0, 0.5);
 }

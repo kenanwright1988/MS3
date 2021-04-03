@@ -22,11 +22,15 @@ wok image from https://www.amazon.se/Craft-Wok-Traditionell-handhamrad-st%C3%A5l
 cast iron pot https://www.amazon.com/AmazonBasics-Pre-Seasoned-Dutch-Handles-2-Quart/dp/B074DFMR8K
 japanese knives from https://toroscookware.com/products/handmade-japanese-complete-set-of-3-knives-aus10-steel-chef-knife-santoku-nakiri
 pot spoon from https://royaldesign.com/us/pot-spoon-526-30-cm
+brass cuttlery set from https://www.no1brands4you.co.uk/kitchen-cutlery/combo-3092-salter-combo-3092-32-piece-gold-cutlery-set-stainless-steel.html
 
 
 recipies and images from bbcgoodfood
 
 ad span sr only on clickable icons for disability
+
+FIX PAGINATION WHEN SEARCHING OR FILTERING - more items showing up than results and pagination not working
+FIX LAST PAGE HAVING NO RESULTS PPAGINATE!
 
 Turn off console log from image upload when submitting
 
@@ -34,6 +38,7 @@ add materialize under deployment on readme
 
 add search and indexing - done just need to refine it a bit more. 
 
+autofill background color is white in search and some form elements
 
 clean up CSS file 
 

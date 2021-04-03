@@ -19,15 +19,20 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 paginate_range = list(mongo.db.products.find())
 paginate_recipes = list(mongo.db.recipies.find())
 
 
-def get_products(offset=0, per_page=10):
+def get_recipes_search(offset=0, per_page=25):
     return paginate_range[offset: offset + per_page]
 
 
-def get_recipes(offset=0, per_page=10):
+def get_products(offset=0, per_page=25):
+    return paginate_range[offset: offset + per_page]
+
+
+def get_recipes(offset=0, per_page=25):
     return paginate_recipes[offset: offset + per_page]
 
 
@@ -40,7 +45,7 @@ def recipes():
     total = len(paginate_recipes)
     pagination_recipe = get_recipes(offset=offset, per_page=per_page)
     pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='materialize')
+                            css_framework='materializecss')
     return render_template('recipes.html',
                            recipes=pagination_recipe,
                            page=page,
@@ -57,7 +62,7 @@ def range():
     total = len(paginate_range)
     pagination_range = get_products(offset=offset, per_page=per_page)
     pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='materialize')
+                            css_framework='materializecss')
     return render_template('range.html',
                            products=pagination_range,
                            page=page,
@@ -221,16 +226,36 @@ def logout():
 def search():
     query = request.args.get("query")
     recipes = list(mongo.db.recipies.find({"$text": {"$search": query}}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    per_page = 5
+    total = len(recipes)
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipes,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to sort all by Cooking time
 @app.route("/cook_time", methods=["GET"])
 def by_cook_time():
     recipes = list(mongo.db.recipies.find().sort("cook_time", 1))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    per_page = 5
+    total = len(recipes)
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipes,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by international
