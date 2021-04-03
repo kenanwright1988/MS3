@@ -12,13 +12,13 @@
                     <form class="col s8 black-text" method="POST" action="{{ url_for('register') }}">
                         <div class="row">
                             <div class="input-field col s6 offset-s6">
-                                <input id="username" name="username" type="text" class="validate" required>
+                                <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="8" required>
                                 <label for="username">User Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6 offset-s6">
-                                <input id="name" name="name" type="text" class="validate" required>
+                                <input id="name" name="name" type="text" class="validate" minlength="3" maxlength="15" required>
                                 <label for="name">Name</label>
                             </div>
                         </div>
