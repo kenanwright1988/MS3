@@ -20,34 +20,27 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-paginate_range = list(mongo.db.products.find())
-paginate_recipes = list(mongo.db.recipies.find())
-
-
-def get_recipes_search(offset=0, per_page=10):
-    return paginate_range[offset: offset + per_page]
-
-
-def get_products(offset=0, per_page=10):
-    return paginate_range[offset: offset + per_page]
-
-
-def get_recipes(offset=0, per_page=10):
-    return paginate_recipes[offset: offset + per_page]
+# Pagination variables
+# Code from https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
 
 
 @app.route("/")
-@app.route("/recipes.html")
+@app.route("/recipes")
 def recipes():
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page',
-                                           offset='offset')
-    total = len(paginate_recipes)
-    pagination_recipe = get_recipes(offset=offset, per_page=per_page)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page', offset_parameter='offset')
+    per_page = 3
+    offset = offset = (page - 1) * 3
+    print("page = ", page)
+    print("per_page = ", per_page)
+    print("offset = ", offset)
+    total = mongo.db.recipies.find().count()
+    recipe = list(mongo.db.recipies.find())
+    recipe_paginated = recipe[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
     return render_template('recipes.html',
-                           recipes=pagination_recipe,
+                           recipes=recipe_paginated,
                            page=page,
                            per_page=per_page,
                            pagination=pagination,
@@ -56,22 +49,25 @@ def recipes():
 
 @app.route("/range")
 def range():
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page',
-                                           offset='offset')
-    total = len(paginate_range)
-    pagination_range = get_products(offset=offset, per_page=per_page)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = offset = (page - 1) * 3
+    total = mongo.db.products.find().count()
+    products = list(mongo.db.products.find())
+    product_paginated = products[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
     return render_template('range.html',
-                           products=pagination_range,
+                           products=product_paginated,
                            page=page,
                            per_page=per_page,
                            pagination=pagination,
                            )
 
 
-@app.route("/add_recipe.html", methods=["GET", "POST"])
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
         steps = request.form.getlist("steps")
@@ -141,7 +137,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("user_profile"))
 
 
-@app.route("/register.html", methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         # check if username already exists in db
@@ -170,7 +166,7 @@ def register():
     return render_template("register.html")
 
 
-@app.route("/user_profile.html")
+@app.route("/user_profile")
 def user_profile():
     user = session.get("user")
     if user is not None:

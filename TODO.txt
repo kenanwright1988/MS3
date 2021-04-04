@@ -1,4 +1,5 @@
 TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
+remove print statements from recipe and range app routes
 
 favicon src : https://www.pinterest.com/pin/39688040450475892/
 background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-counters/
@@ -61,4 +62,4 @@ integrating cloudinary api - after upload from widget the image url will be pass
 add edit recipie functionality - need to have the data from the recipe im editing already filled in, find a way to show multiple steps/ingredients that were filled in previously, fixed with for loop and using loop index to number ingredient and steps.
 recipe sorting list as 25 5 etc - fixed by storing cook time as integer rather than string
 underline color of materialize inputs - had to look at the materializw rules targeting these items and had to use !important as I could not create a specific enough rule. 
-
+pagination not getting propper offset - fixed by using offset = offset = (page - 1) * 3
