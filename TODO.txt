@@ -28,6 +28,10 @@ recipies and images from bbcgoodfood
 
 When editing recipe if you click add ingredient or step it adds another ingredient 2/3/4 field instead of the next one
 
+find and close missing divs
+
+validate css html js and python 
+
 fix logo heading responsiveness for iphone and really narrow displays
 
 ad span sr only on clickable icons for disability
