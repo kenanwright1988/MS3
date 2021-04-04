@@ -1,35 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
+<div class="container center-align">
     <div class="row">
-        <div class="col s12 center-align white-text flashes">
+        <div class="col s12 center-align white-text box-color box-shadow chalk-board">
             <h1>{{ session["name"]|title }}'s Recipes</h1>
             <h5>Here are all the recipes you have created: </h5>
         </div>
     </div>
-    <div class="row">
-        <div class="col s12 box-shadow box-color chalk-board center-align">
-            <h5 class="underline white-text">Filter recipes</h5>
-            <div class="row">
-                <div class="col s12 white-text filter-tags">
-                    <a href="{{ url_for('by_cook_time') }}">Sort by cooking time</a>
-                    <a href="{{ url_for('by_international') }}">International Recipes</a>
-                    <a href="{{ url_for('by_italian') }}">Italian Recipes</a>
-                    <a href="{{ url_for('by_british') }}">British Recipes</a>
-                    <a href="{{ url_for('by_american') }}">American Recipes</a>
-                    <a href="{{ url_for('by_latin') }}">Latin Recipes</a>
-                    <a href="{{ url_for('by_middleeast') }}">Middle Eastern Recipes</a>
-                    <a href="{{ url_for('by_asian') }}">Asian Recipes</a>
-                    <a href="{{ url_for('by_indian') }}">Indian Recipes</a>
-                    <a href="{{ url_for('by_african') }}">African Recipes</a>
-                    <a href="{{ url_for('by_european') }}">European Recipes</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    {{ pagination.info }}
+    {{ pagination.links }}
 
     {% for recipe in recipes %}
-    {% if session["user"] == recipe["created_by"|lower ] %}
     <div class="row">
         <div class="col s12">
             <div class="card box-shadow box-color chalk-board">
@@ -99,17 +81,21 @@
         <div id="modal1" class="modal box-shadow box-color chalk-board center-align">
             <div class="modal-content white-text">
                 <h4>Delete recipie</h4>
-                <p>This will permanently remove this recipe from Kenan's Cook Book. Are you sure you want to delete this
+                <p>This will permanently remove this recipe from Kenan's Kitchen. Are you sure you want to delete this
                     recipe?</p>
             </div>
             <div class="modal-footer white-text box-color box-shadow center-align">
                 <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                    class="btn-flat red accent-4 box-shadow white-text waves-effect">Delete Recipie</a>
+                    class="btn-flat red accent-4 box-shadow white-text waves-effect">Delete Recipe</a>
                 <a href="#!" class="modal-close waves-effect teal white-text btn-flat box-shadow">Cancel</a>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
 
+    </div>
+</div>
+    <div class="row center-align">    
+    {{ pagination.info }}
+    {{ pagination.links }}
     </div>
     {% endblock %}

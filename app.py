@@ -166,10 +166,23 @@ def register():
 
 @app.route("/user_profile")
 def user_profile():
-    user = session.get("user")
+    user = session.get("user").lower()
     if user is not None:
-        recipes = list(mongo.db.recipies.find())
-        return render_template("user_profile.html", recipes=recipes)
+        page, per_page, offset = get_page_args(
+            page_parameter='page', per_page_parameter='per_page',
+            offset_parameter='offset')
+        per_page = 3
+        offset = (page - 1) * 3
+        total = mongo.db.recipies.find({'created_by': user}).count()
+        recipe = list(mongo.db.recipies.find({'created_by': user}))
+        recipe_paginated = recipe[offset: offset + per_page]
+        pagination = Pagination(page=page, per_page=per_page, total=total,
+                                css_framework='materializecss')
+        return render_template('user_profile.html',
+                               recipes=recipe_paginated,
+                               page=page,
+                               per_page=per_page,
+                               pagination=pagination)
     else:
         return render_template("403.html")
 
