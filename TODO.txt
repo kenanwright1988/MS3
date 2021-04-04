@@ -1,5 +1,5 @@
 TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
-remove print statements from recipe and range app routes
+
 
 favicon src : https://www.pinterest.com/pin/39688040450475892/
 background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-counters/
@@ -24,14 +24,9 @@ cast iron pot https://www.amazon.com/AmazonBasics-Pre-Seasoned-Dutch-Handles-2-Q
 japanese knives from https://toroscookware.com/products/handmade-japanese-complete-set-of-3-knives-aus10-steel-chef-knife-santoku-nakiri
 pot spoon from https://royaldesign.com/us/pot-spoon-526-30-cm
 brass cuttlery set from https://www.no1brands4you.co.uk/kitchen-cutlery/combo-3092-salter-combo-3092-32-piece-gold-cutlery-set-stainless-steel.html
-
-
 recipies and images from bbcgoodfood
 
 ad span sr only on clickable icons for disability
-
-FIX PAGINATION WHEN SEARCHING OR FILTERING - more items showing up than results and pagination not working
-FIX LAST PAGE HAVING NO RESULTS PPAGINATE!
 
 Turn off console log from image upload when submitting
 
@@ -43,7 +38,6 @@ autofill background color is white in search and some form elements
 
 clean up CSS file 
 
-fix confirmation modal when delete is clicked
 comment each code section 
 
 

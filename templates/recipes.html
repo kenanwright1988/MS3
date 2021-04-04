@@ -11,7 +11,7 @@
                             required>
                         <label class="label white-text" for="query"><i class="fas fa-search"></i></label>
                         <button class="submit btn-large grey darken-4 box-shadow">Search</button>
-                        <a href="{{ url_for('recipes') }}" class="btn-large red box-shadow">Cancel</a>
+                        <a href="{{ url_for('recipes') }}" class="btn-large red box-shadow">Clear Search</a>
                     </div>
                 </form>
             </div>
@@ -107,8 +107,11 @@
         {% endif %}
 
         {% endfor %}
-
+        
 
     </div>
+    
 </div>    
+    {{ pagination.info }}
+    {{ pagination.links }}
     {% endblock %}

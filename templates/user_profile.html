@@ -96,7 +96,7 @@
 
         <!-- modal to make sure you want to delete recipe -->
         <!-- Modal Structure -->
-        <div id="modal1" class="modal box-shadow box-color center-align">
+        <div id="modal1" class="modal box-shadow box-color chalk-board center-align">
             <div class="modal-content white-text">
                 <h4>Delete recipie</h4>
                 <p>This will permanently remove this recipe from Kenan's Cook Book. Are you sure you want to delete this
@@ -104,8 +104,8 @@
             </div>
             <div class="modal-footer white-text box-color box-shadow center-align">
                 <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                    class="btn-flat red accent-4 box-shadow waves-effect">Delete Recipie</a>
-                <a href="#!" class="modal-close waves-effect teal btn-flat box-shadow">Cancel</a>
+                    class="btn-flat red accent-4 box-shadow white-text waves-effect">Delete Recipie</a>
+                <a href="#!" class="modal-close waves-effect teal white-text btn-flat box-shadow">Cancel</a>
             </div>
         </div>
         {% endif %}

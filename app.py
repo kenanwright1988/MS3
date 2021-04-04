@@ -32,9 +32,6 @@ def recipes():
         offset_parameter='offset')
     per_page = 3
     offset = (page - 1) * 3
-    print("page = ", page)
-    print("per_page = ", per_page)
-    print("offset = ", offset)
     total = mongo.db.recipies.find().count()
     recipe = list(mongo.db.recipies.find())
     recipe_paginated = recipe[offset: offset + per_page]
