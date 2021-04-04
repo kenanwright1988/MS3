@@ -11,7 +11,7 @@
                     <a href="{{ url_for('by_pans') }}">Pans</a>
                     <a href="{{ url_for('by_knives') }}">Knives</a>
                     <a href="{{ url_for('by_utensils') }}">Utensils</a>
-                    
+
                 </div>
             </div>
         </div>
@@ -42,15 +42,24 @@
                             <h3 class="underline">{{ product.name|title }}</h3><br>
                             <h4>Recommended Price: £{{ product.msrp|title }}</h4>
                             {% if product.rating == 1 %}
-                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
                             {% elif product.rating == 2 %}
-                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i
+                                    class="fas fa-star yellow-text"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i></h4>
                             {% elif product.rating == 3 %}
-                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i
+                                    class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i></h4>
                             {% elif product.rating == 4 %}
-                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star"></i></h4>
+                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i
+                                    class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i
+                                    class="fas fa-star yellow-text"></i><i class="fas fa-star"></i></h4>
                             {% elif product.rating == 5 %}
-                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i></h4>
+                            <h4>User rating: <i class="fas fa-star yellow-text"></i><i
+                                    class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i><i
+                                    class="fas fa-star yellow-text"></i><i class="fas fa-star yellow-text"></i></h4>
                             {% else %}
                             <h4>User rating: Product not yet rated </h4>
                             {% endif %}
@@ -67,30 +76,33 @@
                             <h4 class="underline">About:</h4>
                             <p>{{ product.about }}</p>
                         </div>
-                </div>
-                <div class="row center-align">
-                    <div class="col s12 white-text">
-                        <h4>Buy now from one of our retail partners</h4>
-                        <div class="div col s12 affiliate_links">
-                            <a href="http://www.amazon.co.uk" target="_blank"><i class="fab fa-amazon"></i></a>
-                            <a href="http://www.ebay.com" target="_blank"><i class="fab fa-ebay"></i></a>
-                            <a href="https://disney.fandom.com/wiki/Buy_n_Large" target="_blank"><i class="fab fa-buy-n-large"></i></a>
+                    </div>
+                    <div class="row center-align">
+                        <div class="col s12 white-text">
+                            <h4>Buy now from one of our retail partners</h4>
+                            <div class="div col s12 affiliate_links">
+                                <a href="http://www.amazon.co.uk" target="_blank"><i class="fab fa-amazon"></i></a>
+                                <a href="http://www.ebay.com" target="_blank"><i class="fab fa-ebay"></i></a>
+                                <a href="https://disney.fandom.com/wiki/Buy_n_Large" target="_blank"><i
+                                        class="fab fa-buy-n-large"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            {% else %}
+            <h3>No Recipes Found!</h3>
+            {% endif %}
+
+            {% endfor %}
+
+
         </div>
-
-
-        {% else %}
-        <h3>No Recipes Found!</h3>
-        {% endif %}
-
-        {% endfor %}
-        
-
     </div>
+    {{ pagination.info }}
+    {{ pagination.links }}
 </div>
-{{ pagination.info }}
-{{ pagination.links }}    
+
 {% endblock %}
