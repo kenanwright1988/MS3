@@ -50,13 +50,13 @@ def recipes():
 
 @app.route("/range")
 def range():
+    products = list(mongo.db.products.find())
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page',
         offset_parameter='offset')
     per_page = 3
     offset = offset = (page - 1) * 3
     total = mongo.db.products.find().count()
-    products = list(mongo.db.products.find())
     product_paginated = products[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
@@ -244,14 +244,17 @@ def search():
 @app.route("/cook_time", methods=["GET"])
 def by_cook_time():
     recipes = list(mongo.db.recipies.find().sort("cook_time", 1))
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
-    per_page = 5
-    total = len(recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find().sort("cook_time", 1).count()
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
     return render_template('recipes.html',
-                           recipes=recipes,
+                           recipes=recipe_paginated,
                            page=page,
                            per_page=per_page,
                            pagination=pagination,
@@ -262,120 +265,315 @@ def by_cook_time():
 @app.route("/international", methods=["GET"])
 def by_international():
     recipes = list(mongo.db.recipies.find({"nationality": "international"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "international"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by Italian
 @app.route("/italian", methods=["GET"])
 def by_italian():
     recipes = list(mongo.db.recipies.find({"nationality": "italian"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "italian"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by British
 @app.route("/british", methods=["GET"])
 def by_british():
     recipes = list(mongo.db.recipies.find({"nationality": "british"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "british"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by American
 @app.route("/american", methods=["GET"])
 def by_american():
     recipes = list(mongo.db.recipies.find({"nationality": "american"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "american"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by latin
 @app.route("/latin", methods=["GET"])
 def by_latin():
     recipes = list(mongo.db.recipies.find({"nationality": "latin"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "latin"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by middleeast
 @app.route("/middleeast", methods=["GET"])
 def by_middleeast():
     recipes = list(mongo.db.recipies.find({"nationality": "middle eastern"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "middle eastern"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by asian
 @app.route("/asian", methods=["GET"])
 def by_asian():
     recipes = list(mongo.db.recipies.find({"nationality": "asian"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "asian"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by indian
 @app.route("/indian", methods=["GET"])
 def by_indian():
     recipes = list(mongo.db.recipies.find({"nationality": "indian"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "indian"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by african
 @app.route("/african", methods=["GET"])
 def by_african():
     recipes = list(mongo.db.recipies.find({"nationality": "african"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "african"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by European
 @app.route("/european", methods=["GET"])
 def by_european():
     recipes = list(mongo.db.recipies.find({"nationality": "european"}))
-    return render_template("recipes.html",
-                           recipes=recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"nationality": "european"}).count()
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('recipes.html',
+                           recipes=recipe_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by pots
 @app.route("/pots", methods=["GET"])
 def by_pots():
     products = list(mongo.db.products.find({"type": "pot"}))
-    return render_template("range.html",
-                           products=products)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = offset = (page - 1) * 3
+    total = mongo.db.products.find({"type": "pot"}).count()
+    product_paginated = products[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('range.html',
+                           products=product_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by pans
 @app.route("/pans", methods=["GET"])
 def by_pans():
     products = list(mongo.db.products.find({"type": "pan"}))
-    return render_template("range.html",
-                           products=products)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = offset = (page - 1) * 3
+    total = mongo.db.products.find({"type": "pan"}).count()
+    product_paginated = products[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('range.html',
+                           products=product_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by knives
 @app.route("/knives", methods=["GET"])
 def by_knives():
     products = list(mongo.db.products.find({"type": "knife"}))
-    return render_template("range.html",
-                           products=products)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = offset = (page - 1) * 3
+    total = mongo.db.products.find({"type": "knife"}).count()
+    product_paginated = products[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('range.html',
+                           products=product_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by utensils
 @app.route("/utensil", methods=["GET"])
 def by_utensils():
     products = list(mongo.db.products.find({"type": "utensil"}))
-    return render_template("range.html",
-                           products=products)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = offset = (page - 1) * 3
+    total = mongo.db.products.find({"type": "utensil"}).count()
+    product_paginated = products[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('range.html',
+                           products=product_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Route to filter by product rating
 @app.route("/rating", methods=["GET"])
 def by_rating():
     products = list(mongo.db.products.find().sort("rating", -1))
-    return render_template("range.html",
-                           products=products)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = offset = (page - 1) * 3
+    total = mongo.db.products.find().count()
+    product_paginated = products[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template('range.html',
+                           products=product_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
 
 
 # Error handlers from flask documentation
