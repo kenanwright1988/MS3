@@ -369,3 +369,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 div .pagination ul {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.pagination ul li:not(:last-child) {
+    border-right: 2px solid white;
+    margin-right: 0px;
+    padding-right: 20px;
+}

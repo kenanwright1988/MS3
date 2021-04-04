@@ -24,15 +24,15 @@ paginate_range = list(mongo.db.products.find())
 paginate_recipes = list(mongo.db.recipies.find())
 
 
-def get_recipes_search(offset=0, per_page=25):
+def get_recipes_search(offset=0, per_page=10):
     return paginate_range[offset: offset + per_page]
 
 
-def get_products(offset=0, per_page=25):
+def get_products(offset=0, per_page=10):
     return paginate_range[offset: offset + per_page]
 
 
-def get_recipes(offset=0, per_page=25):
+def get_recipes(offset=0, per_page=10):
     return paginate_recipes[offset: offset + per_page]
 
 
@@ -40,8 +40,8 @@ def get_recipes(offset=0, per_page=25):
 @app.route("/recipes.html")
 def recipes():
     page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
-    per_page = 5
+                                           per_page_parameter='per_page',
+                                           offset='offset')
     total = len(paginate_recipes)
     pagination_recipe = get_recipes(offset=offset, per_page=per_page)
     pagination = Pagination(page=page, per_page=per_page, total=total,
@@ -57,8 +57,8 @@ def recipes():
 @app.route("/range")
 def range():
     page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
-    per_page = 5
+                                           per_page_parameter='per_page',
+                                           offset='offset')
     total = len(paginate_range)
     pagination_range = get_products(offset=offset, per_page=per_page)
     pagination = Pagination(page=page, per_page=per_page, total=total,
