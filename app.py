@@ -21,16 +21,17 @@ mongo = PyMongo(app)
 
 
 # Pagination variables
-# Code from https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+# Code from https://github.com/DarilliGames/flaskpaginate/blob/master/app.py
 
 
 @app.route("/")
 @app.route("/recipes")
 def recipes():
     page, per_page, offset = get_page_args(
-        page_parameter='page', per_page_parameter='per_page', offset_parameter='offset')
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
     per_page = 3
-    offset = offset = (page - 1) * 3
+    offset = (page - 1) * 3
     print("page = ", page)
     print("per_page = ", per_page)
     print("offset = ", offset)
@@ -222,14 +223,17 @@ def logout():
 def search():
     query = request.args.get("query")
     recipes = list(mongo.db.recipies.find({"$text": {"$search": query}}))
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
-    per_page = 5
-    total = len(recipes)
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 3
+    offset = (page - 1) * 3
+    recipe_paginated = recipes[offset: offset + per_page]
+    total = mongo.db.recipies.find({"$text": {"$search": query}}).count()
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
     return render_template('recipes.html',
-                           recipes=recipes,
+                           recipes=recipe_paginated,
                            page=page,
                            per_page=per_page,
                            pagination=pagination,
