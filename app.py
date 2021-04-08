@@ -270,9 +270,8 @@ def by_cook_time():
 
 
 # Route to filter by international
-@app.route('/nationality_filter')
-def filter_by_nationality():
-    id = request.args['id']
+@app.route('/nationality_filter/<id>')
+def nationality_filter(id):
     print(id)
     recipes = list(mongo.db.recipies.find({"nationality": id}))
     page, per_page, offset = get_page_args(
