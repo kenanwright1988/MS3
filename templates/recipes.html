@@ -24,16 +24,8 @@
             <div class="row">
                 <div class="col s12 white-text filter-tags">
                     <a href="{{ url_for('by_cook_time') }}">Sort by cooking time</a>
-                    <a href="{{ url_for('by_international') }}">International Recipes</a>
-                    <a href="{{ url_for('by_italian') }}">Italian Recipes</a>
-                    <a href="{{ url_for('by_british') }}">British Recipes</a>
-                    <a href="{{ url_for('by_american') }}">American Recipes</a>
-                    <a href="{{ url_for('by_latin') }}">Latin Recipes</a>
-                    <a href="{{ url_for('by_middleeast') }}">Middle Eastern Recipes</a>
-                    <a href="{{ url_for('by_asian') }}">Asian Recipes</a>
-                    <a href="{{ url_for('by_indian') }}">Indian Recipes</a>
-                    <a href="{{ url_for('by_african') }}">African Recipes</a>
-                    <a href="{{ url_for('by_european') }}">European Recipes</a>
+                    <a href="{{ url_for('filter_by_nationality') }}?id=international">International Recipes</a>
+                    
                 </div>
             </div>
         </div>
