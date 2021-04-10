@@ -26,6 +26,12 @@ pot spoon from https://royaldesign.com/us/pot-spoon-526-30-cm
 brass cuttlery set from https://www.no1brands4you.co.uk/kitchen-cutlery/combo-3092-salter-combo-3092-32-piece-gold-cutlery-set-stainless-steel.html
 recipies and images from bbcgoodfood
 
+add propper commenting syntax
+"""
+like this 
+"""
+
+
 When editing recipe if you click add ingredient or step it adds another ingredient 2/3/4 field instead of the next one
 
 find and close missing divs

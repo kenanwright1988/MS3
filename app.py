@@ -272,7 +272,6 @@ def by_cook_time():
 # Route to filter by international
 @app.route('/nationality_filter/<id>')
 def nationality_filter(id):
-    print(id)
     recipes = list(mongo.db.recipies.find({"nationality": id}))
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page',
@@ -291,79 +290,15 @@ def nationality_filter(id):
                            )
 
 
-# Route to filter by pots
-@app.route("/pots", methods=["GET"])
-def by_pots():
-    products = list(mongo.db.products.find({"type": "pot"}))
+@app.route('/utensil_filter/<id>')
+def utensil_filter(id):
+    products = list(mongo.db.products.find({"type": id}))
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page',
         offset_parameter='offset')
     per_page = 3
     offset = offset = (page - 1) * 3
     total = mongo.db.products.find({"type": "pot"}).count()
-    product_paginated = products[offset: offset + per_page]
-    pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='materializecss')
-    return render_template('range.html',
-                           products=product_paginated,
-                           page=page,
-                           per_page=per_page,
-                           pagination=pagination,
-                           )
-
-
-# Route to filter by pans
-@app.route("/pans", methods=["GET"])
-def by_pans():
-    products = list(mongo.db.products.find({"type": "pan"}))
-    page, per_page, offset = get_page_args(
-        page_parameter='page', per_page_parameter='per_page',
-        offset_parameter='offset')
-    per_page = 3
-    offset = offset = (page - 1) * 3
-    total = mongo.db.products.find({"type": "pan"}).count()
-    product_paginated = products[offset: offset + per_page]
-    pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='materializecss')
-    return render_template('range.html',
-                           products=product_paginated,
-                           page=page,
-                           per_page=per_page,
-                           pagination=pagination,
-                           )
-
-
-# Route to filter by knives
-@app.route("/knives", methods=["GET"])
-def by_knives():
-    products = list(mongo.db.products.find({"type": "knife"}))
-    page, per_page, offset = get_page_args(
-        page_parameter='page', per_page_parameter='per_page',
-        offset_parameter='offset')
-    per_page = 3
-    offset = offset = (page - 1) * 3
-    total = mongo.db.products.find({"type": "knife"}).count()
-    product_paginated = products[offset: offset + per_page]
-    pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='materializecss')
-    return render_template('range.html',
-                           products=product_paginated,
-                           page=page,
-                           per_page=per_page,
-                           pagination=pagination,
-                           )
-
-
-# Route to filter by utensils
-@app.route("/utensil", methods=["GET"])
-def by_utensils():
-    products = list(mongo.db.products.find({"type": "utensil"}))
-    page, per_page, offset = get_page_args(
-        page_parameter='page', per_page_parameter='per_page',
-        offset_parameter='offset')
-    per_page = 3
-    offset = offset = (page - 1) * 3
-    total = mongo.db.products.find({"type": "utensil"}).count()
     product_paginated = products[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')

@@ -7,10 +7,10 @@
             <div class="row">
                 <div class="col s12 white-text filter-tags">
                     <a href="{{ url_for('by_rating') }}">Highest Rated</a>
-                    <a href="{{ url_for('by_pots') }}">Pots</a>
-                    <a href="{{ url_for('by_pans') }}">Pans</a>
-                    <a href="{{ url_for('by_knives') }}">Knives</a>
-                    <a href="{{ url_for('by_utensils') }}">Utensils</a>
+                    <a href="{{ url_for('utensil_filter', id='pot') }}">Pots</a>
+                    <a href="{{ url_for('utensil_filter', id='pan') }}">Pans</a>
+                    <a href="{{ url_for('utensil_filter', id='knife') }}">Knives</a>
+                    <a href="{{ url_for('utensil_filter', id='utensil') }}">Utensils</a>
 
                 </div>
             </div>
