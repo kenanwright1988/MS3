@@ -27,12 +27,6 @@ brass cuttlery set from https://www.no1brands4you.co.uk/kitchen-cutlery/combo-30
 recipies and images from bbcgoodfood
 
 
-
-
-When editing recipe if you click add ingredient or step it adds another ingredient 2/3/4 field instead of the next one
-
-find and close missing divs
-
 validate css html js and python 
 
 
@@ -41,13 +35,6 @@ Turn off console log from image upload when submitting
 add materialize under deployment on readme
 
 add search and indexing - done just need to refine it a bit more. 
-
-
-
-
-comment each code section 
-
-
 
 
 issues:
@@ -63,3 +50,4 @@ recipe sorting list as 25 5 etc - fixed by storing cook time as integer rather t
 underline color of materialize inputs - had to look at the materializw rules targeting these items and had to use !important as I could not create a specific enough rule. 
 pagination not getting propper offset - fixed by using offset = offset = (page - 1) * 3
 autofill background color is white in search and some form elements - comment this in readme and say couldnt find solution. 
+When editing recipe if you click add ingredient or step it adds another ingredient 2/3/4 field instead of the next one
