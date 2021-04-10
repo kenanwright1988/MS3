@@ -26,10 +26,7 @@ pot spoon from https://royaldesign.com/us/pot-spoon-526-30-cm
 brass cuttlery set from https://www.no1brands4you.co.uk/kitchen-cutlery/combo-3092-salter-combo-3092-32-piece-gold-cutlery-set-stainless-steel.html
 recipies and images from bbcgoodfood
 
-add propper commenting syntax
-"""
-like this 
-"""
+
 
 
 When editing recipe if you click add ingredient or step it adds another ingredient 2/3/4 field instead of the next one
@@ -38,9 +35,6 @@ find and close missing divs
 
 validate css html js and python 
 
-fix logo heading responsiveness for iphone and really narrow displays
-
-ad span sr only on clickable icons for disability
 
 Turn off console log from image upload when submitting
 
@@ -48,14 +42,11 @@ add materialize under deployment on readme
 
 add search and indexing - done just need to refine it a bit more. 
 
-autofill background color is white in search and some form elements
 
-clean up CSS file 
+
 
 comment each code section 
 
-
-comment register from walkthrough and highlight parts that I have changed
 
 
 
@@ -71,3 +62,4 @@ add edit recipie functionality - need to have the data from the recipe im editin
 recipe sorting list as 25 5 etc - fixed by storing cook time as integer rather than string
 underline color of materialize inputs - had to look at the materializw rules targeting these items and had to use !important as I could not create a specific enough rule. 
 pagination not getting propper offset - fixed by using offset = offset = (page - 1) * 3
+autofill background color is white in search and some form elements - comment this in readme and say couldnt find solution. 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,21 +13,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css">
     <title>Kenan's Kitchen</title>
 </head>
-
 <body>
-
-    <!-- Navbar -->
+    <!-- Page heading logo -->
     <header>
         <div class="row center-align">
             <div class="col s4 offset-s4 box-shadow box-color chalk-board page-heading">
                 <h1 class="white-text">Kenan's Kitchen</h1>
             </div>
-
-
-            <div class="col s12 center-align">
-
-            </div>
         </div>
+        <!-- Navbar -->
         <nav class="nav-center no-shadows">
             <div class="nav-wrapper center-align">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-ellipsis-v"></i></a>
@@ -46,8 +39,7 @@
                 </ul>
             </div>
         </nav>
-
-
+        <!-- SideNav -->
         <ul class="sidenav chalk-board box-color nav-text" id="mobile-demo">
             <li><a href="{{ url_for('recipes')}}">Recipes</a></li>
             <li><a href="{{ url_for('range')}}">Utensils</a></li>
@@ -77,12 +69,9 @@
     </section>
     <!-- Main content -->
     <main>
-
         {% block content %}
         {% endblock %}
-
     </main>
-
     <!-- footer -->
     <footer class="page-footer darken-4 ">
         <div class="container ">
@@ -92,13 +81,11 @@
                     <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="http://www.pinterest.com" target="_blank"><i class="fab fa-pinterest-square"></i></a>
-
                 </div>
             </div>
         </div>
     </footer>
-
-
+    <!-- Script links -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -119,8 +106,6 @@ var myWidget = cloudinary.createUploadWidget({
     }
   }
 )
-
 </script>
 </body>
-
 </html>
