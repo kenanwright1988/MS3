@@ -317,7 +317,7 @@ def utensil_filter(id):
         page_parameter='page', per_page_parameter='per_page',
         offset_parameter='offset')
     per_page = 3
-    offset = offset = (page - 1) * 3  # My formula for getting the right offset
+    offset = (page - 1) * 3  # My formula for getting the right offset
     total = mongo.db.products.find({"type": "pot"}).count()
     product_paginated = products[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page, total=total,
@@ -340,7 +340,7 @@ def by_rating():
         page_parameter='page', per_page_parameter='per_page',
         offset_parameter='offset')
     per_page = 3
-    offset = offset = (page - 1) * 3  # My formula for getting the right offset
+    offset = (page - 1) * 3  # My formula for getting the right offset
     total = mongo.db.products.find().count()
     product_paginated = products[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page, total=total,
