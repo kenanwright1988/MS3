@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Cormorant+Unicase&display=swap');
 
+/* --- General --- */
 html {
     background: url("https://res.cloudinary.com/dyxe4g62g/image/upload/v1616252447/images/albums/MS3/new_background_2_pq1syk.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -29,6 +30,47 @@ p {
     font-size: 20px;
 }
 
+.box-shadow {
+    box-shadow: 0px 10px 10px 0px black;
+}
+
+.box-color {
+    background-color: rgba(238, 238, 238, 0.5);
+    background-image: url('https://res.cloudinary.com/dyxe4g62g/image/upload/v1616248713/images/albums/MS3/chalkboard-1_zuwdry.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.underline {
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.row .col.s3 {
+    padding-left: 40px;
+}
+
+/* --- Flash messages --- */
+.flashes {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* --- Navbar --- */
 nav {
     background-color: transparent;
@@ -49,6 +91,37 @@ nav ul a {
     font-weight: 800;
 }
 
+.sidenav li>a {
+    text-shadow: none;
+    font-size: 30px;
+}
+
+/*-- Centering Materialize nav. code from https://stackoverflow.com/questions/38964113/how-can-i-create-a-navbar-with-center-aligned-links-using-materialize --*/
+nav.nav-center ul {
+    text-align: center;
+}
+
+nav.nav-center ul li {
+    display: inline;
+    float: none;
+}
+
+nav.nav-center ul li a {
+    display: inline-block;
+}
+
+/*-- Piping between Nav links code from https://stackoverflow.com/questions/25247072/how-to-separate-link-items-with-pipeline --*/
+ul li:not(:last-child) {
+    border-right: 2px solid white;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+/*-- Turn off Nav shadow code from https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar/51751637 --*/
+.no-shadows {
+    box-shadow: none !important;
+}
+
 /* --- Footer --- */
 .page-footer {
     background-color: rgba(0, 0, 0, 0.1);
@@ -67,32 +140,12 @@ nav ul a {
     color: black;
 }
 
-.no-padding {
-    padding: 0;
-}
-
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
-
+/* --- Recipe boxes and forms ---*/
 .recipe-image {
     height: auto;
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
-
-}
-
-
-.row .col.s3 {
-    padding-left: 40px;
 }
 
 .custom_list li {
@@ -109,31 +162,11 @@ main {
     margin-left: 20px;
 }
 
-.box-shadow {
-    box-shadow: 0px 10px 10px 0px black;
-}
-
-.box-color {
-    background-color: rgba(238, 238, 238, 0.5);
-    background-image: url('https://res.cloudinary.com/dyxe4g62g/image/upload/v1616248713/images/albums/MS3/chalkboard-1_zuwdry.jpg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.underline {
-    text-decoration: underline;
-    margin-bottom: 15px;
-}
-
 .input-field>label {
     font-family: "Bitter", sans-serif;
     font-size: 25px;
     color: black;
 }
-
-
 
 /*-- code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown --*/
 ul.dropdown-content.select-dropdown li span {
@@ -167,11 +200,6 @@ ul.dropdown-content.select-dropdown li span {
     color: white;
 }
 
-.sidenav li>a {
-    text-shadow: none;
-    font-size: 30px;
-}
-
 .logo-box {
     color: white;
     background-color: transparent;
@@ -183,12 +211,10 @@ ul.dropdown-content.select-dropdown li span {
     color: white;
 }
 
-
 .chalk-board {
     border: 5px solid #7e5644;
     border-radius: 12px;
 }
-
 
 .row div .custom-box-padding {
     padding: 5px;
@@ -196,48 +222,16 @@ ul.dropdown-content.select-dropdown li span {
     border-radius: 12px;
 }
 
-/*-- Centering Materialize nav. code from https://stackoverflow.com/questions/38964113/how-can-i-create-a-navbar-with-center-aligned-links-using-materialize --*/
-
-nav.nav-center ul {
-    text-align: center;
-}
-
-nav.nav-center ul li {
-    display: inline;
-    float: none;
-}
-
-nav.nav-center ul li a {
-    display: inline-block;
-}
-
-/*-- Piping between Nav links code from https://stackoverflow.com/questions/25247072/how-to-separate-link-items-with-pipeline --*/
-ul li:not(:last-child) {
-    border-right: 2px solid white;
-    margin-right: 20px;
-    padding-right: 20px;
-}
-
+/* --- Media Queries --- */
 @media only screen and (max-width: 992px) {
     ul li:not(:last-child) {
         border-right: none;
     }
-
     h1 {
         font-size: 29px;
     }
 }
-
-/*-- Turn off Nav shadow code from https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar/51751637 --*/
-.no-shadows {
-    box-shadow: none !important;
-}
-
-.flashes {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-
+/* --- Inputs and forms --- */
 /*-- Rule taken from Devtools in chrome to move the label up more when inputing data --*/
 .input-field>input[type]:-webkit-autofill:not(.browser-default):not([type="search"])+label,
 .input-field>input[type=date]:not(.browser-default)+label,
@@ -309,7 +303,6 @@ input {
 }
 
 /*-- Had to use the !important as the materialize rule is way more specific and couldn't get it to work without  --*/
-
 /*-- Overriding the default colors for the materialize form input fields invalid--*/
 input.invalid[type=email]:not(.browser-default),
 input.invalid[type=password]:not(.browser-default),
@@ -348,6 +341,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-color: black !important;
 }
 
+
+/* --- Pagination --- */
 .pagination-page-info {
     color: white;
     font-family: "Bitter", sans-serif;
