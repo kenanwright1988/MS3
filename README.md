@@ -1,17 +1,35 @@
 # Kenan's Cook Book
 
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
+Welcome to Kenan's Cook Book. For my third milestone project I have decided to make a cook book website with the goal of selling a fictional range of kitchen utensils. The site is based on the flask framwork to generate content from a database and present it to the user. I have made sure to include CRUD functionality as well as make use of a login/register/logout system which is authenticated and all passwords are protected by a hash for security.
  
 ## UX
+
+### Site Goals
+
+The goal of Kenan's Kitchen is to provide cooking enthusiasts a place to discover new recipes as well as create and edit their own which will then be available to all other users. The site will offer a range of premium utensils for sale to users to ensure they can easily make their selected recipe as well as generate revenue for the site. 
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+### User Stories
+#### As an cooking enthusiast: 
+- I want to quickly find recipes for dinner.
+- I want to be able to easily sort and search for a specific recipe.
+- I want to be able to create a profile and login to the site.
+- I want to be able to Add, Edit and Delete my own recipes.
+- I want the recipes I have created publically available to all other active people on the site.  
+- I want a page with all my recipes I have created that I can easily access once logged in. 
+- I want to be able to purchase any kitchen equipment I may need. 
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+#### As the site designer:
+- I want the process of displaying content to be fast and seamless.
+- I want to dynamically generate content based on collections in MongoDB.
+- I want the site to be eye catching and engaging.
+- I want the site to be easy to use and intuitive with clear stylistic choices.
+- I want the site to be as bug free as possible.
+- I want the site to be responsive to a large number of devices and screen sizes. 
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+### Wireframes
+
+To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
+
 
 ## Features
 
