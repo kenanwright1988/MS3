@@ -33,8 +33,59 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
+### Recipes(Home) Page
+- Recipes are dynamically generated from the MongoDB collection and displayed on this page using Jinja templating language.
+- Pagination is used to allow the user to sort through the pages of results.
+- Recipes are displayed paginated in groups of 3 as they are quite large and more than that would require too much scrolling.
+- The search bar allows users to search for recipe names, and difficulty etc and returns paginated results based on an index in the mongodb collection.
+- The filter area allows users to click on a preset button which will display results based on their selection eg. Nationality or cook time. 
+
+### Premium Utensils Page
+- Products are dynamically generated from the MongoDB collection and displayed on this page using Jinja templating language.
+- Pagination is used to allow the user to sort through the pages of results.
+- Products are displayed paginated in groups of 3 as they are quite large and more than that would require too much scrolling.
+- The filter area allows users to click on a preset button which will display results based on their selection eg. User rating or pots/pans etc.
+- Users have the option to buy a product from one of our fictional retail partners eg. Amazon, Ebay or Buy n Large.
+
+### Registration page
+- This page allows users to create a profile and login credentials to fully utilize the website.
+- The user is preseted with a registration form in which they will need to provide a Username, Name Email address and password. The password is hashed so that when its stored in the DB it will not be visible. 
+- The backend python will check weather the desired username is taken or not and prompt the user accordingly. 
+- All input fields are required as well as having min/max values. All input fields have the required attribute and will promp the user if something was inputed incorrectly. 
+- Once all criteria have been filled in and submited the backend python will add the details to a new entry within the database as well as putting the user into the session cookie then redirect them to their user profile page. 
+
+### User Profile Page
+- This page Shows the user all recipes they have created.
+- Pagination is used to allow the user to sort through the pages of results.
+- Recipes created by the user will be displayed here with the option to edit and delete recipes.
+- Clicking edit will take the user to the edit recipe page.
+- clicking delete will trigger a confirmation modal which asks the user to confirm they would like to delete the recipe. 
+
+### Edit Recipe Page
+- This page takes the recipe id of the recipe the user wants to edit and returns a form that is mostly prefilled out with the existing recipe details. 
+- The user has the option of changing any of the input fields as well as uploading a new image via the Cloudinary upload widget. 
+- When the user clicks submit the backend python will update the DB as neccesary with all new inputed data. 
+
+
+### Add a Recipe Page
+- The add a recipe page has a form where users can input data for the recipe as well as upload an image and add more ingredients and steps.
+- Images are handled by the Cloudinary Upload widget and API. 
+- When a user uploads an image using the upload widget Cloudinary returns an object with the details of the image. I have used Javascript to append the URL of the uploaded image to a hidden image URL input field which then saves the URL of the image in the DB under the img_url attribute. 
+- I have used Jquery to append extra fields if needed by clicking the green + button which will add another input. I have a variable which increases when the plus button is clicked and decreases when the - button is clicked. This ensures that the label will be correct eg. Ingredient 1, ingredient 2, Step 1, Step 2 etc. 
+- If a user does not upload an image a placeholder image will be displayed in its place. 
+- Once the submit button is clicked the backend python will insert all the information into an entry within the DB. 
+
+### Logout Page
+- When the user clicks logout the user is removed from the session cookie using the .pop() function. 
+- The browser is then redirected to the login page. 
+- A Flash message will appear saying that the user has successfully been logged out. 
+
+### Login Page
+- The login page presents the user with a form that takes the username and password field. 
+- The backend python will check if the username exists and if the password is valid and promt the user accordingly via Flash messages. 
+- If all login conditions are met the user will be redirected to the User profile page. 
+
+
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - ...
