@@ -12,6 +12,14 @@ html {
     background-size: cover;
 }
 
+p>a {
+    color: white;
+}
+
+p>a:hover {
+    color: black;
+}
+
 .page-heading {
     margin-top: 30px;
 }
