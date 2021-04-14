@@ -102,28 +102,27 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 
 ## Technologies Used
 
-
-**Flask-Paginate** - Flask paginate was used to paginate returned database queries. 
-**MongoDB** - MongoDB was used to store and access database items.
-**Flask** - Used as web app framework to make creating the app faster and easier. 
-**Heroku** - Heroku was used to host the live version of this app.
-**Github** - Github was used for storing my code and version control.  
-**Gitpod** - I used Gitpod to code the site as well as push updates to Github.  
-**Python** - Python 3 was used for the backend code to run the app and logic.  
-**Prettier** Code - I used Beautify to keep my code properly indented and easily readable.  
+**Flask-Paginate** - Flask paginate was used to paginate returned database queries.  
+**MongoDB** - MongoDB was used to store and access database items.  
+**Flask** - Used as web app framework to make creating the app faster and easier.   
+**Heroku** - Heroku was used to host the live version of this app.  
+**Github** - Github was used for storing my code and version control.    
+**Gitpod** - I used Gitpod to code the site as well as push updates to Github.    
+**Python** - Python 3 was used for the backend code to run the app and logic.    
+**Prettier** Code - I used Beautify to keep my code properly indented and easily readable.    
 **HTML5** - The core of the site was built with HTML version 5.  
 **CSS** - CSS was used to style the website and define fonts and layout.  
 **Materialize CSS** - Materialize was used for layout and alignment with the grid system, forms and inputs as well as pagination.   
-**JavaScript** - JavaScript was used to provide logic and funtionality to certain elements such as the Cloudinary upload widget..  
+**JavaScript** - JavaScript was used to provide logic and funtionality to certain elements such as the Cloudinary upload widget.  
 **Jquery** - Jquery was used to write the click functions that append extra inputs to the forms as well as to enable Materialize selectors and sidenav.   
 **Font Awesome** - Social Media icons from Font Awesome.  
 **Google Chrome** - The website was built and tested in google Chrome.  
 **Auto close tag** - self explanitory.  
 **HTML hint** - for faster coding.  
 **Cloudinary** - Hosting images to make the site load faster as well as the API for image uploads and the upload widget.  
-**Apple Safari** - Used for testing.
-**Mozilla Firefox** - Used for testing.
-**Opera** - Used for testing.
+**Apple Safari** - Used for testing.  
+**Mozilla Firefox** - Used for testing.  
+**Opera** - Used for testing.  
 
 ## Testing
 
@@ -159,11 +158,47 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+### Code
+- Centering Materialize nav code from https://stackoverflow.com/questions/38964113/how-can-i-create-a-navbar-with-center-aligned-links-using-materialize  
+- Piping between nav links code from https://stackoverflow.com/questions/25247072/how-to-separate-link-items-with-pipeline  
+- Turn off Nav shadow code from https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar/51751637  
+- Change dropdown text color code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown  
+- Code to change Chromes autocomplete field background color to black. code from https://dev.to/atndesign/a-trick-to-change-the-autocomplete-background-color-21ll  
+- Python backend app logic ideas and structure taken from the Code Institute Task Manager project and customised to suite my needs. 
+- Cloudinary Upload widget JS code from Cloudinary documentation. 
+- Add and remove input fields code taken but modified from https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery  
+- Pagination code taken and modified to suit this project from https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9  
 
-### Media
-- The photos used in this site were obtained from ...
+### Content
+- Utensil text taken and modified from [Cervera](https://www.cervera.se/)
+- Recipe text from [BBC Food](https://www.bbc.co.uk/food)
+
+
+#### Photo Credits
+- Favicon: https://www.pinterest.com/pin/39688040450475892/  
+- Website Background: https://eu.goerie.com/story/lifestyle/home-garden/2020/11/14/fresh-kitchen-backsplash-ideas-stylish-and-functional-backsplash-can-breathe-new-life-into-your-kitc/6190279002/  
+- Omlette: https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png  
+- Jam: https://foodgawker.com/post/2017/08/21/675744/  
+- Boiled egg: https://thestayathomechef.com/how-to-boil-eggs/
+- Carbonara: https://www.bbcgoodfood.com/recipes/ultimate-spaghetti-carbonara-recipe
+- American pancakes: https://www.bbc.co.uk/food/recipes/fluffyamericanpancak_74828
+- Scotch egg: https://www.bbc.co.uk/food/recipes/scotcheggs_85851
+- Bunuelos: https://www.bbc.co.uk/food/recipes/buuelos_with_spiced_15500
+- Kofta: https://recipesjourney.com/en/turkish-kofte-recipe-lamb-meat/
+- Salmon roll: https://www.indoindians.com/how-to-make-salmon-sushi-2/
+- Indian scrambled eggs: https://www.bbc.co.uk/food/recipes/indianscrambledeggs_86454
+- African eggs: https://www.bbc.co.uk/food/recipes/spiced_north-african_82972
+- Herring with dill: https://www.bbc.co.uk/food/recipes/herringwithdillandmu_88218
+- Frying pan: https://images-na.ssl-images-amazon.com/images/I/61ato0rDpjL_SX425_.jpg
+- Wok: https://www.amazon.se/Craft-Wok-Traditionell-handhamrad-st%C3%A5lhj%C3%A4lphandtag/dp/B00PUZT9MU
+- Cast iron pot: https://www.amazon.com/AmazonBasics-Pre-Seasoned-Dutch-Handles-2-Quart/dp/B074DFMR8K
+- Japanese knives: https://toroscookware.com/products/handmade-japanese-complete-set-of-3-knives-aus10-steel-chef-knife-santoku-nakiri  
+- Pot spoon: https://royaldesign.com/us/pot-spoon-526-30-cm  
+- Brass cuttlery set: https://www.no1brands4you.co.uk/kitchen-cutlery/combo-3092-salter-combo-3092-32-piece-gold-cutlery-set-stainless-steel.html
+
+
+
+
 
 ### Acknowledgements
 
