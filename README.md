@@ -87,23 +87,43 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 
 
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Login - Allows users to login to their account.
+- Register - allows users to create a profile which will allow them to create, edit and delete their own recipes.
+- Create Recipe - allows users to create their own recipes and upload an image to be shared with the whole site.
+- Edit Recipe - allows users to edit recipes they have already created.
+- Delete - allows users to delete recipes they have already created. 
+- Search - allows users to search for recipes based on Name, cooking time, difficulty or nationality. 
+- Pagination - returns results in groups of 3 and allows users to click through pages instead of having to scroll all the way down the page.
+- Filter buttons(Recipes) - Allows users to select predefined results based on cooking time or nationality.
+- Filter buttons(Products) - Allows users to select predefined results based on product rating or pots/pans etc.
 
 ### Features Left to Implement
 - Another feature idea
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
+**Flask-Paginate** - Flask paginate was used to paginate returned database queries. 
+**MongoDB** - MongoDB was used to store and access database items.
+**Flask** - Used as web app framework to make creating the app faster and easier. 
+**Heroku** - Heroku was used to host the live version of this app.
+**Github** - Github was used for storing my code and version control.  
+**Gitpod** - I used Gitpod to code the site as well as push updates to Github.  
+**Python** - Python 3 was used for the backend code to run the app and logic.  
+**Prettier** Code - I used Beautify to keep my code properly indented and easily readable.  
+**HTML5** - The core of the site was built with HTML version 5.  
+**CSS** - CSS was used to style the website and define fonts and layout.  
+**Materialize CSS** - Materialize was used for layout and alignment with the grid system, forms and inputs as well as pagination.   
+**JavaScript** - JavaScript was used to provide logic and funtionality to certain elements such as the Cloudinary upload widget..  
+**Jquery** - Jquery was used to write the click functions that append extra inputs to the forms as well as to enable Materialize selectors and sidenav.   
+**Font Awesome** - Social Media icons from Font Awesome.  
+**Google Chrome** - The website was built and tested in google Chrome.  
+**Auto close tag** - self explanitory.  
+**HTML hint** - for faster coding.  
+**Cloudinary** - Hosting images to make the site load faster as well as the API for image uploads and the upload widget.  
+**Apple Safari** - Used for testing.
+**Mozilla Firefox** - Used for testing.
+**Opera** - Used for testing.
 
 ## Testing
 
