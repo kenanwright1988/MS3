@@ -38,14 +38,18 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 - Pagination is used to allow the user to sort through the pages of results.
 - Recipes are displayed paginated in groups of 3 as they are quite large and more than that would require too much scrolling.
 - The search bar allows users to search for recipe names, and difficulty etc and returns paginated results based on an index in the mongodb collection.
-- The filter area allows users to click on a preset button which will display results based on their selection eg. Nationality or cook time. 
+- The filter area allows users to click on a preset button which will display results based on their selection eg. Nationality or cook time.  
+  
+![Recipe page](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416856/images/albums/MS3/features/recipes_qeuw7w.png "Recipes(Home) Page")
 
 ### Premium Utensils Page
 - Products are dynamically generated from the MongoDB collection and displayed on this page using Jinja templating language.
 - Pagination is used to allow the user to sort through the pages of results.
 - Products are displayed paginated in groups of 3 as they are quite large and more than that would require too much scrolling.
 - The filter area allows users to click on a preset button which will display results based on their selection eg. User rating or pots/pans etc.
-- Users have the option to buy a product from one of our fictional retail partners eg. Amazon, Ebay or Buy n Large.
+- Users have the option to buy a product from one of our fictional retail partners eg. Amazon, Ebay or Buy n Large.  
+
+![Utensils page](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416727/images/albums/MS3/features/products_bqtqrv.png "Premium Utensils Page")
 
 ### Registration page
 - This page allows users to create a profile and login credentials to fully utilize the website.
@@ -54,17 +58,23 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 - All input fields are required as well as having min/max values. All input fields have the required attribute and will promp the user if something was inputed incorrectly. 
 - Once all criteria have been filled in and submited the backend python will add the details to a new entry within the database as well as putting the user into the session cookie then redirect them to their user profile page. 
 
+![Registration page](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416728/images/albums/MS3/features/register_fgyllf.png "User Registration Page")
+
 ### User Profile Page
 - This page Shows the user all recipes they have created.
 - Pagination is used to allow the user to sort through the pages of results.
 - Recipes created by the user will be displayed here with the option to edit and delete recipes.
 - Clicking edit will take the user to the edit recipe page.
-- clicking delete will trigger a confirmation modal which asks the user to confirm they would like to delete the recipe. 
+- clicking delete will trigger a confirmation modal which asks the user to confirm they would like to delete the recipe.  
+
+![User Profile page](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416728/images/albums/MS3/features/user_profile_bq1isk.png "User Profile Page")
 
 ### Edit Recipe Page
 - This page takes the recipe id of the recipe the user wants to edit and returns a form that is mostly prefilled out with the existing recipe details. 
 - The user has the option of changing any of the input fields as well as uploading a new image via the Cloudinary upload widget. 
-- When the user clicks submit the backend python will update the DB as neccesary with all new inputed data. 
+- When the user clicks submit the backend python will update the DB as neccesary with all new inputed data.  
+
+![Edit Recipe page](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416727/images/albums/MS3/features/edit_recipe_pwecgb.png "Edit Recipe Page")
 
 
 ### Add a Recipe Page
@@ -73,17 +83,23 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 - When a user uploads an image using the upload widget Cloudinary returns an object with the details of the image. I have used Javascript to append the URL of the uploaded image to a hidden image URL input field which then saves the URL of the image in the DB under the img_url attribute. 
 - I have used Jquery to append extra fields if needed by clicking the green + button which will add another input. I have a variable which increases when the plus button is clicked and decreases when the - button is clicked. This ensures that the label will be correct eg. Ingredient 1, ingredient 2, Step 1, Step 2 etc. 
 - If a user does not upload an image a placeholder image will be displayed in its place. 
-- Once the submit button is clicked the backend python will insert all the information into an entry within the DB. 
+- Once the submit button is clicked the backend python will insert all the information into an entry within the DB.  
+
+![Add Recipe page](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416728/images/albums/MS3/features/add_recipe_fcfwl3.png "Add Recipe Page")
 
 ### Logout Page
 - When the user clicks logout the user is removed from the session cookie using the .pop() function. 
 - The browser is then redirected to the login page. 
 - A Flash message will appear saying that the user has successfully been logged out. 
 
+![Logout page](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416728/images/albums/MS3/features/logout_ehng7b.png "Logout Page")
+
 ### Login Page
 - The login page presents the user with a form that takes the username and password field. 
 - The backend python will check if the username exists and if the password is valid and promt the user accordingly via Flash messages. 
 - If all login conditions are met the user will be redirected to the User profile page. 
+
+![Login page](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416727/images/albums/MS3/features/login_fmkowv.png "Login Page")
 
 
 ### Existing Features
@@ -92,10 +108,17 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 - Create Recipe - allows users to create their own recipes and upload an image to be shared with the whole site.
 - Edit Recipe - allows users to edit recipes they have already created.
 - Delete - allows users to delete recipes they have already created. 
+![Delete modal](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417316/images/albums/MS3/features/delete_recipe_eh29gz.png "Delete Modal")  
 - Search - allows users to search for recipes based on Name, cooking time, difficulty or nationality. 
+![Search](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417399/images/albums/MS3/features/search_e2aafb.png "Search") 
+
 - Pagination - returns results in groups of 3 and allows users to click through pages instead of having to scroll all the way down the page.
+![Pagination](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417447/images/albums/MS3/features/paginate_vl8sjz.png "Pagination")
+
 - Filter buttons(Recipes) - Allows users to select predefined results based on cooking time or nationality.
+![Filter buttons(Recipes)](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417538/images/albums/MS3/features/filter_recipes_vvoyxa.png "Filter buttons(Recipes)")
 - Filter buttons(Products) - Allows users to select predefined results based on product rating or pots/pans etc.
+![Filter buttons(products)](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417538/images/albums/MS3/features/filter_products_jvmmzo.png "Filter buttons(Products)")
 
 ### Features Left to Implement
 - Another feature idea
