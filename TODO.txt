@@ -1,25 +1,6 @@
 TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
 
 deployment in readme
-known issues in readme
 
-validate css html js and python in readme
-
-add materialize under deployment on readme
  
 
-issues add to readme:
-- centering a form input element - https://stackoverflow.com/questions/54728464/how-to-center-text-inputs-using-materialize-css
-- displaying current page as custom text under page heading - fixed by writing a loop to check if the page name and inster an h3 depending on page name. add screenshot. 
-- label text overlapping on the firs label and not on each new label - figure this out!
-- werkzuig couldnt build the template for edit_recipe.html - working with michael from CI tutor support we found the problem was a jinja if statement on the base .html - try get this working again. 
-- Couldnt fetch the name attribute on login - login method only inserted user attribute into cookies so when the user was creating a recipie it was insterting null into created by field. fixed by adding the name field into cookie upon login
-- Couldnt make the search function work - Tutor support Kevin assisted me in fixing this by adding the propper form action to my search bar as well as using request.args.get("query") instead of request.form.get("query") 
-- integrating cloudinary api - after upload from widget the image url will be passed to the hidden input on the form and then gets written by the back end and saved to the db.
-- add edit recipie functionality - need to have the data from the recipe im editing already filled in, find a way to show multiple steps/ingredients that were filled in previously, fixed with for loop and using loop index to number ingredient and steps.
-- recipe sorting list as 25 5 etc - fixed by storing cook time as integer rather than string
-- underline color of materialize inputs - had to look at the materializw rules targeting these items and had to use !important as I could not create a specific enough rule. 
-- pagination not getting propper offset - fixed by using offset = offset = (page - 1) * 3
-- autofill background color is white in search and some form elements - comment this in readme and say couldnt find solution. 
-- When editing recipe if you click add ingredient or step it adds another ingredient 2/3/4 field instead of the next one
-- Possible unbalanced tuple unpacking with sequence defined at line 237 of flask_paginate: - no idea how to fix this, tutor support couldnt help

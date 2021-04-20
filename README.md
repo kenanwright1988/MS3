@@ -1,6 +1,8 @@
 # Kenan's Cook Book
 
-Welcome to Kenan's Cook Book. For my third milestone project I have decided to make a cook book website with the goal of selling a fictional range of kitchen utensils. The site is based on the flask framwork to generate content from a database and present it to the user. I have made sure to include CRUD functionality as well as make use of a login/register/logout system which is authenticated and all passwords are protected by a hash for security.
+Welcome to Kenan's Cook Book. For my third milestone project I have decided to make a cook book website with the goal of selling a fictional range of kitchen utensils. The site is based on the flask framwork to generate content from a database and present it to the user. I have made sure to include CRUD functionality as well as make use of a login/register/logout system which is authenticated and all passwords are protected by a hash for security.  
+  
+A live preview of the website can be found [Here](https://kenan-cookbook-ms3.herokuapp.com/)  
  
 ## UX
 
