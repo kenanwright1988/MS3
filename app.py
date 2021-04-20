@@ -253,6 +253,8 @@ def search():
                             css_framework='materializecss')
     if len(recipes) == 0:
         flash(f"We're sorry but no recipes with {query} were found!")
+    else:
+        flash(f"Your search for {query} returned {len(recipes)} result(s)!")
     return render_template('recipes.html',
                            recipes=recipe_paginated,
                            page=page,

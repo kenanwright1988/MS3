@@ -29,9 +29,9 @@ The page loads correctly, the nav link works and results are displayed paginated
 Type the name of a recipe, nationality, cooking time or difficulty in the search bar and click search or hit enter
 
 #### Expectation
-The page will return the desired results paginated in groups of 3 on the recipes page. 
+The page will return the desired results on the recipes page. If no results were found the user will be prompted that there were no matching recipes based on their criteria. 
 
 #### Result
-The searched query is returned on the recipes page using pagination to seperate the results in groups of 3. 
+The searched query is returned on the recipes page using pagination to seperate the results in groups of 3 only if there are more then 3 results. If the search did not have any results the user is shown a flash message saying that their query returned no results. 
 
 [<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618416856/images/albums/MS3/features/recipes_qeuw7w.png" width="250"/>](search results)
