@@ -9,7 +9,7 @@ Welcome to Kenan's Cook Book. For my third milestone project I have decided to m
 The goal of Kenan's Kitchen is to provide cooking enthusiasts a place to discover new recipes as well as create and edit their own which will then be available to all other users. The site will offer a range of premium utensils for sale to users to ensure they can easily make their selected recipe as well as generate revenue for the site. 
  
 ### User Stories
-#### As an cooking enthusiast: 
+#### As a cooking enthusiast: 
 - I want to quickly find recipes for dinner.
 - I want to be able to easily sort and search for a specific recipe.
 - I want to be able to login to the site.

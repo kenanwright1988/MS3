@@ -10,7 +10,7 @@
 <img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618914685/images/albums/MS3/Testing/responsive/responsive_ipad_iz8tuc.png" width="350"/>
 
 
-## Testing user stories
+## Testing user stories as a cooking enthusiast:
 ## User Story 1
 - I want to quickly find recipes for dinner.
 
@@ -152,16 +152,16 @@ See Issues and Toubleshooting in [readme](README.md)
 
 See result from User Story 5 as this has already been covered.
 
-## User Story 8
+### User Story 8
 - I want a page with all my recipes I have created that I can easily access once logged in. 
 
-## Action
+### Action
 The user clicks the User Profile link on the nav bar when logged in. 
 
-## Expectation
+### Expectation
 The user will be redirected to the User Profile page where all the reciped they have created are displayed with an edit and delete button present on each item. 
 
-## Result
+### Result
 The user is redirected to the user profile page. All recipes created by the user are present. Each recipe has an edit and delete button. 
 
 #### User profile page
@@ -174,14 +174,94 @@ The user is redirected to the user profile page. All recipes created by the user
 ## User Story 9
 - I want to be able to purchase any kitchen equipment I may need.
 
-## Action 
+### Action 
 The user clicks the premium utensils link on the nav bar
 
-## Expectation
+### Expectation
 The user will be redirected to the products page where results will be shown paginated in groups of 3 where needed. The user also has the option to filter by product rating, knives, pots, pans and utensils. Upon clicking a filter products will be displayed accordingly. The items will have links to purchase via a third party retailer. 
 
-## Result
+### Result
 The user is redirected to the product page where all results are shown paginated in groups of 3. If the user clicks any of the filter buttons the results are filtered and displayed correctly. Each item has the links to purchase via a third party retailer and the links open in a new window. 
 
 #### Products page
-<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618913255/images/albums/MS3/Testing/login-redirected_jbks56.png" width="250"/>
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618919369/images/albums/MS3/Testing/products_page_xtuemt.png" width="250"/>
+
+#### Filtered by rating
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618919407/images/albums/MS3/Testing/products-filter_rzngjc.png" width="250"/>
+
+#### Buy now links
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618919476/images/albums/MS3/Testing/products-buy-now_vkynut.png" width="250"/>
+
+## Testing user stories as the site designer:
+
+## User Story 1
+- I want the process of displaying content to be fast and seamless.
+
+### Action 
+Loading any page on the site
+
+### Expect
+All pages to load in a timely manner and feel fast
+
+### Result
+All pages load very quickly thanks to the speed of [MongoDB](http://www.mongodb.com) as well as using the [Cloudinary](http://www.cloudinary.com) caching server to host all images. 
+
+## User Story 2 
+- I want to dynamically generate content based on collections in MongoDB.
+
+### Action
+Opening the recipes or product page dynamically adds content based on the data stored in MongoDb.
+
+### Expect
+All content should be dynamically generated and layed out based on entries in mongoDB.
+
+### Result
+Recipes and products get generated based on the data stored in mongodb and are displayed according to my styles and filters.
+
+#### Recipes page
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618920119/images/albums/MS3/Testing/recipes_victcg.png" width="250"/>
+
+#### Products page
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618919369/images/albums/MS3/Testing/products_page_xtuemt.png" width="250"/>
+
+
+## User Story 3
+- I want the site to be eye catching and engaging.
+
+### Action
+The user looks at the design and layout of the site.
+
+### Expectation 
+The user will have a good experience and find the layout eye-catching, simple and easy to use. 
+
+### Result
+The site looks good and clean according to friends and family. 
+
+## User Story 4
+- I want the site to be easy to use and intuitive with clear stylistic choices.
+
+### Action
+The user engaging with the site and navigating its functions.
+
+### Expectation
+The user will not struggle to find any content and easily navigate around the site and make use of the features. 
+
+### Results
+According to friends and family the site is easy to use, creating an account and logging in is easy and intuitive. Creating deleting and editing recipes is strait forward and obvious. 
+
+## User Story 5 
+- I want the site to be as bug free as possible.
+
+## Action
+The user browses the site and navigates its functions
+
+## Expect 
+The site should work without any bugs that hinder funtionality or break the site. The user shouldn't leave the site due to bugs and glitches. Any remaining bugs should not break functions or cause a poor user experience. 
+
+## Result
+Very few bugs are present and none break functionality or cause a bad user experience. 
+See Known bugs section in [README.MD](README.MD)
+
+## User Story 6
+- I want the site to be responsive to a large number of devices and screen sizes.  
+See the Testing Responsiveness section at the beginning of this document. 

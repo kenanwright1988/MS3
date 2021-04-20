@@ -1,6 +1,7 @@
 TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
 
-Testing section in readme
+deployment in readme
+known issues in readme
 
 validate css html js and python in readme
 
