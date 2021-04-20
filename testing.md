@@ -1,4 +1,14 @@
 # Manual Testing for Kenan's Cook Book
+## Testing Responsiveness
+#### Am I Responsive
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618914685/images/albums/MS3/Testing/responsive/responsive-am-i_sybx2p.png" width="450"/>
+
+#### iPhone
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618914685/images/albums/MS3/Testing/responsive/responsive-iphone_lklivp.png" width="250"/>
+
+#### iPad
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618914685/images/albums/MS3/Testing/responsive/responsive_ipad_iz8tuc.png" width="350"/>
+
 
 ## Testing user stories
 ## User Story 1
@@ -19,7 +29,7 @@ The page loads correctly, the nav link works and results are displayed paginated
 - Google Chrome
 - Mozilla firefox
 - Chrome for Ios
-- safari
+- Safari
 
 
 ## User Story 2
@@ -47,13 +57,13 @@ The searched query is returned on the recipes page using pagination to seperate 
 - Google Chrome
 - Mozilla firefox
 - Chrome for Ios
-- safari
+- Safari
 
 ## User Story 3
 - I want to be able to login to the site.
 
 ### Action
-User clicks the login button
+User clicks the login nav link or the link on the create account page then fills out their credentials and clicks login.
 
 ### Expectation
 The user will be prompted with a login screen and prompted to enter their login credentials. If the user leaves fields blank the user will be prompted to fill in the required input fields. If the user gets the username or password wrong the user will be prompted with a flash message. 
@@ -74,5 +84,32 @@ The user is logged in and redirected to the user profile page. If the username o
 - Google Chrome
 - Mozilla firefox
 - Chrome for Ios
-- safari
+- Safari
+
+## User Story 4
+- I want to be able to create a profile.
+
+### Action
+The user clicks the register nav link or the link on the login page to register a new account. Then fills out their details and clicks create an account. 
+
+### Expectation
+The user will be able to fill out their details and create a profile/login to the website. The user will be prompted if the desired username is taken. The user will be prompted if they have used too few or many characters. The user will be prompted if they have left any required fields empty. 
+
+### Result
+The user enters all required information and is succesfully registered and redirected to their profile page. If the user leaves any required fields blank or fills them in incorrectly the user is prompted to fill them in. If the username is taken the user is prompted by a flash message. 
+
+#### If registration is successful
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618914268/images/albums/MS3/Testing/register-success_noygtl.png" width="250"/> 
+
+#### If username is taken
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618914268/images/albums/MS3/Testing/register-username-exists_mgngxf.png" width="250"/> 
+
+#### If no text entered in an input field
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618914268/images/albums/MS3/Testing/register-no-text_wvjnba.png" width="250"/>
+
+### Tested On
+- Google Chrome
+- Mozilla firefox
+- Chrome for Ios
+- Safari
 
