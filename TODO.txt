@@ -1,43 +1,13 @@
 TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
 
+Testing section in readme
 
-favicon src : https://www.pinterest.com/pin/39688040450475892/
-background image : https://www.ecohome.net/guides/3212/new-options-for-kitchen-counters/
-background2: https://eu.goerie.com/story/lifestyle/home-garden/2020/11/14/fresh-kitchen-backsplash-ideas-stylish-and-functional-backsplash-can-breathe-new-life-into-your-kitc/6190279002/
-omlette : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png
-omlette text from : https://www.bbcgoodfood.com/recipes/basic-omelette
-jam from https://foodgawker.com/post/2017/08/21/675744/
-boiled egg from https://thestayathomechef.com/how-to-boil-eggs/
-carbonara from https://www.bbcgoodfood.com/recipes/ultimate-spaghetti-carbonara-recipe
-american pancakes from https://www.bbc.co.uk/food/recipes/fluffyamericanpancak_74828
-scotch egg from https://www.bbc.co.uk/food/recipes/scotcheggs_85851
-bunuelos from https://www.bbc.co.uk/food/recipes/buuelos_with_spiced_15500
-kofta from https://recipesjourney.com/en/turkish-kofte-recipe-lamb-meat/
-salmon roll from https://www.indoindians.com/how-to-make-salmon-sushi-2/
-indian scrambled eggs from https://www.bbc.co.uk/food/recipes/indianscrambledeggs_86454
-african eggs from https://www.bbc.co.uk/food/recipes/spiced_north-african_82972
-herring with dill from https://www.bbc.co.uk/food/recipes/herringwithdillandmu_88218
-frying pan from https://images-na.ssl-images-amazon.com/images/I/61ato0rDpjL._SX425_.jpg
-utensil text from https://www.cervera.se/
-wok image from https://www.amazon.se/Craft-Wok-Traditionell-handhamrad-st%C3%A5lhj%C3%A4lphandtag/dp/B00PUZT9MU
-cast iron pot https://www.amazon.com/AmazonBasics-Pre-Seasoned-Dutch-Handles-2-Quart/dp/B074DFMR8K
-japanese knives from https://toroscookware.com/products/handmade-japanese-complete-set-of-3-knives-aus10-steel-chef-knife-santoku-nakiri
-pot spoon from https://royaldesign.com/us/pot-spoon-526-30-cm
-brass cuttlery set from https://www.no1brands4you.co.uk/kitchen-cutlery/combo-3092-salter-combo-3092-32-piece-gold-cutlery-set-stainless-steel.html
-recipies and images from bbcgoodfood
-
-
-validate css html js and python 
-
-
-Turn off console log from image upload when submitting
+validate css html js and python in readme
 
 add materialize under deployment on readme
+ 
 
-add search and indexing - done just need to refine it a bit more. 
-
-
-issues:
+issues add to readme:
 centering a form input element - https://stackoverflow.com/questions/54728464/how-to-center-text-inputs-using-materialize-css
 displaying current page as custom text under page heading - fixed by writing a loop to check if the page name and inster an h3 depending on page name. add screenshot. 
 label text overlapping on the firs label and not on each new label - figure this out!

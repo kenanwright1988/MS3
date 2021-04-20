@@ -251,6 +251,8 @@ def search():
     total = mongo.db.recipies.find({"$text": {"$search": query}}).count()
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
+    if len(recipes) == 0:
+        flash(f"We're sorry but no recipes with {query} were found!")
     return render_template('recipes.html',
                            recipes=recipe_paginated,
                            page=page,

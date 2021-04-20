@@ -40,77 +40,79 @@
             </div>
         </div>
         <!-- Pagination -->
-        {{ pagination.info }}
-        {{ pagination.links }}
+        {% if recipes|length >= 3 %}    
+            {{ pagination.info }}
+            {{ pagination.links }}
+        {% endif %}
         <!-- loops over each recipe in recipes list -->
         {% for recipe in recipes %}
         <!-- if recipes is not empty  -->
-        {% if recipes|length != 0 %}
-        <div class="row">
-            <!-- Recipes container -->
-            <div class="col s12">
-                <div class="card box-shadow box-color chalk-board">
-                    <div class="card-content ">
-                        <div class="row ">
-                            <div class="col s6 offset-s3 chalk-outline custom-box-padding">
-                                <!-- Check if there is a product image -->
-                                {% if recipe.img_url %}
-                                <img class="recipe-image box-shadow" src="{{ recipe.img_url }}"
-                                    alt="Image of {{ recipe.food_name }}">
-                                <!-- Else insert placeholder image -->    
-                                {% else %}
-                                <img class="recipe-image box-shadow"
-                                    src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1616167504/image-not-found_y6b1wx.jpg"
-                                    alt="No image uploaded">
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- Recipe information area -->
-                            <div class="col s12 white-text center-align info-box ">
-                                <h3 class="underline">{{ recipe.food_name|title }}</h3><br>
-                                <h4>Nationality: {{ recipe.nationality|title }}</h4>
-                                <h4>Cooking Time: {{ recipe.cook_time }}min</h4>
-                                <h4>Difficulty: {{ recipe.difficulty }}</h4>
-                                <h4>Submitted by: {{ recipe.created_by|title }}</h4>
-                                <h4>Submitted on: {{ recipe.date_created }}</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- Ingredients area -->
-                            <div class="col s4 center-align ingredients">
-                                <h4 class="underline">Ingredients:</h4>
-                                <ul class="custom_list left-align">
-                                    {% if recipe.ing_name %}
-                                    <!-- Gets individual ingredients from ing_name key and adds to unordered list-->
-                                    {% for ingredient in recipe.ing_name %}
-                                    <li>{{ ingredient|title }}</li>
-                                    {% endfor %}
-                                    <!-- if no ingredients added -->
+            {% if recipes|length != 0 %}
+            <div class="row">
+                <!-- Recipes container -->
+                <div class="col s12">
+                    <div class="card box-shadow box-color chalk-board">
+                        <div class="card-content ">
+                            <div class="row ">
+                                <div class="col s6 offset-s3 chalk-outline custom-box-padding">
+                                    <!-- Check if there is a product image -->
+                                    {% if recipe.img_url %}
+                                    <img class="recipe-image box-shadow" src="{{ recipe.img_url }}"
+                                        alt="Image of {{ recipe.food_name }}">
+                                    <!-- Else insert placeholder image -->    
                                     {% else %}
-                                    <li>No ingredients added</li>
+                                    <img class="recipe-image box-shadow"
+                                        src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1616167504/image-not-found_y6b1wx.jpg"
+                                        alt="No image uploaded">
                                     {% endif %}
-                                </ul>
+                                </div>
                             </div>
-                            <!-- Recipe steps area -->
-                            <div class="col s7 offset-s1 center-align logo-box">
-                                <!-- Gets individual steps from steps key -->
-                                {% for step in recipe.steps %}
-                                <h4 class="underline">Step {{ loop.index }}:</h4>
-                                <p class="left-align">{{ step }}</p>
-                                {% endfor %}
+                            <div class="row">
+                                <!-- Recipe information area -->
+                                <div class="col s12 white-text center-align info-box ">
+                                    <h3 class="underline">{{ recipe.food_name|title }}</h3><br>
+                                    <h4>Nationality: {{ recipe.nationality|title }}</h4>
+                                    <h4>Cooking Time: {{ recipe.cook_time }}min</h4>
+                                    <h4>Difficulty: {{ recipe.difficulty }}</h4>
+                                    <h4>Submitted by: {{ recipe.created_by|title }}</h4>
+                                    <h4>Submitted on: {{ recipe.date_created }}</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- Ingredients area -->
+                                <div class="col s4 center-align ingredients">
+                                    <h4 class="underline">Ingredients:</h4>
+                                    <ul class="custom_list left-align">
+                                        {% if recipe.ing_name %}
+                                        <!-- Gets individual ingredients from ing_name key and adds to unordered list-->
+                                        {% for ingredient in recipe.ing_name %}
+                                        <li>{{ ingredient|title }}</li>
+                                        {% endfor %}
+                                        <!-- if no ingredients added -->
+                                        {% else %}
+                                        <li>No ingredients added</li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                                <!-- Recipe steps area -->
+                                <div class="col s7 offset-s1 center-align logo-box">
+                                    <!-- Gets individual steps from steps key -->
+                                    {% for step in recipe.steps %}
+                                    <h4 class="underline">Step {{ loop.index }}:</h4>
+                                    <p class="left-align">{{ step }}</p>
+                                    {% endfor %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {% else %}
-            <h3>No Recipes Found!</h3>
-        {% endif %}
+            {% endif %}
         {% endfor %}
         </div>
     </div>
-    <!-- Pagination -->    
+    <!-- Pagination -->
+    {% if recipes|length >= 3 %}    
         {{ pagination.info }}
         {{ pagination.links }}
+    {% endif %}    
 {% endblock %}

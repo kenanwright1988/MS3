@@ -9,8 +9,10 @@
             </div>
         </div>
     <!-- Pagination -->    
-    {{ pagination.info }}
-    {{ pagination.links }}
+    {% if recipes|length >= 3 %}    
+        {{ pagination.info }}
+        {{ pagination.links }}
+    {% endif %}
         <!-- loops over the recipes in the recipes list -->    
         {% for recipe in recipes %}
         <div class="row">
@@ -96,7 +98,9 @@
     </div>
         <!-- pagination -->
         <div class="row center-align">    
-        {{ pagination.info }}
-        {{ pagination.links }}
+        {% if recipes|length >= 3 %}    
+            {{ pagination.info }}
+            {{ pagination.links }}
+        {% endif %}
         </div>
 {% endblock %}
