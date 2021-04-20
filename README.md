@@ -177,6 +177,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 - Cloudinary Upload widget JS code from Cloudinary documentation. 
 - Add and remove input fields code taken but modified from https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery  
 - Pagination code taken and modified to suit this project from https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9  
+- Center a form input element code from https://stackoverflow.com/questions/54728464/how-to-center-text-inputs-using-materialize-css
 
 ### Content
 - Utensil text taken and modified from [Cervera](https://www.cervera.se/)

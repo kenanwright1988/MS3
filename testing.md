@@ -128,12 +128,8 @@ The user clicks edit or delete on a recipe they have created on their profile pa
 When the user clicks delete on one of the recipes they have created, a modal will pop up and ask them to confirm or cancel. Upon clicking confirm the recipe will be deleted from the database. Upon clicking cancel the modal will be closed and the user redirected back to their profile page. When the user clicks Edit the user will be redirected to the edit recipe page where the information about the recipe will be filled in. Upon submiting the edit the recipe will appear on the recipes page with the new information. 
 
 ### Result
-The user clicks delete the modal is triggered, if the user clicks delete on the modal the recipe is deleted and a flash message is displayed notifying the user. If the user clicks cancel the modal is closed and user is redirected to the user profile page. The user clicks edit and is redirected to the edit recipe page where the input fields are filled out*. The user can edit the fields as need be and add or remove steps or ingredients**. The user can upload a new image. The user clicks submit and the edited recipe is saved to the database and viewable on the recipes page.
+The user clicks delete the modal is triggered, if the user clicks delete on the modal the recipe is deleted and a flash message is displayed notifying the user. If the user clicks cancel the modal is closed and user is redirected to the user profile page. The user clicks edit and is redirected to the edit recipe page where the input fields are filled out. The user can edit the fields as need be and add or remove steps or ingredients. The user can upload a new image. The user clicks submit and the edited recipe is saved to the database and viewable on the recipes page.
 
-### Known Bugs in Edit Form
-See Issues and Toubleshooting in [readme](README.md)  
-*The nationality field is not pre filled in, I could not get this to work in time.  
-** When adding or removing ingredients the step number and ingredient numbers get messed up. I did not have time to fix this or find a solution before the deadline.   
 
 #### Edit Recipe
 <img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618917788/images/albums/MS3/Testing/delete%20and%20edit/edit-recipe_vxretq.png" width="250"/>
@@ -260,8 +256,53 @@ The site should work without any bugs that hinder funtionality or break the site
 
 ## Result
 Very few bugs are present and none break functionality or cause a bad user experience. 
-See Known bugs section in [README.MD](README.MD)
+See Issues and Toubleshooting section in this document.
 
 ## User Story 6
 - I want the site to be responsive to a large number of devices and screen sizes.  
 See the Testing Responsiveness section at the beginning of this document. 
+
+
+## Code Validation
+### HTML
+The HTML validated with errors for open elements however I think this is due to using flask and Jinja templating to dynamically add content as I have checked all my templates for open tags and I do not find any. Not sure how to validate properly however the site works fine as it should. [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2F8080-amber-moth-tp3mni7w.ws-eu03.gitpod.io%2Frecipes)
+![HTML Validation](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618922410/images/albums/MS3/validation/html_fg1yrh.png)
+
+
+
+### CSS
+My CSS file validated without any errors on the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator)
+![CSS Validation](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618921380/images/albums/MS3/validation/css_s1auqi.png)
+
+### Custom 404 SEO Validation 
+My Site passed custom 404 SEO validation on [SEO Site Checkup](https://seositecheckup.com/tools/custom-404-error-page-test)  
+![SEO Validation](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618921301/images/albums/MS3/validation/SEO-validation_k9rv9b.png)
+
+### PEP8 Compliance
+My Site passed PEP8 compliance at [PEP8 Checker](http://pep8online.com/checkresult)
+![SEO Validation](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618921766/images/albums/MS3/validation/PEP8_check_ppeevc.png)
+
+### JSHint Validation
+My JS functions showed no errors and only a few warnings about ES6 compatibility in Mozilla.
+![Main JS](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618921948/images/albums/MS3/validation/JSHint1_zd8gu3.png)  
+![Materialize doc ready Validation](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618921949/images/albums/MS3/validation/JSHint2_cz9irl.png) 
+
+## Issues and Troubleshooting
+
+### Issues I encountered and solved     
+- I couldnt fetch the name attribute on login - login method only inserted user attribute into cookies so when the user was creating a recipie it was insterting null into the created by field. I fixed this by adding the name field into cookie upon login.  
+- I couldnt make the search function work - Tutor support Kevin assisted me in fixing this by adding the propper form action to my search bar as well as using request.args.get("query") instead of request.form.get("query") 
+- integrating cloudinary api - after upload from widget the image url will be passed to the hidden input on the form and then gets written by the back end and saved to the db.  
+- Edit recipie functionality, have the data from the recipe im editing already filled in and find a way to show multiple steps/ingredients that were filled in previously - this was fixed with for loop and using loop index to number ingredient and steps.  
+- Recipe sorting list as string - fixed by storing cook time as integer rather than string in MongoDB  
+- Changing underline color of the materialize input fields - I had to look at the materialize rules targeting these items and had to use !important as I could not create a specific enough rule. 
+- Pagination not getting propper offset - fixed by using offset = offset = (page - 1) * 3  
+ 
+  
+
+## Known Bugs
+I unfortunately ran out of time to fix the remaining bugs, however they do not break any functionality or cause a bad user experience in my opinion.  
+- Chrome autofill background color is white in search and some form elements - I tried many many solutions from stack overflow and other sites, however no matter what I tried Chrome still uses that horrible white background color when it autoflls form data. 
+- Possible unbalanced tuple unpacking with sequence defined at line 237 of flask_paginate - Im not sure what this means, I spent a long time googling and couldn't find a solution. I think its something to do with the flask paginate component which I used for pagination. 
+- When editing recipe if you click add ingredient or step it adds another ingredient 2/3/4 field instead of the next one. I couldnt find a way to solve this is when creating the recipe it uses a variable which increases and decreases when you add or remove input fields. However I couldn't find a way to store this variable somehow so that when editing a recipe it will remember the variable.
+- The nationality field is not pre filled in when editing a recipe - I could not get this to work in time, The only way I could think of doing this is to use a Jinja if statement but you would have to add the whole input field in every if and elif and would add a lot more coding and wouldn't look clean.  
