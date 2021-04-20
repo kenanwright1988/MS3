@@ -12,7 +12,8 @@ The goal of Kenan's Kitchen is to provide cooking enthusiasts a place to discove
 #### As an cooking enthusiast: 
 - I want to quickly find recipes for dinner.
 - I want to be able to easily sort and search for a specific recipe.
-- I want to be able to create a profile and login to the site.
+- I want to be able to login to the site.
+- I want to be able to create a profile.
 - I want to be able to Add, Edit and Delete my own recipes.
 - I want the recipes I have created publically available to all other active people on the site.  
 - I want a page with all my recipes I have created that I can easily access once logged in. 
