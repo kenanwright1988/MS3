@@ -147,3 +147,41 @@ See Issues and Toubleshooting in [readme](README.md)
 #### Delete confirm modal
 <img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618917788/images/albums/MS3/Testing/delete%20and%20edit/delete-recipe-modal_z0hbyc.png" width="250"/>
 
+## User Story 7 
+- I want the recipes I have created publically available to all other active people on the site.
+
+See result from User Story 5 as this has already been covered.
+
+## User Story 8
+- I want a page with all my recipes I have created that I can easily access once logged in. 
+
+## Action
+The user clicks the User Profile link on the nav bar when logged in. 
+
+## Expectation
+The user will be redirected to the User Profile page where all the reciped they have created are displayed with an edit and delete button present on each item. 
+
+## Result
+The user is redirected to the user profile page. All recipes created by the user are present. Each recipe has an edit and delete button. 
+
+#### User profile page
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618913255/images/albums/MS3/Testing/login-redirected_jbks56.png" width="250"/>
+
+#### Edit and delete buttons
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618918739/images/albums/MS3/Testing/edit-delete-btns_gycih1.png" width="250"/>
+
+
+## User Story 9
+- I want to be able to purchase any kitchen equipment I may need.
+
+## Action 
+The user clicks the premium utensils link on the nav bar
+
+## Expectation
+The user will be redirected to the products page where results will be shown paginated in groups of 3 where needed. The user also has the option to filter by product rating, knives, pots, pans and utensils. Upon clicking a filter products will be displayed accordingly. The items will have links to purchase via a third party retailer. 
+
+## Result
+The user is redirected to the product page where all results are shown paginated in groups of 3. If the user clicks any of the filter buttons the results are filtered and displayed correctly. Each item has the links to purchase via a third party retailer and the links open in a new window. 
+
+#### Products page
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618913255/images/albums/MS3/Testing/login-redirected_jbks56.png" width="250"/>

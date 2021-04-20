@@ -328,6 +328,7 @@ def utensil_filter(id):
     product_paginated = products[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
+    flash(f"Showing results for {id.title()}")
     return render_template('range.html',
                            products=product_paginated,
                            page=page,
@@ -351,6 +352,7 @@ def by_rating():
     product_paginated = products[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
+    flash("Showing highest rated products first")
     return render_template('range.html',
                            products=product_paginated,
                            page=page,
