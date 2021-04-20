@@ -278,6 +278,7 @@ def by_cook_time():
     total = mongo.db.recipies.find().sort("cook_time", 1).count()
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
+    flash("Showing results by cooking time ascending!")
     return render_template('recipes.html',
                            recipes=recipe_paginated,
                            page=page,
@@ -302,6 +303,7 @@ def nationality_filter(id):
     total = len(recipes)
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='materializecss')
+    flash(f"Showing results for {id.title()}")
     return render_template('recipes.html',
                            recipes=recipe_paginated,
                            page=page,

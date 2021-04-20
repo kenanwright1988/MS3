@@ -36,13 +36,13 @@ The page loads correctly, the nav link works and results are displayed paginated
 - I want to be able to easily sort and search for a specific recipe.
 
 ### Action
-Type the name of a recipe, nationality, cooking time or difficulty in the search bar and click search or hit enter
+Type the name of a recipe, nationality, cooking time or difficulty in the search bar and click search or hit enter. The user can also click a list of predefined filters in the filter area
 
 ### Expectation
-The page will return the desired results on the recipes page. If no results were found the user will be prompted that there were no matching recipes based on their criteria. If search is clicked or enter is pressed with an empty field the user will be prompted to enter text. 
+The page will return the desired results on the recipes page. If no results were found the user will be prompted that there were no matching recipes based on their criteria. If search is clicked or enter is pressed with an empty field the user will be prompted to enter text. If the user clicked on of the filters the results should be returned based on that filter, paginated if need be. 
 
 ### Result
-The searched query is returned on the recipes page using pagination to seperate the results in groups of 3 only if there are more then 3 results. If the search did not have any results the user is shown a flash message saying that their query returned no results. The flash message also shows the name of the searched term and the amount of results if any.If no text was entered in the search bar the user will be prompted to enter text.
+The searched query is returned on the recipes page using pagination to seperate the results in groups of 3 only if there are more then 3 results. If the search did not have any results the user is shown a flash message saying that their query returned no results. The flash message also shows the name of the searched term and the amount of results if any.If no text was entered in the search bar the user will be prompted to enter text. When a filter button is clicked the user is shown a list of the relevant recipes paginated as needed. 
 
 #### If search returns results
 <img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618912281/images/albums/MS3/Testing/search-true_qr2wfx.png" width="250"/>  
@@ -52,6 +52,9 @@ The searched query is returned on the recipes page using pagination to seperate 
 
 #### If no text is entered in the search bar
 <img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618912742/images/albums/MS3/Testing/no-text_gmmikb.png" width="250"/>
+
+#### If a filter button is clicked
+<img src="https://res.cloudinary.com/dyxe4g62g/image/upload/v1618915769/images/albums/MS3/Testing/filter-by-british_du7ik8.png" width="250"/>
 
 ### Tested On
 - Google Chrome
@@ -113,3 +116,11 @@ The user enters all required information and is succesfully registered and redir
 - Chrome for Ios
 - Safari
 
+## User Story 5
+- I want to be able to Add my own recipes.
+
+### Action
+The user clicks add a recipe on the nav bar and inputs their selected data then clicks submit.
+
+### Expectation
+The recipe is added to the database and available and searchable by all users on the recipes page. 
