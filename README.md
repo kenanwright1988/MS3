@@ -125,7 +125,12 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 ![Filter buttons(products)](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417538/images/albums/MS3/features/filter_products_jvmmzo.png "Filter buttons(Products)")
 
 ### Features Left to Implement
-- Another feature idea
+- Reccomend utensils from the product range on each recipe. 
+- Recommend other recipes that go well with the current recipe. 
+- Ingredient quantity selection and miligrams, liters etc.
+- Print function that prints an easily readable recipe.
+- Share recipe to social media sites like Facebook, Instagram etc.
+- Admin account functionality that can add products and see all recipes and users as well as edit and delete them. 
 
 ## Technologies Used
 
