@@ -2,8 +2,29 @@
 
 Welcome to Kenan's Cook Book. For my third milestone project I have decided to make a cook book website with the goal of selling a fictional range of kitchen utensils. The site is based on the flask framwork to generate content from a database and present it to the user. I have made sure to include CRUD functionality as well as make use of a login/register/logout system which is authenticated and all passwords are protected by a hash for security.  
   
-A live preview of the website can be found [Here](https://kenan-cookbook-ms3.herokuapp.com/)  
- 
+A live preview of the website can be found [Here](https://kenan-cookbook-ms3.herokuapp.com/) 
+
+## Table of Contents
+
+1. [UX](#ux)
+
+2. [Wireframes](#wireframes)
+
+3. [Features](#features)
+
+4. [Technologies Used](#technologies)
+
+5. [Testing](#testing)
+
+6. [Deployment](#deploy)
+
+7. [Credits](#credits)
+
+8. [Acknowledgements](#acknowledgements)
+
+9. [Disclaimer](#disclaimer)
+
+<a name="ux"></a> 
 ## UX
 
 ### Site Goals
@@ -30,11 +51,12 @@ The goal of Kenan's Kitchen is to provide cooking enthusiasts a place to discove
 - I want the site to be as bug free as possible.
 - I want the site to be responsive to a large number of devices and screen sizes. 
 
+<a name="wireframes"></a>
 ### Wireframes
 
 To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 
-
+<a name="features"></a>
 ## Features
 
 ### Recipes(Home) Page
@@ -132,6 +154,7 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 - Share recipe to social media sites like Facebook, Instagram etc.
 - Admin account functionality that can add products and see all recipes and users as well as edit and delete them. 
 
+<a name="technologies"></a>
 ## Technologies Used
 
 **Flask-Paginate** - Flask paginate was used to paginate returned database queries.  
@@ -141,7 +164,7 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 **Github** - Github was used for storing my code and version control.    
 **Gitpod** - I used Gitpod to code the site as well as push updates to Github.    
 **Python** - Python 3 was used for the backend code to run the app and logic.    
-**Prettier** Code - I used Beautify to keep my code properly indented and easily readable.    
+**Prettier Code** - I used Beautify to keep my code properly indented and easily readable.    
 **HTML5** - The core of the site was built with HTML version 5.  
 **CSS** - CSS was used to style the website and define fonts and layout.  
 **Materialize CSS** - Materialize was used for layout and alignment with the grid system, forms and inputs as well as pagination.   
@@ -149,6 +172,7 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 **Jquery** - Jquery was used to write the click functions that append extra inputs to the forms as well as to enable Materialize selectors and sidenav.   
 **Font Awesome** - Social Media icons from Font Awesome.  
 **Google Chrome** - The website was built and tested in google Chrome.  
+**Google Fonts** - Bitter, Akaya and Cormorant from Google.  
 **Auto close tag** - self explanitory.  
 **HTML hint** - for faster coding.  
 **Cloudinary** - Hosting images to make the site load faster as well as the API for image uploads and the upload widget.  
@@ -156,14 +180,13 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 **Mozilla Firefox** - Used for testing.  
 **Opera** - Used for testing.  
 
+<a name="testing"></a>
 ## Testing
 
 The testing section of the README can be found [Here](testing.md)
 
+<a name="deploy"></a>
 ## Deployment
-
-### Deployment
-
 Kenan's Cook Book was deployed to [Heroku](https://www.heroku.com/)
 
 ### Fork Kenan's Cook Book
@@ -229,7 +252,7 @@ Kenan's Cook Book was deployed to [Heroku](https://www.heroku.com/)
 15. In the "Automatic deploys" section click "Enable Automatic Deploy"
 16. Your app should now be live on Heroku
 
-
+<a name="credits"></a>
 ## Credits
 
 ### Code
@@ -275,7 +298,15 @@ I have credited all the photos that I have used however as users can upload thei
 
 
 
+<a name="acknowledgements"></a>
+## Acknowledgements
 
-### Acknowledgements
+I received inspiration for this project from 
+- [BBC Food](https://www.bbc.co.uk/food)
+- [Yummly](https://www.yummly.com/)
+- [Simply Recipes](https://www.simplyrecipes.com/)
 
-- I received inspiration for this project from X
+
+<a name="disclaimer"></a>
+## Disclaimer
+This project is for educational purposes only and will not be used for commercial use. All media has been credited and any similarities to other companies/websites/applications are purely unintentional.  
