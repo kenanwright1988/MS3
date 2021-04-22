@@ -153,18 +153,76 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 
 ## Testing
 
-Testing section of the README can be found [Here](testing.md)
+The testing section of the README can be found [Here](testing.md)
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+### Deployment
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+Kenan's Cook Book was deployed to [Heroku](https://www.heroku.com/)
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+### Fork Kenan's Cook Book
+1. Create a Github account or login [here](www.github.com)
+2. On GitHub, go to [Kdoggg666/MS3](https://github.com/Kdoggg666/MS3/)
+3. Look for the fork button, top right under your profile picture and click it
+
+### Clone Kenan's Cook Book
+1. Create a Github account or login [here](www.github.com)
+2. Fork the project as detailed in the steps above
+3. Click the code button    
+4. Select to clone with HTTPS/SSH/GithubCli and click the copy icon on the right  
+5. In your editor software eg. GitBash, GitPod, VSCode open the terminal    
+6. Navigate to the destination which you want to be the destination for the clone
+7. Type gitclone if you selected HTTPS or SSH and paste the copied code. If you used GithubCLi just paste the code you copied
+8. Press Enter to create your clone
+
+### Create Environment file
+1. In your code editor with the project open type ```touch env.py```
+2. Open the newly created ```env.py``` file
+3. On the first line type "import OS"
+4. After that you will add the following Configuration Variables(Take note as these will need to be added to your Heroku app later)  
+    ```python  
+    os.environ.setdefault("IP", "0.0.0.0")  
+    os.environ.setdefault("PORT", "5000")  
+    os.environ.setdefault("SECRET_KEY", "A secret Key of your choice goes here")  
+    os.environ.setdefault(
+    "MONGO_URI", "The MONGO_URI that you copied when creating your collection goes here")  
+    os.environ.setdefault("MONGO_DBNAME", "The name of your MongoDB collection goes here")
+    ```
+5. Save the file    
+
+
+### Create a Mongo Database to use for this project
+1. Create an account at [MongoDB](https://www.mongodb.com/) and login
+2. Click "Create a New Cluster"
+3. Select your Cluster Tier, Provider and Region
+4. Click "Cluster Name" and give your DB a name
+5. Click "Create Cluster"
+6. Under the "Clusters" section click "Connect"
+7. Click "Connect Your Application"
+8. In the "Driver" dropdown select "Python" and in the "Version" dropdown select "Version 3.6 or later"
+9. Copy the text in the textbox as this is your MONGO_URI which you will need later for deployment to Heroku 
+10. Dont forget to replace "password" with the password for your MongoDB account. Replace "myFirstDatabase" with the name of the database that connections will use by default
+11. Click "Close"
+12. Your MongoDB collection is now ready 
+
+### To deploy this app to Heroku use the following steps:
+1. Create a Github account or login [here](www.github.com)
+2. Clone or fork Kenan's Cook Book using the steps above 
+3. Run the command ```pip3 freeze --local > requirements.txt``` in your VSCode/Gitpod/Code Editor terminal to create a requirements file
+4. To create a procfile for Heroku run ```echo web: python run.py > Procfile``` from the terminal in your VSCode/Gitpod/Code Editor
+5. Create a new account on [Heroku](https://signup.heroku.com/)
+6. Login to your account and click new then "Create New App"
+7. Give your app a unique name and select the region closest to you then click create app
+8. On the "Deployment" section click on the github icon to connect your repository to the new app you have created
+9. On the "Deployment Method" section look for "Connect to GitHub" and enter your gitHub name and search for the repository
+10. Click "Connect"
+11. Click "Settings"
+12. Click "Reveal Config Vars"
+13. Enter the variables PORT, IP, MONGO_URI, MONGODB_NAME and SECRET_KEY and their corresponding values from your ```app.py``` file and your MONGO Database 
+14. Go back to the "Deployment" section and in the "Manual deploy" section select the master branch and click "Deploy Branch"
+15. In the "Automatic deploys" section click "Enable Automatic Deploy"
+16. Your app should now be live on Heroku
 
 
 ## Credits
@@ -187,6 +245,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 
 #### Photo Credits
+I have credited all the photos that I have used however as users can upload their own images I can not ensure that they own the rights to those images as well as I can not credit them here. 
 - Favicon: https://www.pinterest.com/pin/39688040450475892/  
 - Website Background: https://eu.goerie.com/story/lifestyle/home-garden/2020/11/14/fresh-kitchen-backsplash-ideas-stylish-and-functional-backsplash-can-breathe-new-life-into-your-kitc/6190279002/  
 - Omlette: https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-an-omelette-horizontal-1542310072.png  

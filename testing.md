@@ -296,7 +296,7 @@ My JS functions showed no errors and only a few warnings about ES6 compatibility
 - Edit recipie functionality, have the data from the recipe im editing already filled in and find a way to show multiple steps/ingredients that were filled in previously - this was fixed with for loop and using loop index to number ingredient and steps.  
 - Recipe sorting list as string - fixed by storing cook time as integer rather than string in MongoDB  
 - Changing underline color of the materialize input fields - I had to look at the materialize rules targeting these items and had to use !important as I could not create a specific enough rule. 
-- Pagination not getting propper offset - fixed by using offset = offset = (page - 1) * 3  
+- Pagination not getting propper offset - fixed by using offset = (page - 1) * 3  
  
   
 
