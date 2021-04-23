@@ -1,6 +1,0 @@
-TURN OFF DEBUG MODE BEFORE SUBMIT!!!!!!
-
-deployment in readme
-
- 
-

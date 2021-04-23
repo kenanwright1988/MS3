@@ -56,6 +56,31 @@ The goal of Kenan's Kitchen is to provide cooking enthusiasts a place to discove
 
 To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 
+### Database Overview
+For this project I have used [MongoDB](https://www.mongodb.com/) which is a non-relational database.
+
+#### Recipes 
+The recipes collection takes input data from the add and edit recipe forms. They are then served via jinja templates to the recipe page as well as the edit and add recipe pages. 
+
+![Recipe Items](https://res.cloudinary.com/dyxe4g62g/image/upload/v1619202939/images/albums/MS3/database/recipe_db_bshs4f.png)  
+
+#### Products
+The product collection serves content to the premium utensils page. Currently there is no way for users to add products as this would be a seperate feature that admins will be able to add in future versions of this site. 
+
+![Product Items](https://res.cloudinary.com/dyxe4g62g/image/upload/v1619202939/images/albums/MS3/database/Product_db_wv7c80.png)  
+
+#### Users
+The Users collection stores the registration information of users as well as stores the hashed passwords to allow login and add/edit funtioinailty. 
+
+![Users](https://res.cloudinary.com/dyxe4g62g/image/upload/v1619202939/images/albums/MS3/database/user_db_ssqofd.png)  
+
+#### Search Index
+Search functionality for the recipes collection uses an index which queries text for the various attributes.  
+
+![Index](https://res.cloudinary.com/dyxe4g62g/image/upload/v1619202939/images/albums/MS3/database/index_db_blsufx.png)
+
+
+
 <a name="features"></a>
 ## Features
 
@@ -134,16 +159,22 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 - Create Recipe - allows users to create their own recipes and upload an image to be shared with the whole site.
 - Edit Recipe - allows users to edit recipes they have already created.
 - Delete - allows users to delete recipes they have already created. 
-![Delete modal](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417316/images/albums/MS3/features/delete_recipe_eh29gz.png "Delete Modal")  
+
+ ![Delete modal](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417316/images/albums/MS3/features/delete_recipe_eh29gz.png "Delete Modal")  
 - Search - allows users to search for recipes based on Name, cooking time, difficulty or nationality. 
+  
 ![Search](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417399/images/albums/MS3/features/search_e2aafb.png "Search") 
 
-- Pagination - returns results in groups of 3 and allows users to click through pages instead of having to scroll all the way down the page.
+- Pagination - returns results in groups of 3 and allows users to click through pages instead of having to scroll all the way down the page.  
+
 ![Pagination](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417447/images/albums/MS3/features/paginate_vl8sjz.png "Pagination")
 
 - Filter buttons(Recipes) - Allows users to select predefined results based on cooking time or nationality.
-![Filter buttons(Recipes)](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417538/images/albums/MS3/features/filter_recipes_vvoyxa.png "Filter buttons(Recipes)")
+
+![Filter buttons(Recipes)](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417538/images/albums/MS3/features/filter_recipes_vvoyxa.png "Filter buttons(Recipes)")  
+
 - Filter buttons(Products) - Allows users to select predefined results based on product rating or pots/pans etc.
+
 ![Filter buttons(products)](https://res.cloudinary.com/dyxe4g62g/image/upload/v1618417538/images/albums/MS3/features/filter_products_jvmmzo.png "Filter buttons(Products)")
 
 ### Features Left to Implement
@@ -157,28 +188,28 @@ To see all wireframes created in the UX stage [Click Here!](/wireframes.md)
 <a name="technologies"></a>
 ## Technologies Used
 
-**Flask-Paginate** - Flask paginate was used to paginate returned database queries.  
-**MongoDB** - MongoDB was used to store and access database items.  
-**Flask** - Used as web app framework to make creating the app faster and easier.   
-**Heroku** - Heroku was used to host the live version of this app.  
-**Github** - Github was used for storing my code and version control.    
-**Gitpod** - I used Gitpod to code the site as well as push updates to Github.    
-**Python** - Python 3 was used for the backend code to run the app and logic.    
-**Prettier Code** - I used Beautify to keep my code properly indented and easily readable.    
-**HTML5** - The core of the site was built with HTML version 5.  
-**CSS** - CSS was used to style the website and define fonts and layout.  
-**Materialize CSS** - Materialize was used for layout and alignment with the grid system, forms and inputs as well as pagination.   
-**JavaScript** - JavaScript was used to provide logic and funtionality to certain elements such as the Cloudinary upload widget.  
-**Jquery** - Jquery was used to write the click functions that append extra inputs to the forms as well as to enable Materialize selectors and sidenav.   
-**Font Awesome** - Social Media icons from Font Awesome.  
-**Google Chrome** - The website was built and tested in google Chrome.  
-**Google Fonts** - Bitter, Akaya and Cormorant from Google.  
-**Auto close tag** - self explanitory.  
-**HTML hint** - for faster coding.  
-**Cloudinary** - Hosting images to make the site load faster as well as the API for image uploads and the upload widget.  
-**Apple Safari** - Used for testing.  
-**Mozilla Firefox** - Used for testing.  
-**Opera** - Used for testing.  
+- **Flask-Paginate** - Flask paginate was used to paginate returned database queries.  
+- **MongoDB** - MongoDB was used to store and access database items.  
+- **Flask** - Used as web app framework to make creating the app faster and easier.   
+- **Heroku** - Heroku was used to host the live version of this app.  
+- **Github** - Github was used for storing my code and version control.    
+- **Gitpod** - I used Gitpod to code the site as well as push updates to Github.    
+- **Python** - Python 3 was used for the backend code to run the app and logic.    
+- **Prettier Code** - I used Beautify to keep my code properly indented and easily readable.    
+- **HTML5** - The core of the site was built with HTML version 5.  
+- **CSS** - CSS was used to style the website and define fonts and layout.  
+- **Materialize CSS** - Materialize was used for layout and alignment with the grid system, forms and inputs as well as pagination.   
+- **JavaScript** - JavaScript was used to provide logic and funtionality to certain elements such as the Cloudinary upload widget.  
+- **Jquery** - Jquery was used to write the click functions that append extra inputs to the forms as well as to enable Materialize selectors and sidenav.   
+- **Font Awesome** - Social Media icons from Font Awesome.  
+- **Google Chrome** - The website was built and tested in google Chrome.  
+- **Google Fonts** - Bitter, Akaya and Cormorant from Google.  
+- **Auto close tag** - self explanitory.  
+- **HTML hint** - for faster coding.  
+- **Cloudinary** - Hosting images to make the site load faster as well as the API for image uploads and the upload widget.  
+- **Apple Safari** - Used for testing.  
+- **Mozilla Firefox** - Used for testing.  
+- **Opera** - Used for testing.  
 
 <a name="testing"></a>
 ## Testing
