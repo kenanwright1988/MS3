@@ -278,7 +278,7 @@ Kenan's Cook Book was deployed to [Heroku](https://www.heroku.com/)
 10. Click "Connect"
 11. Click "Settings"
 12. Click "Reveal Config Vars"
-13. Enter the variables PORT, IP, MONGO_URI, MONGODB_NAME and SECRET_KEY and their corresponding values from your ```app.py``` file and your MONGO Database 
+13. Enter the variables PORT, IP, MONGO_URI, MONGODB_NAME and SECRET_KEY and their corresponding values from your ```env.py``` file and your MONGO Database 
 14. Go back to the "Deployment" section and in the "Manual deploy" section select the master branch and click "Deploy Branch"
 15. In the "Automatic deploys" section click "Enable Automatic Deploy"
 16. Your app should now be live on Heroku
